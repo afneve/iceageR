@@ -1,0 +1,38 @@
+header {
+    nav {
+        position: fixed;
+        display: flex;
+        width: 100%;
+        background: black;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+        height: 40px;
+        z-index: 10;
+        overflow: hidden;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+
+        .selected {
+            background: $ice_blue;
+        }
+
+        .nav-item {
+            width: 50%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    }
+} 
+
+#microphone{
+    width: 10%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    border-left: 2px solid white;
+
+    &.active i {
+        color: $ice_blue;
+    }
+}

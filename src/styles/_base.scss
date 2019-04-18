@@ -1,0 +1,97 @@
+$ice_blue: #0C78C5;
+$ice_yellow: #fce037;
+$ice_green: #26bf42;
+
+%progressBarContainer {
+    height: 6px;
+    width: 100%;
+    box-sizing: border-box;
+
+    .progressBar {
+        height: 100%;
+        background: $ice_yellow;
+        /* Old browsers */
+        background: -moz-linear-gradient(left, $ice_yellow 0%, $ice_green 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, $ice_yellow 0%, $ice_green 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, $ice_yellow 0%, $ice_green 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$ice_yellow', endColorstr='$ice_green', GradientType=1);
+    }   
+}
+
+[data-complete=true] {
+    .progressBar {
+        background: $ice_green;
+    }
+}
+
+
+body {
+    background: #fff;
+    color: #666;
+    font-family: 'Oxygen', Arial, sans-serif;
+    margin: 0;
+}
+
+h2{
+	color: $ice_blue;
+    text-align:left;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+h4{
+    margin: 0 0 10px;
+    text-align: center;
+}
+
+.progressBarContainer {
+    @extend %progressBarContainer;
+}
+
+
+#ice-age{
+	padding: 60px 12px 0;
+}
+
+.hide{
+    display: none;
+}
+
+#ice-age-overlay {
+    padding: 20px;
+    width: 80%;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: black;
+    font-size: 16px;
+    z-index: 50;
+    background-color: white;
+}
+#overlay-screen {
+    background-color: #000;
+    opacity: 0.8;
+    width: 100%;
+    position: fixed;
+    z-index: 30;
+}
+.overlay-heading {
+    text-align: left;
+    text-transform: capitalize;
+}
+
+#info-view {
+    a {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+.gallery {
+    margin-left: 20px;
+    font-weight: normal;
+}

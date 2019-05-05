@@ -24,7 +24,7 @@ class NavItems extends Component {
 
     return (
       <React.Fragment>
-        <NavLink exact id="progress" to="/" activeClassName="selected" className="nav-item">Progress</NavLink>
+        <NavLink exact id="progress" to="/iceageR" activeClassName="selected" className="nav-item">Progress</NavLink>
         <NavLink id="segments" to="/segments/polk-burnett" activeClassName="selected" className="nav-item">Segments</NavLink>
         <NavLink id="info" to="/info" activeClassName="selected" className="nav-item">Info</NavLink>
         {

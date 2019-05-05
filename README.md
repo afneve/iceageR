@@ -1,3 +1,12 @@
+# Ice Age Trail port to React
+
+Working on converting original Ice Age Trail App to React. 
+
+## What's next
+
+Work on content of /segments route
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

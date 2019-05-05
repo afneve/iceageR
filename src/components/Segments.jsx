@@ -9,8 +9,8 @@ import {
 } from "react-router-dom";
 
 class Segments extends Component {
-    
-    render () {
+
+    render() {
         return (
             <React.Fragment>
                 <CountyList />

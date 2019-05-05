@@ -9,8 +9,8 @@ import {
 } from "react-router-dom";
 
 class CountyList extends Component {
-    
-    render () {
+
+    render() {
         return (
             <React.Fragment>
                 <div id="segments-view">
@@ -18,16 +18,16 @@ class CountyList extends Component {
                         <div id="segment-filter">
                             <ul>
                                 {countyData.map((county) => {
-                                    return(
-                                    <li key={county.countyId}>
-                                        <NavLink
-                                            exact
-                                            to={`/segments/${formatCountyName(county.countyName)}`}
-                                            activeClassName='selected'>
-                                            {county.countyName}
-                                        </NavLink>
-                                    </li>
-                                    ); 
+                                    return (
+                                        <li key={county.countyId}>
+                                            <NavLink
+                                                exact
+                                                to={`/segments/${formatCountyName(county.countyName)}`}
+                                                activeClassName='selected'>
+                                                {county.countyName}
+                                            </NavLink>
+                                        </li>
+                                    );
                                 })}
                             </ul>
                         </div>

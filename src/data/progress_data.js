@@ -1,231 +1,494 @@
-export const progressData = {
-	"users" : [
-	{
-		"user" : "E",
-		"userId" : "2",
-		"completedSegments" : [
-			{
-				"segmentId" : 69.1,
-				"extraInfo" : "2019-03-24"
-			},
-			{
-				"segmentId" : 70,
-				"extraInfo" : "2019-03-24"
-			},
-			{
-				"segmentId" : 71,
-				"extraInfo" : "2019-03-24"
-			},
-			{
-				"segmentId" : 72,
-				"extraInfo" : "2019-03-25"
-			},
-			{
-				"segmentId" : 73,
-				"extraInfo" : "2019-03-24"
-			},
-			{
-				"segmentId" : 74,
-				"extraInfo" : "2019-03-24"
-			},
-			{
-				"segmentId" : 75,
-				"extraInfo" : "2019-03-24"
-			},
-			{
-				"segmentId" : 39,
-				"extraInfo" : "2019-01-11"
-			},
-			{
-				"segmentId" : 47,
-				"extraInfo" : "2019-01-05"
-			},
-			{
-				"segmentId" : 46,
-				"extraInfo" : "2019-01-05"
-			},
-			{
-				"segmentId" : 55,
-				"extraInfo" : "2018-12-14"
-			},
-			{
-				"segmentId" : 36,
-				"extraInfo" : "2018-11-03"
-			},
-			{
-				"segmentId" : 34,
-				"extraInfo" : "2018-11-03"
-			},
-			{
-				"segmentId" : 44,
-				"extraInfo" : "2018-11-03"
-			},
-			{
-				"segmentId" : 65,
-				"extraInfo" : "2018-10-13"
-			},
-			{
-				"segmentId" : 66,
-				"extraInfo" : "2018-10-13"
-			},
-			{
-				"segmentId" : 67,
-				"extraInfo" : "2018-10-13"
-			},
-			{
-				"segmentId" : 68,
-				"extraInfo" : "2018-10-13"
-			},
-			{
-				"segmentId" : 69,
-				"extraInfo" : "2018-10-13"
-			},
-			{
-				"segmentId" : 115,
-				"extraInfo" : "2018-09-29"
-			},
-			{
-				"segmentId" : 21,
-				"extraInfo" : "2018-06-25"
-			},
-			{
-				"segmentId" : 76,
-				"extraInfo" : "2018-03-26"
-			},
-			{
-				"segmentId" : 77,
-				"extraInfo" : "2018-03-26"
-			},
-			{
-				"segmentId" : 78,
-				"extraInfo" : "2018-03-25"
-			},
-			{
-				"segmentId" : 79,
-				"extraInfo" : "2018-03-25"
-			},
-			{
-				"segmentId" : 12,
-				"extraInfo" : "2018-02-17"
-			},
-			{
-				"segmentId" : 60,
-				"extraInfo" : "2018-01-26"
-			},
-			{
-				"segmentId" : 61,
-				"extraInfo" : "2018-01-26"
-			},
-			{
-				"segmentId" : 64,
-				"extraInfo" : "2018-01-26"
-			},
-			{
-				"segmentId" : 56,
-				"extraInfo" : "2018-01-20"
-			},
-			{
-				"segmentId" : 57,
-				"extraInfo" : "2018-01-20"
-			},
-			{
-				"segmentId" : 58,
-				"extraInfo" : "2018-01-20"
-			},
-			{
-				"segmentId" : 59,
-				"extraInfo" : "2017-10-21"
-			},
-			{
-				"segmentId" : 62,
-				"extraInfo" : "2017-10-21"
-			},
-			{
-				"segmentId" : 63,
-				"extraInfo" : "2017-10-21"
-			},
-			{
-				"segmentId" : 53,
-				"extraInfo" : "2017-08-19"
-			},
-			{
-				"segmentId" : 54,
-				"extraInfo" : "2017-08-19"
-			},
-			{
-				"segmentId" : 38,
-				"extraInfo" : "2017-04-08"
-			},
-			{
-				"segmentId" : 118,
-				"extraInfo" : "2017-03-27"
-			},
-			{
-				"segmentId" : 120,
-				"extraInfo" : "2017-03-27"
-			},
-			{
-				"segmentId" : 119,
-				"extraInfo" : "2017-03-26"
-			},
-			{
-				"segmentId" : 50,
-				"extraInfo" : "2017-03-19"
-			},
-			{
-				"segmentId" : 51,
-				"extraInfo" : "2017-03-19"
-			},
-			{
-				"segmentId" : 52,
-				"extraInfo" : "2017-03-19"
-			},
-			{
-				"segmentId" : 15,
-				"extraInfo" : "2017-03-05"
-			},
-			{
-				"segmentId" : 14,
-				"extraInfo" : "2017-03-04"
-			},
-			{
-				"segmentId" : 13,
-				"extraInfo" : "2017-03-04"
-			},
-			{
-				"segmentId" : 48,
-				"extraInfo" : "2017-02-19"
-			},
-			{
-				"segmentId" : 49,
-				"extraInfo" : "2017-02-19"
-			},
-			{
-				"segmentId" : 45,
-				"extraInfo" : "2017-02-11"
-			},
-			{
-				"segmentId" : 33,
-				"extraInfo" : "2016-04-16"
-			}
-		],
-		"partialSegments" : [
-			{
-				"segmentId" : 40,
-				"extraInfo" : "Completed everything West of Cty B"
-			},
-			{
-				"segmentId" : 117,
-				"extraInfo" : "Completed Western segment from B to Bb"
-			},
-			{
-				"segmentId" : 16,
-				"extraInfo" : "Completed Western segment to Stout Road."
-			},
-			{
-				"segmentId" : 17,
-				"extraInfo" : "Completed North section to about 2 miles North of North Lake. Stopped where trail left snowmobile trail on the East side"
-			}
-		]
-	}]
-}
+export const segmentStatus = {
+    "St. Croix Falls": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Gandy Dancer": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Trade River": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Straight Lake": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Straight River": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Pine Lake": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "McKenzie Creek": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Indian Creek": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Sand Creek": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Timberland Hills": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Grassy Lake": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Bear Lake": {
+        dateCompleted: "2/17/2018",
+        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157674588412887"
+    },
+    "Tuscobia": {
+        dateCompleted: "3/4/2017",
+        gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157674557547937"
+    },
+    "Blueberry": {
+        dateCompleted: "3/4/2017",
+        gallery: ""
+    },
+    "Hemlock Creek": {
+        dateCompleted: "3/5/2017",
+        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157703208081561"
+    },
+    "Northern Blue Hills": {
+        dateCompleted: "",
+        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157703207779231"
+    },
+    "Southern Blue Hills": {
+        dateCompleted: "",
+        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157701446390472"
+	},
+	"Chippewa Moraine": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Harwood Lakes": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Firth Lake": {
+        dateCompleted: "",
+        gallery: ""
+	},
+	"Chippewa River": {
+        dateCompleted: "",
+        gallery: "6/25/2018"
+    },
+    "Lake Eleven": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Jerry Lake": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Mondeaux Esker": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Pine Line": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "East Lake": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Rib Lake": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Wood Lake": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Timberland Wilderness": {
+        dateCompleted: "",
+        gallery: ""
+	},
+	"Camp 27": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Newwood": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Averill-Kelly Creek Wilderness": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Turtle Rock": {
+        dateCompleted: "4/16/2016",
+        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157698809354690"
+    },
+    "Grandfather Falls": {
+        dateCompleted: "11/3/2018",
+        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157704702699695"
+    },
+    "Underdown": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Alta Junction": {
+        dateCompleted: "11/3/2018",
+        gallery: ""
+    },
+    "Harrison Hills": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Parrish Hills": {
+        dateCompleted: "4/8/2017",
+        gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157674830360997"
+    },
+    "Highland Lakes Western": {
+        dateCompleted: "01/11/2019",
+        gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157704188108601/with/31765701897/"
+    },
+    "Highland Lakes Eastern": {
+        dateCompleted: "05/04/2019",
+        gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157704188177461"
+    },
+    "Old Railroad": {
+        dateCompleted: "05/04/2019",
+        gallery: ""
+    },
+    "Lumbercamp": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Kettlebowl": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Plover River": {
+        dateCompleted: "11/3/2018",
+        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157674556784627"
+    },
+    "Dells of the Eau Claire": {
+        dateCompleted: "2/11/2017",
+        gallery: ""
+    },
+    "Thornapple Creek": {
+        dateCompleted: "01/05/2019",
+        gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157677646368048"
+    },
+    "Ringle": {
+        dateCompleted: "01/05/2019",
+        gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157704818450034"
+    },
+    "New Hope-Iola Ski Hill": {
+        dateCompleted: "2/19/2017",
+        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157703208527491"
+    },
+    "Skunk and Foster Lakes": {
+        dateCompleted: "2/19/2017",
+        gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157676715181588"
+    },
+    "Waupaca River": {
+        dateCompleted: "3/19/2017",
+        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157698785024720"
+    },
+    "Hartman Creek": {
+        dateCompleted: "3/19/2017",
+        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157701414552582"
+    },
+    "Emmons Creek": {
+        dateCompleted: "3/19/2017",
+        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157701414750552"
+    },
+    "Deerfield": {
+        dateCompleted: "8/19/2017",
+        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157701448313402"
+    },
+    "Bohn Lake": {
+        dateCompleted: "8/20/2017",
+        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157701448296812"
+    },
+    "Greenwood": {
+        dateCompleted: "12/14/2018",
+        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157703167588891"
+    },
+    "Mecan River": {
+        dateCompleted: "1/20/2018",
+        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157704711242744"
+    },
+    "Wedde Creek": {
+        dateCompleted: "1/20/2018",
+        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157674588639597"
+	},
+	"Chaffee Creek": {
+        dateCompleted: "1/20/2018",
+        gallery: ""
+    },
+    "John Muir Park": {
+        dateCompleted: "10/21/2017",
+        gallery: ""
+    },
+    "Portage Canal": {
+        dateCompleted: "1/26/2018",
+        gallery: ""
+    },
+    "Baraboo": {
+        dateCompleted: "1/26/2018",
+        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157704710673315"
+    },
+    "Sauk Point": {
+        dateCompleted: "10/21/2017",
+        gallery: ""
+    },
+    "Devil's Lake": {
+        dateCompleted: "10/21/2017",
+        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157698809834160"
+    },
+    "Merrimac": {
+        dateCompleted: "1/26/2018",
+        gallery: ""
+    },
+    "Gibraltar Rock": {
+        dateCompleted: "10/13/2018",
+        gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157701540411142"
+    },
+    "Fern Glen": {
+        dateCompleted: "10/13/2018",
+        gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157698912431420"
+	},
+	"City of Lodi": {
+        dateCompleted: "10/13/2018",
+        gallery: ""
+    },
+    "Eastern Lodi Marsh": {
+        dateCompleted: "10/13/2018",
+        gallery: ""
+    },
+    "Lodi Marsh": {
+        dateCompleted: "10/13/2018",
+        gallery: ""
+    },
+    "Springfield Hill": {
+        dateCompleted: "03/25/2019",
+        gallery: ""
+    },
+    "Indian Lake": {
+        dateCompleted: "03/25/2019",
+        gallery: ""
+    },
+    "Table Bluff": {
+        dateCompleted: "03/25/2019",
+        gallery: ""
+	},
+	"Cross Plains": {
+        dateCompleted: "03/25/2019",
+        gallery: ""
+    },
+    "Valley View": {
+        dateCompleted: "03/24/2019",
+        gallery: ""
+    },
+    "Madison": {
+        dateCompleted: "03/24/2019",
+        gallery: ""
+    },
+    "Verona": {
+        dateCompleted: "03/24/2019",
+        gallery: ""
+    },
+    "Montrose": {
+        dateCompleted: "3/26/2018",
+        gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157704819142544"
+    },
+    "Brooklyn Wildlife": {
+        dateCompleted: "3/26/2018",
+        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157703242161171"
+    },
+    "Monticello": {
+        dateCompleted: "3/25/2018",
+        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157674588806937"
+    },
+    "Albany": {
+        dateCompleted: "3/25/2018",
+        gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157676844644048"
+    },
+    "Arbor Ridge": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Devil's Staircase": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Janesville": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Janesville to Milton": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Milton": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Storrs Lake": {
+        dateCompleted: "",
+        gallery: ""
+	},
+	"Clover Valley": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Whitewater Lake": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Blackhawk": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Blue Spring Lake": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Stony Ridge": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Eagle": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Scuppernong": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Waterville": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Lapham Peak": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Delafield": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Hartland": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Merton": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Monches": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Loew Lake": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Holy Hill": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Pike Lake": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Slinger": {
+        dateCompleted: "",
+        gallery: ""
+	},
+	"Cedar Lakes": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "West Bend": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Southern Kewaskum": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Kewaskum": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Milwaukee River": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Milwaukee River": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Parnell": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Greenbush": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "LaBudde Creek": {
+        dateCompleted: "",
+        gallery: ""
+    },
+    "Walla Hi": {
+        dateCompleted: "",
+        gallery: ""
+	},
+	"City of Manitowoc": {
+        dateCompleted: "04/07/2019",
+        gallery: ""
+    },
+    "Dunes": {
+        dateCompleted: "04/06/2019",
+        gallery: ""
+	},
+	"City of Two Rivers": {
+        dateCompleted: "04/06/2019",
+        gallery: ""
+    },
+    "Point Beach": {
+        dateCompleted: "09/29/2018",
+        gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157698912564780"
+    },
+    "Mishicot": {
+        dateCompleted: "04/06/2019",
+        gallery: ""
+    },
+    "East Twin River": {
+        dateCompleted: "04/06/2019",
+        gallery: ""
+    },
+    "Tisch Mills": {
+        dateCompleted: "04/06/2019",
+        gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157703498560211"
+    },
+    "Kewaunee River": {
+        dateCompleted: "03/27/2017",
+        gallery: ""
+    },
+    "Forestville": {
+        dateCompleted: "03/26/2017",
+        gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157701662526712"
+    },
+    "Sturgeon Bay": {
+        dateCompleted: "03/27/2017",
+        gallery: ""
+    }
+};

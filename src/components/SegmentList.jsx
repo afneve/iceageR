@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 class SegmentList extends Component {
-    
-    render () {
+
+    render() {
         return (
             <div className="segment-list">
                 {this.props.segments.map((segment) => {
@@ -11,7 +11,7 @@ class SegmentList extends Component {
                             <h3 className="segment-name">{segment.segment}</h3>
                             <div className="segment-summary">{segment.summary}</div>
                             <div className="segment-info">
-                            
+
                             </div>
                         </div>
                     );
@@ -44,7 +44,7 @@ export default SegmentList;
     </div>
     <div class="location-based-info">
         <a class="location" target="_blank" href="https://www.google.com/maps/dir/44.9490261+-89.69986209999999/45.45001666666667N+92.64881666666666W">Directions to East End</a><div class="getDistance" data-lat="45.45001666666667" data-long="92.64881666666666"></div></div></div></div>
-        
+
     <div class="extra-info">
         <div data-icon="potablewater" class="yes segment-details"><i class="fas fa-tint"></i></div>
         <div data-icon="restrooms" class="yes segment-details"><i class="fas fa-restroom"></i></div>

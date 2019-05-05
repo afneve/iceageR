@@ -5,12 +5,12 @@ import Segments from '../Segments';
 import Info from '../Info';
 
 import {
-  Route,
-  Switch
+    Route,
+    Switch
 } from "react-router-dom";
 
 class Main extends Component {
-    render () {
+    render() {
         return (
             <main id="ice-age" className="App">
                 <Switch>
@@ -18,7 +18,7 @@ class Main extends Component {
                     <Route path="/segments" component={Segments} />
                     <Route path="/info" component={Info} />
                 </Switch>
-          </main>
+            </main>
         );
     }
 }

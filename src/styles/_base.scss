@@ -17,14 +17,18 @@ $ice_green: #26bf42;
         /* Chrome10-25,Safari5.1-6 */
         background: linear-gradient(to right, $ice_yellow 0%, $ice_green 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$ice_yellow', endColorstr='$ice_green', GradientType=1);
-    }   
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$ice_yellow', endColorstr='$ice_green', GradientType=1);
+    }
 }
 
 [data-complete=true] {
     .progressBar {
         background: $ice_green;
     }
+}
+
+.completed {
+    background: $ice_green;
 }
 
 
@@ -35,13 +39,14 @@ body {
     margin: 0;
 }
 
-h2{
-	color: $ice_blue;
-    text-align:left;
+h2 {
+    color: $ice_blue;
+    text-align: left;
     margin-top: 0;
     margin-bottom: 8px;
 }
-h4{
+
+h4 {
     margin: 0 0 10px;
     text-align: center;
 }
@@ -51,11 +56,11 @@ h4{
 }
 
 
-#ice-age{
-	padding: 60px 12px 0;
+#ice-age {
+    padding: 60px 12px 0;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
@@ -72,6 +77,7 @@ h4{
     z-index: 50;
     background-color: white;
 }
+
 #overlay-screen {
     background-color: #000;
     opacity: 0.8;
@@ -79,6 +85,7 @@ h4{
     position: fixed;
     z-index: 30;
 }
+
 .overlay-heading {
     text-align: left;
     text-transform: capitalize;

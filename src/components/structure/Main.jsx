@@ -14,7 +14,7 @@ class Main extends Component {
         return (
             <main id="ice-age" className="App">
                 <Switch>
-                    <Route exact path="/" component={Progress} />
+                    <Route exact path="/iceageR" component={Progress} />
                     <Route path="/segments" component={Segments} />
                     <Route path="/info" component={Info} />
                 </Switch>

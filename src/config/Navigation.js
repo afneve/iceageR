@@ -4,7 +4,7 @@ export const Navigation = [
     {
         id: 'Progress',
         text: 'Progress',
-        route: '/progress',
+        route: '/iceageR',
         component: ''
     },
     {

@@ -11,16 +11,22 @@ class UserProgress extends Component {
     state = {
         sort: '',
         sortBy: '',
-        direction: ''
+        startFrom: ''
     };
 
-   handleSort = (key) => {
+   handleSort = (sortBy) => {
+        console.log(this.state);
+        console.log(sortBy, this.state.sortBy);
+
+        
+
         this.setState({
-            direction: !this.state.direction || this.state.direction === 'eW' ? 'wE' : 'eW',
-            sort: !this.state.sort || this.state.sort === 'asc' ? 'desc' : 'asc',
-            sortBy: key 
+            startFrom: sortBy === 'orderId' ? this.state.startFrom !== 'east' ? 'east' : 'west' : '',
+            sort: sortBy !== this.state.sortBy || this.state.sort !== 'desc' ? 'desc' : 'asc',
+            sortBy: sortBy 
         });
-        // this.state.direction === 'eW' ? '(East to West)' : '(West to East)'
+
+        console.log(this.state);
     };
 
    sortRows = () => {
@@ -58,7 +64,11 @@ class UserProgress extends Component {
                                 return (
                                     <th
                                         onClick={() => this.handleSort(category.sortBy)}>
-                                        {category.label}
+                                        {category.label === 'Segment' ?
+                                            `${category.label} ${this.state.startFrom === 'east' ? '(East to West)' : '(West to East)'}`
+                                            :
+                                            category.label
+                                        }
                                     </th>
                                 );
                             })

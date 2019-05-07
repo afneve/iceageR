@@ -80,8 +80,8 @@ export const segmentStatus = {
         gallery: ""
 	},
 	"Chippewa River": {
-        dateCompleted: "",
-        gallery: "6/25/2018"
+        dateCompleted: "6/25/2018",
+        gallery: ""
     },
     "Lake Eleven": {
         dateCompleted: "",

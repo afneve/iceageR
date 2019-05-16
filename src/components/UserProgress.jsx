@@ -7,6 +7,9 @@ import { segmentStatus } from '../data/progress_data';
 
 import { Categories } from '../config/Categories';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSort, faSortUp, faSortDown, faCheck, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+
 class UserProgress extends Component {
     state = {
         sort: '',
@@ -54,6 +57,12 @@ class UserProgress extends Component {
    };
 
     render() {
+        const {
+            sort,
+            sortBy,
+            startFrom
+        } = this.state;
+
         return (
             <div className="progress-info container">
                 <table>
@@ -65,9 +74,17 @@ class UserProgress extends Component {
                                     <th
                                         onClick={() => this.handleSort(category.sortBy)}>
                                         {category.label === 'Segment' ?
-                                            `${category.label} ${this.state.startFrom === 'east' ? '(East to West)' : '(West to East)'}`
+                                            `${category.label} ${startFrom === 'east' ? '(East to West)' : '(West to East)'}`
                                             :
-                                            category.label
+                                            <React.Fragment>
+                                                {category.label}
+                                                <span>
+                                                    {!!category.sortBy && sortBy === category.sortBy ? sortBy && sort === 'desc' ? <FontAwesomeIcon icon={faSortDown} /> : <FontAwesomeIcon icon={faSortUp} /> : !!category.sortBy && <FontAwesomeIcon icon={faSort} />}
+                                                </span>
+                                                
+                                            </React.Fragment>
+                                            
+                                            // !!category.sortBy && sortBy === category.sortBy ? sortBy && sort === 'desc' ? <FontAwesomeIcon icon={faSortDown} /> : <FontAwesomeIcon icon={faSortUp} /> : ''
                                         }
                                     </th>
                                 );
@@ -77,11 +94,16 @@ class UserProgress extends Component {
                         {
                             this.sortRows().map((segment, index) => {
                                 return(
-                                    <tr key={index} className={segmentStatus[segment.segment].dateCompleted ? 'completed' : null}>
+                                    <tr key={index}>
                                         {
                                             Categories.map((category) => {
                                                 return (
-                                                    <td>{segment[category.key]}</td>
+                                                    <td>
+                                                        <span>
+                                                         {segmentStatus[segment.segment].dateCompleted && category.key === 'segment' && <FontAwesomeIcon icon={faCheckCircle} />}
+                                                        </span>
+                                                        {segment[category.key]}
+                                                    </td>
                                                 );
                                             })
                                         }

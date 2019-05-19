@@ -1,4 +1,4 @@
-import { faMicrophone } from '@fortawesome/free-solid-svg-icons';
+// import { faMicrophone } from '@fortawesome/free-solid-svg-icons';
 
 export const Navigation = [
     {

@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 
+/*
 import { iceAgeData } from '../data/ice_age_data';
 
 import { matchCounties, formatCountyName } from '../utils/countyCheck';
+*/
 
 class OverallProgress extends Component {
     render() {
         return (
             <div className="progress-info container">
-                <h2></h2>
+                {/*<h2></h2>*/}
                 <p></p>
                 <p></p>
                 <p></p>

@@ -427,11 +427,11 @@ export const segmentStatus = {
         dateCompleted: "",
         gallery: ""
     },
-    "Milwaukee River": {
+    "Milwaukee River (Washington Co)": {
         dateCompleted: "",
         gallery: ""
     },
-    "Milwaukee River": {
+    "Milwaukee River (Fond Du Lac Co)": {
         dateCompleted: "",
         gallery: ""
     },

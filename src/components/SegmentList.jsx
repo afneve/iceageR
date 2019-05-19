@@ -9,32 +9,34 @@ class SegmentList extends Component {
             <div className="segment-list">
                 {this.props.segments.map((segment) => {
                     return (
-                        <div className="segment" key={segment.segment}>
-                            <h3 className="segment-name">{segment.segment}</h3>
-                            <div className="segment-summary">{segment.summary}</div>
-                            <div className="segment-info">
-                                <div>{`Distance: ${segment.iceagetraildistance}`}</div>
-                                <div>{`Elevation: ${segment.elevation}`}</div>
-                                <div>{`Ruggedness: ${segment.ruggedness}`}</div>
-                            </div>
-                            <div className="extra-info">
-                                <div>
-                                    {!!segment.potablewater ? 
-                                        <span className="true">
-                                            <FontAwesomeIcon icon={faTint} color="green" />
-                                        </span> :
-                                        <FontAwesomeIcon icon={faTint} />
-                                    }
+                        <div 
+                            className="segment" 
+                            key={segment.segment}>
+                                <h3 className="segment-name">{segment.segment}</h3>
+                                <div className="segment-summary">{segment.summary}</div>
+                                <div className="segment-info">
+                                    <div>{`Distance: ${segment.iceagetraildistance}`}</div>
+                                    <div>{`Elevation: ${segment.elevation}`}</div>
+                                    <div>{`Ruggedness: ${segment.ruggedness}`}</div>
                                 </div>
-                                <div>
-                                    {!!segment.restrooms ? 
-                                        <span className="true">
-                                            <FontAwesomeIcon icon={faRestroom} color="green" /> 
-                                        </span> :
-                                        <FontAwesomeIcon icon={faRestroom} />
-                                    }
+                                <div className="extra-info">
+                                    <div>
+                                        {!!segment.potablewater ? 
+                                            <span className="true">
+                                                <FontAwesomeIcon icon={faTint} color="green" />
+                                            </span> :
+                                            <FontAwesomeIcon icon={faTint} />
+                                        }
+                                    </div>
+                                    <div>
+                                        {!!segment.restrooms ? 
+                                            <span className="true">
+                                                <FontAwesomeIcon icon={faRestroom} color="green" /> 
+                                            </span> :
+                                            <FontAwesomeIcon icon={faRestroom} />
+                                        }
+                                    </div>
                                 </div>
-                            </div>
                         </div>
                     );
                 })}

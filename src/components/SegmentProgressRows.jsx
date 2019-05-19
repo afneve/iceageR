@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { iceAgeData } from '../data/ice_age_data';
 
-import { countyData } from '../data/county_data';
+// import { countyData } from '../data/county_data';
 import { segmentStatus } from '../data/progress_data';
 
 import { Categories } from '../config/Categories';

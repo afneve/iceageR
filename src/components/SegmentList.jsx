@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
-class SegmentList extends Component {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRestroom, faTint } from '@fortawesome/free-solid-svg-icons';
 
+class SegmentList extends Component {
     render() {
         return (
             <div className="segment-list">
@@ -14,6 +16,24 @@ class SegmentList extends Component {
                                 <div>{`Distance: ${segment.iceagetraildistance}`}</div>
                                 <div>{`Elevation: ${segment.elevation}`}</div>
                                 <div>{`Ruggedness: ${segment.ruggedness}`}</div>
+                            </div>
+                            <div className="extra-info">
+                                <div>
+                                    {!!segment.potablewater ? 
+                                        <span className="true">
+                                            <FontAwesomeIcon icon={faTint} color="green" />
+                                        </span> :
+                                        <FontAwesomeIcon icon={faTint} />
+                                    }
+                                </div>
+                                <div>
+                                    {!!segment.restrooms ? 
+                                        <span className="true">
+                                            <FontAwesomeIcon icon={faRestroom} color="green" /> 
+                                        </span> :
+                                        <FontAwesomeIcon icon={faRestroom} />
+                                    }
+                                </div>
                             </div>
                         </div>
                     );

@@ -4,7 +4,10 @@ import { iceAgeData } from '../data/ice_age_data';
 
 import SegmentList from './SegmentList';
 
-import { matchCounties, formatCountyName } from '../utils/countyCheck';
+import { 
+    matchCounties, 
+    formatCountyName 
+} from '../utils/countyCheck';
 
 const Segment = (props) => {
     const county = props.match.params.county;
@@ -16,15 +19,15 @@ const Segment = (props) => {
     if (!countySegments.length === 0) {
         return <div>County doesn't have any segments</div>
     }
+
     return (
         <React.Fragment>
-            <div
-                className="county">
+            <div className="county">
                 <h2 className="county-name">
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://www.google.com/#q= Burnett Counties+wi+weather">
+                        href={`https://www.google.com/#q= ${countySegments[0].booksection}+wi+weather`}>
                         {countySegments[0].booksection}
                     </a>
                 </h2>

@@ -4,21 +4,22 @@ export const Navigation = [
     {
         id: 'Progress',
         text: 'Progress',
-        route: '/iceageR',
+        route: '/',
         component: ''
     },
     {
         id: 'Segments',
         text: 'Segments',
-        route: '/segments/polk-burnett',
+        route: '/segments',
         component: ''
     },
     {
-        id: 'Extra',
-        text: 'Extra',
-        route: '/extra',
+        id: 'Info',
+        text: 'Info',
+        route: '/info',
         component: ''
-    },
+    }
+    /*,
     {
         id: 'M',
         text: '',
@@ -26,4 +27,5 @@ export const Navigation = [
         component: '',
         icon: faMicrophone
     }
+    */
 ];

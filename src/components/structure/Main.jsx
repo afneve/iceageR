@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-import Progress from '../Views/Progress';
-import Segments from '../Views/Segments';
-import Info from '../Views/Info';
-
 import {
     Route,
     Switch
 } from "react-router-dom";
+
+import Progress from '../Views/Progress';
+import Segments from '../Views/Segments';
+import Info from '../Views/Info';
 
 class Main extends Component {
     render() {

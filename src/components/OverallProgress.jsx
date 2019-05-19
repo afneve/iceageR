@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import { iceAgeData } from '../data/ice_age_data';
 
+import { matchCounties, formatCountyName } from '../utils/countyCheck';
+
 class OverallProgress extends Component {
     render() {
         return (

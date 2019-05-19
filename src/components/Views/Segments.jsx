@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import County from '../County';
-import CountyList from '../CountyList';
-
 import {
     Route,
     Switch
 } from "react-router-dom";
+
+import County from '../County';
+import CountyList from '../CountyList';
 
 class Segments extends Component {
 

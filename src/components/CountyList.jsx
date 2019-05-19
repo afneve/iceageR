@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 
+import { NavLink } from "react-router-dom";
+
 import { countyData } from '../data/county_data';
 
 import { formatCountyName } from '../utils/countyCheck';
 
-import {
-    NavLink
-} from "react-router-dom";
-
 class CountyList extends Component {
-
     render() {
         return (
             <React.Fragment>

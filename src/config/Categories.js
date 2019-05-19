@@ -23,12 +23,15 @@ export const Categories = [
         'key': 'booksection',
         'sortBy': '',
         'label': 'County'
-    },
-    {
-        'key': 'Date completed',
-        'sortBy': '',
-        'label': 'Date completed'
     }
+    /*
+    ,
+    {
+        'key': 'dateCompleted',
+        'sortBy': 'dateCompleted',
+        'label': ''
+    }
+    */
 ];
 
 /*

@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 
-import { iceAgeData } from '../../data/ice_age_data';
-
-import SegmentProgressRows from '../SegmentProgressRows';
 import OverallProgress from '../OverallProgress';
+import SegmentProgressRows from '../SegmentProgressRows';
 
 class Progress extends Component {
     render() {

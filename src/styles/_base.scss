@@ -34,6 +34,14 @@ $ice_green: #26bf42;
 table {
     margin: auto;
 
+    th {
+        padding: 5px;
+
+        span {
+            margin-left: 5px;
+        }
+    }
+
     tr:nth-child(2n + 2) {
         background: #eee;
     }

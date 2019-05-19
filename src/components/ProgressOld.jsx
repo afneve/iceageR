@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { iceAgeData } from '../data/ice_age_data';
 
-import UserProgress from './UserProgress';
+import Progress from './ProgressOld';
 
 class Progress extends Component {
 
@@ -220,7 +220,7 @@ class Progress extends Component {
 
     render() {
         return (
-            <UserProgress />
+            <Progress />
         );
     }
 }

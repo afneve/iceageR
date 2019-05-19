@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import County from './County';
-import CountyList from './CountyList';
+import County from '../County';
+import CountyList from '../CountyList';
 
 import {
     Route,

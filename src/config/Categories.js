@@ -23,5 +23,16 @@ export const Categories = [
         'key': 'booksection',
         'sortBy': '',
         'label': 'County'
+    },
+    {
+        'key': 'Date completed',
+        'sortBy': '',
+        'label': 'Date completed'
     }
 ];
+
+/*
+    key = property of object to access value
+    sortBy = propert of object to sort by
+    label = what is displayed in table heading
+*/

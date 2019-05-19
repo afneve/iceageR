@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import Progress from '../Progress';
-import Segments from '../Segments';
-import Info from '../Info';
+import Progress from '../Views/Progress';
+import Segments from '../Views/Segments';
+import Info from '../Views/Info';
 
 import {
     Route,

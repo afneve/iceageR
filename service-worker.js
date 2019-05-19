@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/iceageR/precache-manifest.482bfb5442601f11bed7feee32f31b0d.js"
+  "/iceageR/precache-manifest.f0c505b0278cef493b8567efb69510d7.js"
 );
 
 workbox.clientsClaim();

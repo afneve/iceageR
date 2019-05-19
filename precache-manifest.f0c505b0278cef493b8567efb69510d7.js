@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/iceageR/static/js/runtime~main.cc6ea412.js"
   },
   {
-    "revision": "752053ae1e5f4ac491b1",
+    "revision": "6287e9cf6eff69123756",
     "url": "/iceageR/static/js/main.446977f1.chunk.js"
   },
   {
@@ -12,11 +12,11 @@ self.__precacheManifest = [
     "url": "/iceageR/static/js/2.b992e44f.chunk.js"
   },
   {
-    "revision": "752053ae1e5f4ac491b1",
-    "url": "/iceageR/static/css/main.ecad745a.chunk.css"
+    "revision": "6287e9cf6eff69123756",
+    "url": "/iceageR/static/css/main.be580690.chunk.css"
   },
   {
-    "revision": "96ada50dcff3db66be6d038f190abfb3",
+    "revision": "804f1b2db2386c4346eb6cb265d591c6",
     "url": "/iceageR/index.html"
   }
 ];

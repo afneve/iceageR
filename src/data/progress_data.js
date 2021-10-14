@@ -404,11 +404,11 @@ export const segmentStatus = {
         gallery: ""
     },
     "Pike Lake": {
-        dateCompleted: "",
+        dateCompleted: "10/20/2019",
         gallery: ""
     },
     "Slinger": {
-        dateCompleted: "",
+        dateCompleted: "10/20/2019",
         gallery: ""
 	},
 	"Cedar Lakes": {

@@ -1,5 +1,8 @@
 .Segments {
-    display: flex
+    display: flex;
+    @include for-phone-only {
+        flex-direction: column;
+    }
 }
 
 .segment-summary {
@@ -37,6 +40,12 @@
 #segments-view {
     background: #eee;
     width: 50%;
+    min-width: 215px;
+    max-width: 300px;
+
+    @include for-phone-only {
+        display: none;
+    }
 
     
     .county-name a {

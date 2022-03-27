@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import {
     Route,
@@ -7,20 +7,19 @@ import {
 
 import County from '../County';
 import CountyList from '../CountyList';
+import CountySelectList from '../CountyList';
 
-class Segments extends Component {
+const Segments = () => {
+    return (
+        <>
+            <CountyList />
+            <CountySelectList />
 
-    render() {
-        return (
-            <React.Fragment>
-                <CountyList />
-
-                <Switch>
-                    <Route path="/segments/:county" component={County} />
-                </Switch>
-            </React.Fragment>
-        );
-    }
+            <Switch>
+                <Route path="/segments/:county" component={County} />
+            </Switch>
+        </>
+    );
 }
 
 export default Segments;

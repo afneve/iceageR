@@ -74,58 +74,58 @@ class SegmentProgressRows extends Component {
         } = this.state;
 
         return (
-            <React.Fragment>
-            <tr>
+            <>
+                <tr>
+                    {
+                        Categories.map((category) => {
+                            return (
+                                <th
+                                    key={category.sortBy}
+                                    onClick={() => this.handleSort(category.sortBy)}>
+                                    {category.label === 'Segment' ?
+                                        `${category.label} ${startFrom === 'east' ? '(East to West)' : '(West to East)'}`
+                                        :
+                                        <>
+                                            {category.label}
+                                            <span>
+                                                {!!category.sortBy && sortBy === category.sortBy ?
+                                                    sortBy && sort === 'desc' ?
+                                                        <FontAwesomeIcon icon={faSortDown} /> :
+                                                        <FontAwesomeIcon icon={faSortUp} />
+                                                    :
+                                                    !!category.sortBy && <FontAwesomeIcon icon={faSort} />}
+                                            </span>
+                                        </>
+                                    }
+                                </th>
+                            );
+                        })
+                    }
+                </tr>
                 {
-                    Categories.map((category) => {
+                    this.sortRows().map((segment, index) => {
                         return (
-                            <th
-                                key={category.sortBy}
-                                onClick={() => this.handleSort(category.sortBy)}>
-                                {category.label === 'Segment' ?
-                                    `${category.label} ${startFrom === 'east' ? '(East to West)' : '(West to East)'}`
-                                    :
-                                    <React.Fragment>
-                                        {category.label}
-                                        <span>
-                                            {!!category.sortBy && sortBy === category.sortBy ?
-                                                sortBy && sort === 'desc' ? 
-                                                    <FontAwesomeIcon icon={faSortDown} /> :
-                                                    <FontAwesomeIcon icon={faSortUp} /> 
-                                                :
-                                                !!category.sortBy && <FontAwesomeIcon icon={faSort} />}
-                                        </span>
-                                    </React.Fragment>
+                            <tr key={index}>
+                                {
+                                    Categories.map((category, index) => {
+                                        return (
+                                            <td key={index}>
+                                                <span>
+                                                    {
+                                                        segmentStatus[segment.segment].dateCompleted && category.key === 'segment' &&
+                                                        <FontAwesomeIcon icon={faCheckCircle} />
+                                                    }
+                                                </span>
+                                                {segment[category.key]}
+                                            </td>
+                                        );
+                                    })
                                 }
-                            </th>
+                            </tr>
                         );
                     })
                 }
-            </tr>
-            {
-                this.sortRows().map((segment, index) => {
-                    return (
-                        <tr key={index}>
-                            {
-                                Categories.map((category, index) => {
-                                    return (
-                                        <td key={index}>
-                                            <span>
-                                                {
-                                                    segmentStatus[segment.segment].dateCompleted && category.key === 'segment' && 
-                                                        <FontAwesomeIcon icon={faCheckCircle} />
-                                                }
-                                            </span>
-                                            {segment[category.key]}
-                                        </td>
-                                    );
-                                })
-                            }
-                        </tr>
-                    );
-                })
-            }
-            </React.Fragment>
+            </>
         );
     }
 }

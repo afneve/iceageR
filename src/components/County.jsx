@@ -21,7 +21,7 @@ const Segment = (props) => {
     }
 
     return (
-        <React.Fragment>
+        <>
             <div className="county">
                 <h2 className="county-name">
                     <a
@@ -35,7 +35,7 @@ const Segment = (props) => {
             <SegmentList
                 segments={countySegments}
             />
-        </React.Fragment>
+        </>
     )
 }
 

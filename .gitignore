@@ -29,3 +29,5 @@ yarn-error.log*
 package.json
 
 src/.jshintrc
+
+crawler.js

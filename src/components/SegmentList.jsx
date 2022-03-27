@@ -1,48 +1,46 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRestroom, faTint } from '@fortawesome/free-solid-svg-icons';
 
-class SegmentList extends Component {
-    render() {
-        return (
-            <div className="segment-list">
-                {this.props.segments.map((segment) => {
-                    return (
-                        <div 
-                            className="segment" 
-                            key={segment.segment}>
-                                <h3 className="segment-name">{segment.segment}</h3>
-                                <div className="segment-summary">{segment.summary}</div>
-                                <div className="segment-info">
-                                    <div>{`Distance: ${segment.iceagetraildistance}`}</div>
-                                    <div>{`Elevation: ${segment.elevation}`}</div>
-                                    <div>{`Ruggedness: ${segment.ruggedness}`}</div>
-                                </div>
-                                <div className="extra-info">
-                                    <div>
-                                        {!!segment.potablewater ? 
-                                            <span className="true">
-                                                <FontAwesomeIcon icon={faTint} color="green" />
-                                            </span> :
-                                            <FontAwesomeIcon icon={faTint} />
-                                        }
-                                    </div>
-                                    <div>
-                                        {!!segment.restrooms ? 
-                                            <span className="true">
-                                                <FontAwesomeIcon icon={faRestroom} color="green" /> 
-                                            </span> :
-                                            <FontAwesomeIcon icon={faRestroom} />
-                                        }
-                                    </div>
-                                </div>
+const SegmentList = () => {
+    return (
+        <div className="segment-list">
+            {this.props.segments.map((segment) => {
+                return (
+                    <div
+                        className="segment"
+                        key={segment.segment}>
+                        <h3 className="segment-name">{segment.segment}</h3>
+                        <div className="segment-summary">{segment.summary}</div>
+                        <div className="segment-info">
+                            <div>{`Distance: ${segment.iceagetraildistance}`}</div>
+                            <div>{`Elevation: ${segment.elevation}`}</div>
+                            <div>{`Ruggedness: ${segment.ruggedness}`}</div>
                         </div>
-                    );
-                })}
-            </div>
-        );
-    }
+                        <div className="extra-info">
+                            <div>
+                                {!!segment.potablewater ?
+                                    <span className="true">
+                                        <FontAwesomeIcon icon={faTint} color="green" />
+                                    </span> :
+                                    <FontAwesomeIcon icon={faTint} />
+                                }
+                            </div>
+                            <div>
+                                {!!segment.restrooms ?
+                                    <span className="true">
+                                        <FontAwesomeIcon icon={faRestroom} color="green" />
+                                    </span> :
+                                    <FontAwesomeIcon icon={faRestroom} />
+                                }
+                            </div>
+                        </div>
+                    </div>
+                );
+            })}
+        </div>
+    );
 }
 
 export default SegmentList;

@@ -9,8 +9,10 @@ import {
     formatCountyName 
 } from '../utils/countyCheck';
 
-const Segment = (props) => {
-    const county = props.match.params.county;
+const Segment = ({
+    match
+}) => {
+    const county = match.params.county;
 
     const countySegments = iceAgeData.filter((segment) => {
         return matchCounties(county, formatCountyName(segment.booksection));

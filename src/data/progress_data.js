@@ -436,7 +436,7 @@ export const segmentStatus = {
         gallery: ""
     },
     "Parnell": {
-        dateCompleted: "",
+        dateCompleted: "10/18/2021",
         gallery: ""
     },
     "Greenbush": {
@@ -444,11 +444,11 @@ export const segmentStatus = {
         gallery: ""
     },
     "LaBudde Creek": {
-        dateCompleted: "",
+        dateCompleted: "10/18/2021",
         gallery: ""
     },
     "Walla Hi": {
-        dateCompleted: "",
+        dateCompleted: "10/18/2021",
         gallery: ""
 	},
 	"City of Manitowoc": {

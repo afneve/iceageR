@@ -4,7 +4,6 @@ import OverallProgress from '../OverallProgress';
 import SegmentProgressRows from '../SegmentProgressRows';
 
 const Progress = () => {
-
     return (
         <>
             <OverallProgress />

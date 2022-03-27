@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { NavLink } from "react-router-dom";
 
 import { countyData } from '../data/county_data';
@@ -16,9 +15,9 @@ const CountyList = () => {
                             return (
                                 <li key={county.countyId}>
                                     <NavLink
-                                        exact
+                                        end
                                         to={`/segments/${formatCountyName(county.countyName)}`}
-                                        activeClassName='selected'>
+                                        className={({ isActive }) => (isActive ? "selected" : "")}>
                                         {county.countyName}
                                     </NavLink>
                                 </li>

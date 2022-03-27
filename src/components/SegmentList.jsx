@@ -1,12 +1,13 @@
 import React from 'react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRestroom, faTint } from '@fortawesome/free-solid-svg-icons';
+import ExtraInfo from './ExtraInfo';
 
-const SegmentList = () => {
+const SegmentList = ({
+    segments
+}) => {
     return (
         <div className="segment-list">
-            {this.props.segments.map((segment) => {
+            {segments.map((segment) => {
                 return (
                     <div
                         className="segment"
@@ -18,24 +19,10 @@ const SegmentList = () => {
                             <div>{`Elevation: ${segment.elevation}`}</div>
                             <div>{`Ruggedness: ${segment.ruggedness}`}</div>
                         </div>
-                        <div className="extra-info">
-                            <div>
-                                {!!segment.potablewater ?
-                                    <span className="true">
-                                        <FontAwesomeIcon icon={faTint} color="green" />
-                                    </span> :
-                                    <FontAwesomeIcon icon={faTint} />
-                                }
-                            </div>
-                            <div>
-                                {!!segment.restrooms ?
-                                    <span className="true">
-                                        <FontAwesomeIcon icon={faRestroom} color="green" />
-                                    </span> :
-                                    <FontAwesomeIcon icon={faRestroom} />
-                                }
-                            </div>
-                        </div>
+                        <ExtraInfo 
+                            potableWater={!!segment.potablewater}
+                            restrooms={!!segment.restrooms}
+                        />
                     </div>
                 );
             })}

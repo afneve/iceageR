@@ -1,28 +1,29 @@
-import React, { Component } from 'react';
-
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { NavLink, useNavigate } from "react-router-dom";
 
 import { countyData } from '../data/county_data';
-
 import { formatCountyName } from '../utils/countyCheck';
 
-const CountyList = () => {
+const CountySelectList = () => {
+    let navigate = useNavigate();
+
+    const handleChange = (value) => {
+        navigate(`/segments/${formatCountyName(countyData[value - 1].countyName)}`);
+    }
+
     return (
-        <select>
-            {countyData.map((county) => {
-                return (
-                    <option value={county.countyId} key={county.countyId}>
-                        <NavLink
-                            exact
-                            to={`/segments/${formatCountyName(county.countyName)}`}
-                            activeClassName='selected'>
+        <div className='mobile-select'>
+            <select onChange={event => handleChange(event.target.value)}>
+                {countyData.map((county) => {
+                    return (
+                        <option value={county.countyId} key={county.countyId}>
                             {county.countyName}
-                        </NavLink>
-                    </option>
-                );
-            })}
-        </select>
+                        </option>
+                    );
+                })}
+            </select>
+        </div>
     );
 }
 
-export default CountyList;
+export default CountySelectList;

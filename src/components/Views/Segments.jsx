@@ -2,23 +2,21 @@ import React from 'react';
 
 import {
     Route,
-    Switch
+    Routes
 } from "react-router-dom";
 
-import County from '../County';
 import CountyList from '../CountyList';
-import CountySelectList from '../CountyList';
+import CountySelectList from '../CountySelectList';
+import { Outlet } from "react-router-dom";
 
 const Segments = () => {
     return (
-        <>
+        <div className='Segments'>
             <CountyList />
             <CountySelectList />
 
-            <Switch>
-                <Route path="/segments/:county" component={County} />
-            </Switch>
-        </>
+            <Outlet />
+        </div>
     );
 }
 

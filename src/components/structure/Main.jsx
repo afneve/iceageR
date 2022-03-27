@@ -2,21 +2,24 @@ import React from 'react';
 
 import {
     Route,
-    Switch
+    Routes
 } from "react-router-dom";
 
 import Progress from '../Views/Progress';
 import Segments from '../Views/Segments';
+import County from '../County';
 import Info from '../Views/Info';
 
 const Main = () => {
     return (
         <main id="ice-age" className="App">
-            <Switch>
-                <Route exact path="/" component={Progress} />
-                <Route path="/segments" component={Segments} />
-                <Route path="/info" component={Info} />
-            </Switch>
+            <Routes>
+                <Route path="/" element={<Progress />} />
+                <Route path="info" element={<Info />} />
+                <Route path="segments" element={<Segments />}>
+                    <Route path=":countyId" element={<County />} />
+                </Route>
+            </Routes>
         </main>
     );
 }

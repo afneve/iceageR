@@ -20,16 +20,16 @@ const NavItems = () => {
 					id={nav.id}
 					key={nav.id}
 					to={nav.route}
-					className="nav-item"
-					activeClassName="selected"
-					exact={nav.route === '/' ? true : false}>
+					className={({ isActive }) => "nav-item" + (isActive ? " selected" : "")}
+					//exact={nav.route === '/' ? true : false}>
+					>
 					{nav.text}
 				</NavLink>
 			);
 		})
 
 		/*
-			<NavLink onClick={this.handleMicrophoneClick} id="microphone" to="/microphone" activeClassName="selected" className="nav-item">
+			<NavLink onClick={this.handleMicrophoneClick} id="microphone" to="/microphone" activeclassname="selected" className="nav-item">
 				<FontAwesomeIcon icon={faMicrophone} />
 			</NavLink>
 		*/

@@ -148,7 +148,34 @@ h4 {
     font-weight: normal;
 }
 
-.fa-check-circle {
+.fa-circle-check {
     color: $ice_green;
     margin-right: 2px;
+}
+
+
+
+.mobile-select select {
+    display: none;
+    border: none;
+    font-size: 19px;
+    font-weight: bold;
+    padding: 5px 0;
+    font-family: "Oxygen", sans-serif;
+    color: #666;
+
+    @include for-phone-only {
+        display: block;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
+
+.County {
+    padding: 0 15px;
+}
+
+.County .county-name a {
+    text-decoration: none !important;
+    color: #0C78C5 !important;
 }

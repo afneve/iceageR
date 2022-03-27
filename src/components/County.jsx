@@ -1,4 +1,5 @@
 import React from 'react';
+import { useParams } from "react-router-dom";
 
 import { iceAgeData } from '../data/ice_age_data';
 
@@ -9,10 +10,9 @@ import {
     formatCountyName 
 } from '../utils/countyCheck';
 
-const Segment = ({
-    match
-}) => {
-    const county = match.params.county;
+const County = (props) => {
+    let params = useParams();
+    const county = params.countyId;
 
     const countySegments = iceAgeData.filter((segment) => {
         return matchCounties(county, formatCountyName(segment.booksection));
@@ -23,8 +23,8 @@ const Segment = ({
     }
 
     return (
-        <>
-            <div className="county">
+        <div className='County'>
+            <div className="countyHeader">
                 <h2 className="county-name">
                     <a
                         target="_blank"
@@ -37,8 +37,8 @@ const Segment = ({
             <SegmentList
                 segments={countySegments}
             />
-        </>
+        </div>
     )
 }
 
-export default Segment;
+export default County;

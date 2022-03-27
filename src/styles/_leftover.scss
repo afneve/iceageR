@@ -1,9 +1,44 @@
-#segments-view {
-    .segment-container {
-        width: 100%;
-        display: inline-block;
-        margin-bottom: 55px;
+.Segments {
+    display: flex
+}
+
+.segment-summary {
+    margin-bottom: 20px;
+}
+
+.County h3 {
+    margin: 0 0 5px;
+}
+
+.segment {
+    width: 100%;
+    margin-bottom: 55px;
+}
+
+.extra-info {
+    margin-top: 20px;
+    font-size: 25px;
+    display: flex;
+
+    .segment-details {
+        margin-right: 10px;
     }
+
+    .yes {
+        .fa-droplet path {
+            fill: $ice-blue;
+        }
+        .fa-restroom path {
+            fill: $ice_green;
+        }
+    }
+}
+
+#segments-view {
+    background: #eee;
+    width: 50%;
+
+    
     .county-name a {
         text-decoration: none !important;
         color: $ice-blue !important;
@@ -12,9 +47,7 @@
         font-size: 20px;
         font-weight: bold;
         font-family: 'Oxygen', sans-serif;
-        width: 30%;
-        background: #eee;
-        float: left;
+        width: 100%;
         box-sizing: border-box;
         select {
             display: none;
@@ -54,7 +87,6 @@
 Styles for list of segments
 */
     #segment-list {
-        float: left;
         width: 70%;
         padding: 0 10px;
         box-sizing: border-box;
@@ -63,9 +95,7 @@ Styles for list of segments
         text-align: left;
         font-weight: bold;
     }
-    .segment-summary {
-        margin-bottom: 20px;
-    }
+
     .segment {
         width: 100%;
         box-sizing: border-box;
@@ -94,24 +124,7 @@ Styles for list of segments
         width: 50%;
         display: inline-block;
     }
-    .extra-info {
-        margin-top: 20px;
-        font-size: 25px;
-        display: flex;
-
-        i {
-            margin-right: 10px;
-        }
-
-        .yes {
-            .fa-tint {
-                color: $ice-blue;
-            }
-            .restroom {
-
-            }
-        }
-    }
+    
     #segment-list a {
         color: #236B8E;
     }
@@ -129,9 +142,7 @@ Styles for list of segments
     .user-segments-view {
         margin-bottom: 15px;
     }
-    .county h3 {
-        margin: 0 0 5px;
-    }
+
     .secondary-location {
         margin-top: 10px;
     }

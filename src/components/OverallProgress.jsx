@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
+import { userData } from '../data/user_data';
 import { iceAgeData } from '../data/ice_age_data';
+import { segmentStatus } from '../data/progress_data';
 /*
 import { matchCounties, formatCountyName } from '../utils/countyCheck';
 
@@ -28,11 +30,27 @@ import { matchCounties, formatCountyName } from '../utils/countyCheck';
 */
 
 const OverallProgress = () => {
-    const [totalTrailDistance, setTotalTrailDistance] = useState(0);
+    // const [totalTrailDistance, setTotalTrailDistance] = useState(0);
+    // const [totalSegments, setTotalSegments] = useState(0);
+    // const [remainingSegments, setRemainingSegments] = useState(0);
 
-    useEffect(() => {
+    // useEffect(() => {
+    //     const totalSegments = iceAgeData.length;
 
-    }, []);
+    //     console.log(userData);
+
+    //     let completedSegments = 0;
+
+    //     for (const property in segmentStatus) {
+    //         if (segmentStatus[property].dateCompleted) {
+    //             completedSegments++;
+    //         }
+    //     }
+
+    //    //  const completedSegments = segmentStatus.filter((segment) => segment.dateCompleted).length;
+    //     setRemainingSegments(totalSegments - completedSegments);
+
+    // }, []);
 
     return (
         <div className="progress-info container">

@@ -1,13 +1,13 @@
 {
-  "main.css": "/iceageR/static/css/main.0892c610.chunk.css",
-  "main.js": "/iceageR/static/js/main.ca421037.chunk.js",
-  "main.js.map": "/iceageR/static/js/main.ca421037.chunk.js.map",
-  "runtime~main.js": "/iceageR/static/js/runtime~main.cc6ea412.js",
-  "runtime~main.js.map": "/iceageR/static/js/runtime~main.cc6ea412.js.map",
-  "static/js/2.53d43789.chunk.js": "/iceageR/static/js/2.53d43789.chunk.js",
-  "static/js/2.53d43789.chunk.js.map": "/iceageR/static/js/2.53d43789.chunk.js.map",
-  "index.html": "/iceageR/index.html",
-  "precache-manifest.c0570dadabe88faebc365432e95ebe17.js": "/iceageR/precache-manifest.c0570dadabe88faebc365432e95ebe17.js",
-  "service-worker.js": "/iceageR/service-worker.js",
-  "static/css/main.0892c610.chunk.css.map": "/iceageR/static/css/main.0892c610.chunk.css.map"
+  "files": {
+    "main.css": "/iceageR/static/css/main.a85d94f6.css",
+    "main.js": "/iceageR/static/js/main.ca7a3e00.js",
+    "index.html": "/iceageR/index.html",
+    "main.a85d94f6.css.map": "/iceageR/static/css/main.a85d94f6.css.map",
+    "main.ca7a3e00.js.map": "/iceageR/static/js/main.ca7a3e00.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a85d94f6.css",
+    "static/js/main.ca7a3e00.js"
+  ]
 }

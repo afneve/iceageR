@@ -13,12 +13,19 @@ const SegmentList = ({
                         className="segment"
                         key={segment.segment}>
                         <h3 className="segment-name">{segment.segment}</h3>
+                        {
+                            segment.gallery && 
+                            <div className='galleryTest'>
+                                <a target='_blank' href={segment.gallery} rel='noreferrer'>View images</a>
+                            </div>
+                        }
                         <div className="segment-summary">{segment.summary}</div>
                         <div className="segment-info">
                             <div>{`Distance: ${segment.iceagetraildistance}`}</div>
                             <div>{`Elevation: ${segment.elevation}`}</div>
                             <div>{`Ruggedness: ${segment.ruggedness}`}</div>
-                        </div>
+                           
+                        </div>                    
                         <ExtraInfo 
                             potableWater={!!segment.potablewater}
                             restrooms={!!segment.restrooms}

@@ -412,27 +412,27 @@ export const segmentStatus = {
         gallery: ""
 	},
 	"Cedar Lakes": {
-        dateCompleted: "",
+        dateCompleted: "04/04/2022",
         gallery: ""
     },
     "West Bend": {
-        dateCompleted: "",
+        dateCompleted: "04/03/2022",
         gallery: ""
     },
     "Southern Kewaskum": {
-        dateCompleted: "",
+        dateCompleted: "04/03/2022",
         gallery: ""
     },
     "Kewaskum": {
-        dateCompleted: "",
+        dateCompleted: "04/03/2022",
         gallery: ""
     },
     "Milwaukee River (Washington Co)": {
-        dateCompleted: "",
+        dateCompleted: "04/03/2022",
         gallery: ""
     },
     "Milwaukee River (Fond Du Lac Co)": {
-        dateCompleted: "",
+        dateCompleted: "04/02/2022",
         gallery: ""
     },
     "Parnell": {
@@ -440,7 +440,7 @@ export const segmentStatus = {
         gallery: ""
     },
     "Greenbush": {
-        dateCompleted: "",
+        dateCompleted: "04/02/2022",
         gallery: ""
     },
     "LaBudde Creek": {

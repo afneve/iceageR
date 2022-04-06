@@ -136,7 +136,7 @@ export const segmentStatus = {
         gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157704702699695"
     },
     "Underdown": {
-        dateCompleted: "",
+        dateCompleted: "09/14/2019",
         gallery: ""
     },
     "Alta Junction": {

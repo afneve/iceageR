@@ -1,4 +1,6 @@
 import React from 'react';
+import { HashRouter } from "react-router-dom";
+
 import './App.scss';
 
 import Header from './components/structure/Header';
@@ -7,11 +9,11 @@ import Footer from './components/structure/Footer';
 
 const App = () => {
   return (
-    <>
+    <HashRouter>
         <Header />
         <Main />
         <Footer />
-    </>
+    </HashRouter>
   );
 }
 

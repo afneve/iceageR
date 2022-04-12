@@ -1,5 +1,5 @@
 export const formatCountyName = (county) => {
-    county = county.trim().toLowerCase().split(" ").join("");
+    county = county.trim().toLowerCase().split(' ').join('');
     county = county.substring(0, county.indexOf('count'));
     county = county.replace('&', '-');
         
@@ -51,7 +51,7 @@ export const getAverage = (array, object) => {
 };
 
 export const enableSpeech = () => {
-    console.log("enabled");
+    console.log('enabled');
     var ignore_onend;
 
     // new instance of speech recognition
@@ -75,12 +75,12 @@ export const enableSpeech = () => {
 
         // get last word detected
         var saidWord = event.results[resultsLength][ArrayLength].transcript;
-        saidWord = saidWord.trim().toLowerCase().split(" ").join("");
+        saidWord = saidWord.trim().toLowerCase().split(' ').join('');
 
         // alert(saidWord);
 
         for (var i = 0; i < ice_age_data.length; i++) {
-            var currentSegment = ice_age_data[i].segment.toLowerCase().split(" ").join("");
+            var currentSegment = ice_age_data[i].segment.toLowerCase().split(' ').join('');
             if (ice_age_data[i].booksection.toLowerCase().includes(saidWord)) {
                 // alert(saidWord);
             }
@@ -88,10 +88,10 @@ export const enableSpeech = () => {
             if (currentSegment.includes(saidWord)) {
                 iceAge.scroll(0);
                 $('#segments').click();
-                $('#segment-filter a[data-index="' + ice_age_data[i].countyId + '"]').click();
+                $('#segment-filter a[data-index='' + ice_age_data[i].countyId + '']').click();
                 $('select').val(ice_age_data[i].countyId);
 
-                iceAge.scroll($('#segments-view .segment[data-index="' + (i + 1) + '"]').position().top - $('nav').height() - 2);
+                iceAge.scroll($('#segments-view .segment[data-index='' + (i + 1) + '']').position().top - $('nav').height() - 2);
                 // alert(saidWord);
             }
         }

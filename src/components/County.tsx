@@ -1,8 +1,6 @@
-import React from 'react';
-import { useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 
 import { iceAgeData } from '../data/ice_age_data';
-
 import SegmentList from './SegmentList';
 
 import { 
@@ -10,7 +8,7 @@ import {
     formatCountyName 
 } from '../utils/countyCheck';
 
-const County = (props) => {
+const County = () => {
     let params = useParams();
     const county = params.countyId;
 
@@ -18,17 +16,17 @@ const County = (props) => {
         return matchCounties(county, formatCountyName(segment.booksection));
     });
 
-    if (!countySegments.length === 0) {
+    if (countySegments.length === 0) {
         return <div>County doesn't have any segments</div>
     }
 
     return (
         <div className='County'>
-            <div className="countyHeader">
-                <h2 className="county-name">
+            <div className='countyHeader'>
+                <h2 className='county-name'>
                     <a
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        target='_blank'
+                        rel='noopener noreferrer'
                         href={`https://www.google.com/#q= ${countySegments[0].booksection}+wi+weather`}>
                         {countySegments[0].booksection}
                     </a>

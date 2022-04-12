@@ -1,4 +1,4 @@
-export const segmentStatus = {
+export const segmentStatus: { [key: string]: any } = {
     "St. Croix Falls": {
         dateCompleted: "",
         gallery: ""

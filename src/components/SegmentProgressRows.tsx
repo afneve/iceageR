@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 import { iceAgeData } from '../data/ice_age_data';
-
-// import { countyData } from '../data/county_data';
 import { segmentStatus } from '../data/progress_data';
 
 import { Categories } from '../config/Categories';
@@ -17,7 +15,7 @@ class SegmentProgressRows extends Component {
         startFrom: ''
     };
 
-    handleSort = (sortBy) => {
+    handleSort = (sortBy:any) => {
         if (!sortBy) {
             return false;
         }
@@ -48,7 +46,7 @@ class SegmentProgressRows extends Component {
             */
         }
 
-        return iceAgeData.sort((a, b) => {
+        return iceAgeData.sort((a:any, b:any) => {
 
             let comparison = 0;
 
@@ -103,11 +101,11 @@ class SegmentProgressRows extends Component {
                     }
                 </tr>
                 {
-                    this.sortRows().map((segment, index) => {
+                    this.sortRows().map((segment:any, index) => {
                         return (
                             <tr key={index}>
                                 {
-                                    Categories.map((category, index) => {
+                                    Categories.map((category:any, index) => {
                                         return (
                                             <td key={index}>
                                                 <span>

@@ -10,7 +10,7 @@ export const Navigation = [
     {
         id: 'Segments',
         text: 'Segments',
-        route: '/segments/polk-burnett',
+        route: '/segments',
         component: ''
     },
     {

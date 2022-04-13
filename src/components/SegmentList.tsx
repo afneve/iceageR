@@ -1,13 +1,21 @@
 import ExtraInfo from './ExtraInfo';
 
+interface SegmentDetails {
+    [key: string]: string | number
+}
+
+interface SegmentListProps {
+    segments: SegmentDetails[];
+}
+
 const SegmentList = ({
     segments
-} : {
-    segments: any
-}) => {
+} : SegmentListProps) => {
+    console.log(segments);
     return (
         <div className='segment-list'>
             {segments.map((segment : any) => {
+                console.log(segments);
                 return (
                     <div
                         className='segment'

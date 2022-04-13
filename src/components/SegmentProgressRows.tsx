@@ -15,7 +15,7 @@ class SegmentProgressRows extends Component {
         startFrom: ''
     };
 
-    handleSort = (sortBy:any) => {
+    handleSort = (sortBy: string) => {
         if (!sortBy) {
             return false;
         }
@@ -46,8 +46,7 @@ class SegmentProgressRows extends Component {
             */
         }
 
-        return iceAgeData.sort((a:any, b:any) => {
-
+        return iceAgeData.sort((a: any, b: any) => {
             let comparison = 0;
 
             const valA = parseFloat(a[sortBy]),
@@ -101,11 +100,15 @@ class SegmentProgressRows extends Component {
                     }
                 </tr>
                 {
-                    this.sortRows().map((segment:any, index) => {
+                    this.sortRows().map((segment: {
+                        [key: string]: string | number
+                    }, index) => {
                         return (
                             <tr key={index}>
                                 {
-                                    Categories.map((category:any, index) => {
+                                    Categories.map((category: {
+                                        [key: string]: string
+                                    }, index) => {
                                         return (
                                             <td key={index}>
                                                 <span>

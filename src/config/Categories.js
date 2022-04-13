@@ -1,35 +1,35 @@
 export const Categories = [
     {
-        'key': 'segment',
-        'sortBy': 'orderId',
-        'label': 'Segment'
+        key: 'segment',
+        sortBy: 'orderId',
+        label: 'Segment'
     },
     {
-        'key': 'iceagetraildistance',
-        'sortBy': 'iceagetraildistance',
-        'label': 'Distance'
+        key: 'iceagetraildistance',
+        sortBy: 'iceagetraildistance',
+        label: 'Distance'
     },
     {
-        'key': 'elevation',
-        'sortBy': 'elevation',
-        'label': 'Elevation'
+        key: 'elevation',
+        sortBy: 'elevation',
+        label: 'Elevation'
     },
     {
-        'key': 'ruggedness',
-        'sortBy': 'ruggedness',
-        'label': 'Ruggedness'
+        key: 'ruggedness',
+        sortBy: 'ruggedness',
+        label: 'Ruggedness'
     },
     {
-        'key': 'booksection',
-        'sortBy': '',
-        'label': 'County'
+        key: 'booksection',
+        sortBy: '',
+        label: 'County'
     }
     /*
     ,
     {
-        'key': 'dateCompleted',
-        'sortBy': 'dateCompleted',
-        'label': ''
+        key: 'dateCompleted',
+        sortBy: 'dateCompleted',
+        label: ''
     }
     */
 ];

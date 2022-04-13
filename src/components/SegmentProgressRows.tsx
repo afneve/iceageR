@@ -1,6 +1,5 @@
 import { Component } from 'react';
 
-import { iceAgeData } from '../data/ice_age_data';
 import { segmentStatus } from '../data/progress_data';
 
 import { Categories } from '../config/Categories';
@@ -8,11 +7,12 @@ import { Categories } from '../config/Categories';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSort, faSortUp, faSortDown, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
-class SegmentProgressRows extends Component {
+class SegmentProgressRows extends Component <{ segments: { [key: string]: string | number; }[] }, { sort: string, sortBy: string, startFrom: string, displayWhichSegments: string }> {
     state = {
         sort: '',
         sortBy: '',
-        startFrom: ''
+        startFrom: '',
+        displayWhichSegments: 'all' // all, completed, uncompleted
     };
 
     handleSort = (sortBy: string) => {
@@ -30,8 +30,10 @@ class SegmentProgressRows extends Component {
     sortRows = () => {
         let sortBy = this.state.sortBy;
 
+        const segments = this.props.segments;
+
         if (!sortBy) {
-            return iceAgeData;
+            return segments;
         }
 
         if (sortBy === 'dateCompleted') {
@@ -46,7 +48,7 @@ class SegmentProgressRows extends Component {
             */
         }
 
-        return iceAgeData.sort((a: any, b: any) => {
+        return segments.sort((a: any, b: any) => {
             let comparison = 0;
 
             const valA = parseFloat(a[sortBy]),
@@ -67,7 +69,8 @@ class SegmentProgressRows extends Component {
         const {
             sort,
             sortBy,
-            startFrom
+            startFrom,
+            displayWhichSegments
         } = this.state;
 
         return (
@@ -103,27 +106,36 @@ class SegmentProgressRows extends Component {
                     this.sortRows().map((segment: {
                         [key: string]: string | number
                     }, index) => {
-                        return (
-                            <tr key={index}>
-                                {
-                                    Categories.map((category: {
-                                        [key: string]: string
-                                    }, index) => {
-                                        return (
-                                            <td key={index}>
-                                                <span>
-                                                    {
-                                                        segmentStatus[segment.segment].dateCompleted && category.key === 'segment' &&
-                                                        <FontAwesomeIcon icon={faCheckCircle} />
-                                                    }
-                                                </span>
-                                                {segment[category.key]}
-                                            </td>
-                                        );
-                                    })
-                                }
-                            </tr>
-                        );
+                        if (
+                            (displayWhichSegments === 'all' && segmentStatus[segment.segment])
+                            ||
+                            (displayWhichSegments === 'completed' && segmentStatus[segment.segment].dateCompleted)
+                            ||
+                            (displayWhichSegments === 'uncompleted' && !segmentStatus[segment.segment].dateCompleted)
+                            ) {
+                            return (
+                                <tr key={index}>
+                                    {
+                                        Categories.map((category: {
+                                            [key: string]: string
+                                        }, index) => {
+                                            return (
+                                                <td key={index}>
+                                                    <span>
+                                                        {
+                                                            segmentStatus[segment.segment].dateCompleted && category.key === 'segment' &&
+                                                            <FontAwesomeIcon icon={faCheckCircle} />
+                                                        }
+                                                    </span>
+                                                    {segment[category.key]}
+                                                </td>
+                                            );
+                                        })
+                                    }
+                                </tr>
+                            );
+                        }
+                       
                     })
                 }
             </>

@@ -37,6 +37,7 @@ const SegmentList = ({
                         <ExtraInfo 
                             potableWater={!!segment.potablewater}
                             restrooms={!!segment.restrooms}
+                            nohiking={segment.nohiking}
                         />
                     </div>
                 );

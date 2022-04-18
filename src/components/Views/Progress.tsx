@@ -6,9 +6,11 @@ import SegmentProgressRows from '../SegmentProgressRows';
 import { iceAgeData } from '../../data/ice_age_data';
 import { segmentStatus } from '../../data/progress_data';
 
+type DisplayState = 'all' | 'completed' | 'uncompleted';
+
 
 const Progress = () => {
-    const [displaySegments, setDisplaySegments] = useState<'all' | 'completed' | 'uncompleted'>('all');
+    const [displaySegments, setDisplaySegments] = useState<DisplayState>('all');
 
     const totalNumberOfSegments = iceAgeData.length;
     const filteredSegments = iceAgeData.filter((segment, index) => {
@@ -23,29 +25,34 @@ const Progress = () => {
         }
     });
 
-    // setDisplaySegments('all');
-
-    const onChange = (event: any) => {
-        setDisplaySegments(event.target.value);
+    const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const value = event.target.value;
+        setDisplaySegments(value as DisplayState);
     };
 
     return (
-        <>
-            <label>
-                <input type='radio' checked={(displaySegments === 'all')} onChange={onChange} value='all' />
-                All
-            </label>
-            <label>
-                <input type='radio' checked={(displaySegments === 'completed')} onChange={onChange} value='completed' />
-                Completed
-            </label>
-            <label>
-                <input type='radio' checked={(displaySegments === 'uncompleted')} onChange={onChange} value='uncompleted'/>
-                Uncompleted
-            </label>
+        <div className='Progress'>
             <OverallProgress />
-            <div className='progress-info container'>
-                <div>Displaying {filteredSegments.length} of {totalNumberOfSegments} segments</div>
+            <div className='Progress-filterInfo'>
+                <div className='Progress-filterInfo-filters Progress-filterInfo-row'>
+                    <label>
+                        <input type='radio' checked={(displaySegments === 'all')} onChange={onChange} value='all' />
+                        All
+                    </label>
+                    <label>
+                        <input type='radio' checked={(displaySegments === 'completed')} onChange={onChange} value='completed' />
+                        Completed
+                    </label>
+                    <label>
+                        <input type='radio' checked={(displaySegments === 'uncompleted')} onChange={onChange} value='uncompleted'/>
+                        Uncompleted
+                    </label>
+                </div>
+                
+                <div className='Progress-filterInfo-row'>Displaying {filteredSegments.length} of {totalNumberOfSegments} segments</div>
+            </div>
+            
+            <div className='Progress-info container'>       
                 <table>
                     <tbody>
                         <SegmentProgressRows
@@ -54,7 +61,7 @@ const Progress = () => {
                     </tbody>
                 </table>
             </div>
-        </>
+        </div>
     );
 }
 

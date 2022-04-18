@@ -1,0 +1,14 @@
+.Progress {
+    &-filterInfo {
+        margin-bottom: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+
+        &-row {
+            margin-bottom: 10px;
+            flex: 1 100%;
+        }
+    }
+}

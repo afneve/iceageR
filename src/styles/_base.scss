@@ -96,6 +96,12 @@ h4 {
     text-align: center;
 }
 
+button {
+    height: 42px;
+    width: 42px;
+    font-size: 22px;
+}
+
 .progressBarContainer {
     @extend %progressBarContainer;
 }
@@ -178,4 +184,9 @@ h4 {
 .County .county-name a {
     text-decoration: none !important;
     color: #0C78C5 !important;
+}
+
+.no-hiking {
+    flex: 1 100%;
+    font-size: 14px;
 }

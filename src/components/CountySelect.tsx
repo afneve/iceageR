@@ -1,12 +1,13 @@
 import { NavLink } from 'react-router-dom';
 
 import { countyData } from '../data/county_data';
-import { formatCountyName } from '../utils/countyCheck';
+import { formatCountyName, removeCounty } from '../utils/countyCheck';
 
 const CountyList = () => {
     return (
         <div id='segments-view'>
             <div id='segment-filter-container'>
+                <div className='county-select-header'>Counties</div>
                 <div id='segment-filter'>
                     <ul>
                         {countyData.map((county) => {
@@ -16,7 +17,7 @@ const CountyList = () => {
                                         end
                                         to={`/segments/${formatCountyName(county.countyName)}`}
                                         className={({ isActive }) => (isActive ? 'selected' : '')}>
-                                        {county.countyName}
+                                        {removeCounty(county.countyName)}
                                     </NavLink>
                                 </li>
                             );

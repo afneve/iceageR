@@ -22,6 +22,7 @@
     margin-top: 20px;
     font-size: 25px;
     display: flex;
+    flex-wrap: wrap;
 
     .segment-details {
         margin-right: 10px;
@@ -35,13 +36,20 @@
             fill: $ice_green;
         }
     }
+
+    .no-hiking {
+        flex: 1 1 100%;
+        font-size: 14px;
+        margin-top: 1rem;
+        color: #C50401;
+    }
 }
 
 #segments-view {
     background: #eee;
     width: 50%;
-    min-width: 215px;
-    max-width: 300px;
+    min-width: 200px;
+    max-width: 215px;
 
     @include for-phone-only {
         display: none;
@@ -123,11 +131,6 @@ Styles for list of segments
         i {
             color: $ice-green;
         }
-    }
-    .no-hiking {
-        margin: 15px 0 5px;
-        font-weight:bold;
-        color: #C50401;
     }
     .segment-info {
         width: 50%;
@@ -328,4 +331,8 @@ Styles for list of segments
     .incomplete {
         background: #666;
     }
+}
+
+.county-select-header {
+    padding: 8px 0 0 8px;
 }

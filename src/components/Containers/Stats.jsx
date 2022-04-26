@@ -77,20 +77,19 @@ const Stats = () => {
     }
 
     for (const property in monthTotals) {
-        console.log(property);
-        console.log(property - 1);
         monthData.push({
             name: months[property - 1].substring(0, 3),
             miles: parseFloat(monthTotals[property].toFixed(1))
         })
     }
 
-    console.log(monthData);
-
-
     return (
         <div id='Stats-view' className='view'>
             <h2>Stats</h2>
+            <p>
+                Note: Miles are only recorded once a segment has been completed. For example, if segment X was started in Jan 2020, but
+                wasn't completed until Mar 2022 the miles count toward Mar 2022. 
+            </p>
             <div className="miles miles-by-year">
                 <h3>Miles per year</h3>
                 <ResponsiveContainer width='100%' height={300}>

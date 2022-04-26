@@ -93,23 +93,25 @@ const Stats = () => {
             <h2>Stats</h2>
             <div className="miles miles-by-year">
                 <h3>Miles per year</h3>
-                <BarChart
-                    width={500}
-                    height={300}
-                    data={yearData}
-                    margin={{
-                        top: 5,
-                        right: 30,
-                        left: 20,
-                        bottom: 5
-                    }}
-                >
-                    <XAxis dataKey="name" />
-                    <YAxis />
-                    <Tooltip />
-                    <Legend />
-                    <Bar dataKey="miles" fill="#0C78C5" />
-                </BarChart>
+                <ResponsiveContainer width='100%' height={300}>
+                    <BarChart
+                        width='100%'
+                        height={300}
+                        data={yearData}
+                        margin={{
+                            top: 5,
+                            right: 0,
+                            left: 0,
+                            bottom: 5
+                        }}
+                    >
+                        <XAxis dataKey="name" />
+                        <YAxis />
+                        <Tooltip />
+                        <Legend />
+                        <Bar dataKey="miles" fill="#0C78C5" />
+                    </BarChart>
+                </ResponsiveContainer>
             </div>
             <div className="miles miles-by-month">
                 <h3>Miles per month</h3>
@@ -120,8 +122,8 @@ const Stats = () => {
                         data={monthData}
                         margin={{
                             top: 5,
-                            right: 30,
-                            left: 20,
+                            right: 0,
+                            left: 0,
                             bottom: 5
                         }}
                     >

@@ -62,17 +62,6 @@ const OverallProgress = ({
             <p></p>
             <p></p>
             <p></p>
-            <div className='box'>
-            {
-                iceAgeData.map((segment:any, index:any) => {
-                    if (segmentStatus[segment.segment].dateCompleted) {
-                        return (<div className='complete' key={index}></div>);
-                    } else {
-                        return (<div className='incomplete' key={index}></div>);
-                    } 
-                })
-            }
-            </div>
         </div>
     );
 }

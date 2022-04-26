@@ -14,6 +14,12 @@ export const Navigation = [
         component: ''
     },
     {
+        id: 'Stats',
+        text: 'Stats',
+        route: '/stats',
+        component: ''
+    },
+    {
         id: 'Info',
         text: 'Info',
         route: '/info',

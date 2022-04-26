@@ -29,7 +29,11 @@ import { matchCounties, formatCountyName } from '../utils/countyCheck';
                     }
 */
 
-const OverallProgress = () => {
+const OverallProgress = ({
+    iceAgeData
+}: any) => {
+
+
     // const [totalTrailDistance, setTotalTrailDistance] = useState(0);
     // const [totalSegments, setTotalSegments] = useState(0);
     // const [remainingSegments, setRemainingSegments] = useState(0);
@@ -58,6 +62,17 @@ const OverallProgress = () => {
             <p></p>
             <p></p>
             <p></p>
+            <div className='box'>
+            {
+                iceAgeData.map((segment:any, index:any) => {
+                    if (segmentStatus[segment.segment].dateCompleted) {
+                        return (<div className='complete' key={index}></div>);
+                    } else {
+                        return (<div className='incomplete' key={index}></div>);
+                    } 
+                })
+            }
+            </div>
         </div>
     );
 }

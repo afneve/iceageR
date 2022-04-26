@@ -32,7 +32,9 @@ const Progress = () => {
 
     return (
         <div className='Progress'>
-            <OverallProgress />
+            <OverallProgress 
+                iceAgeData={iceAgeData}
+            />
             <div className='Progress-filterInfo'>
                 <div className='Progress-filterInfo-filters Progress-filterInfo-row'>
                     <label>

@@ -312,3 +312,20 @@ Styles for list of segments
         }
     }
 }
+
+.box {
+    display: flex;
+
+    div {
+        width: 20px;
+        height: 5px;
+    }
+
+    .complete {
+        background: $ice-green
+    }
+
+    .incomplete {
+        background: #666;
+    }
+}

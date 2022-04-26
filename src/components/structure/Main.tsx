@@ -3,20 +3,22 @@ import {
     Routes
 } from 'react-router-dom';
 
-import Progress from '../Views/Progress';
-import Segments from '../Views/Segments';
+import Progress from '../Containers/Progress';
+import Segments from '../Containers/Segments';
 import County from '../County';
-import Info from '../Views/Info';
+import Info from '../Containers/Info';
+import Stats from '../Containers/Stats';
 
 const Main = () => {
     return (
         <main id='ice-age' className='App'>
             <Routes>
                 <Route path='/' element={<Progress />} />
-                <Route path='info' element={<Info />} />
                 <Route path='segments' element={<Segments />}>
                     <Route path=':countyId' element={<County />} />
                 </Route>
+                <Route path='stats' element={<Stats />} />
+                <Route path='info' element={<Info />} />
             </Routes>
         </main>
     );

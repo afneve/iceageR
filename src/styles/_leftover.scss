@@ -51,6 +51,10 @@
     min-width: 200px;
     max-width: 215px;
 
+    .darkMode & {
+        background: #333;
+    }
+
     @include for-phone-only {
         display: none;
     }
@@ -82,8 +86,19 @@
     #segment-filter {
         background: #eee;
         box-sizing: border-box;
+
+        .darkMode & {
+            background: #333;
+            color: white;
+        }
+
         .selected {
             background: white !important;
+
+            .darkMode & {
+                background: #000 !important;
+                color: white;
+            }
         }
         .complete {
             background: $ice-yellow;
@@ -97,6 +112,10 @@
                 padding: 8px;
                 color: black;
                 text-decoration: none;
+
+                .darkMode & {
+                    color: white;
+                }
             }
         }
     }
@@ -336,3 +355,71 @@ Styles for list of segments
 .county-select-header {
     padding: 8px 0 0 8px;
 }
+
+
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    &-label {
+      display: block;
+      overflow: hidden;
+      cursor: pointer;
+      border: 0 solid #bbb;
+      border-radius: 20px;
+      margin: 0;
+    }
+    &-inner {
+      display: block;
+      width: 200%;
+      margin-left: -100%;
+      transition: margin 0.3s ease-in 0s;
+    }
+    &-disabled {
+      background-color: #ddd;
+      cursor: not-allowed;
+      &:before {
+        background-color: #ddd;
+        cursor: not-allowed;
+      }
+    }
+    &-switch {
+      display: block;
+      width: 24px;
+      margin: 5px;
+      background: #fff;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 40px;
+      border: 0 solid #bbb;
+      border-radius: 20px;
+      transition: all 0.3s ease-in 0s;
+    }
+    &-checkbox:checked + &-label {
+      .toggle-switch-inner {
+        margin-left: 0;
+      }
+      .toggle-switch-switch {
+        right: 0px;
+      }
+    }
+    &.small-switch {
+        width: 40px;
+        .toggle-switch-inner {
+          &:after,
+          &:before {
+            content: "";
+            height: 20px;
+            line-height: 20px;
+          }
+        }
+        .toggle-switch-switch {
+          width: 16px;
+          right: 20px;
+          margin: 2px;
+        }
+      }
+  }

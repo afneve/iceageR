@@ -1,7 +1,9 @@
+import Toggle from '../Toggle';
+
 const Info = () => {
     return (
         <div id='info-view' className='view'>
-            <h2>Extra Information</h2>
+            <h2>Information</h2>
             <>
                 <a
                     target='_blank'
@@ -21,6 +23,10 @@ const Info = () => {
                     href='https://www.facebook.com/groups/214797715197465/'>
                     Facebook Group
                 </a>
+            </>
+            <h2>Settings</h2>
+            <>
+               <Toggle name='test' />
             </>
         </div>
     );

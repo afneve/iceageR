@@ -201,6 +201,6 @@ button {
     color: #0C78C5 !important;
 }
 
-#info-view h2 {
+#info-view h2:nth-child(1n + 2){
     margin-top: 40px;
 }

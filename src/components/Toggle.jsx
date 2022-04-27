@@ -7,7 +7,6 @@ const Toggle = ({
 
     const [checked, setChecked] = useState(darkMode ? darkMode : false);
 
-
     const onChange = () => {
         const body = document.body;
 
@@ -23,8 +22,6 @@ const Toggle = ({
 
         }
     };
-
-    console.log(checked);
 
     return (
         <div className='toggle-switch'>

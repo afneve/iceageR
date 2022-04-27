@@ -15,6 +15,9 @@ const customStyles = {
       color: 'black',
       width: '50%'
     },
+    overlay: {
+        backgroundColor: 'rgba(0, 0, 0, 0.75)'
+    }
   };
 
 Modal.setAppElement('#root');
@@ -62,16 +65,27 @@ const ExtraInfo = ({
 
     return (
         <div className='extra-info'>
-            <button onClick={() => handleClick(potableWater)} aria-label='Show water info'>
+            <button 
+                onClick={() => handleClick(potableWater)}
+                disabled={potableWater ? false : true}
+                aria-label='Show water info'
+            >
                 <FontAwesomeIcon icon={faTint} color={potableWater ? 'blue' : 'grey'} />
             </button>
-            <button onClick={() => handleClick(restrooms)} aria-label='Show restroom info'>
+            <button
+                onClick={() => handleClick(restrooms)}
+                disabled={restrooms ? false : true}
+                aria-label='Show restroom info'
+            >
                 <FontAwesomeIcon icon={faRestroom} color={restrooms ? 'green' : 'grey'} />
             </button>
             {
                 nohiking &&
-                <div className='no-hiking'>Hiking Restrictions: {nohiking}</div>
-
+                <div className='no-hiking'>
+                    <div className='deer'>🦌</div>
+                    <div>Hiking Restrictions: <br />{nohiking}</div> 
+                   
+                </div>
             }
             <Modal
                 isOpen={modalIsOpen}
@@ -83,25 +97,6 @@ const ExtraInfo = ({
                 {modalText}
             </Modal>
         </div>
-
-        // <div className='extra-info'>
-        //     <div>
-        //         {!!segment.potablewater ?
-        //             <span className='true'>
-        //                 <FontAwesomeIcon icon={faTint} color='green' />
-        //             </span> :
-        //             <FontAwesomeIcon icon={faTint} />
-        //         }
-        //     </div>
-        //             </span> :
-        //             <FontAwesomeIcon icon={faRestroom} />
-        //         }
-        //     </div>
-        // </div>       //     <div>
-        //         {!!segment.restrooms ?
-        //             <span className='true'>
-        //                 <FontAwesomeIcon icon={faRestroom} color='green' />
-
     );
 }
 

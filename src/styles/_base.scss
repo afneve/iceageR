@@ -112,9 +112,16 @@ h4 {
 
 button {
     height: 42px;
-    width: 42px;
-    font-size: 18px;
+    min-width: 42px;
+    font-size: 28px;
     cursor: pointer;
+    background: none;
+    border: none;
+    margin: 0px 9px;
+}
+
+.deer {
+    font-size: 35px;
 }
 
 .progressBarContainer {
@@ -203,4 +210,11 @@ button {
 
 #info-view h2:nth-child(1n + 2){
     margin-top: 40px;
+}
+
+.ReactModal__Content {
+    .darkMode & {
+        color: white !important;
+        background-color: black !important;
+    }
 }

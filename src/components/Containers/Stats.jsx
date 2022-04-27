@@ -6,14 +6,14 @@ import {
     Tooltip,
     Legend,
     ResponsiveContainer
-} from "recharts";
+} from 'recharts';
 
 import { iceAgeData } from '../../data/ice_age_data';
 import { segmentStatus } from '../../data/progress_data';
 
 const Stats = () => {
-    const months = ["January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December"
+    const months = ['January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
     ];
 
     let monthTotals = {};
@@ -25,12 +25,6 @@ const Stats = () => {
 
     let date, year, month, distance;
 
-    const data = [
-        {
-            name: "Jan",
-            miles: 2400
-        }
-    ];
 
     //Push any completed segments to new array
     for (let i = 0; i < iceAgeData.length; i++) {
@@ -72,25 +66,29 @@ const Stats = () => {
     for (const property in yearTotals) {
         yearData.push({
             name: property,
-            miles: parseFloat(yearTotals[property].toFixed(1))
+            miles: parseFloat(yearTotals[property].toFixed(1)),
+            unit: 'miles'
         })
     }
 
     for (const property in monthTotals) {
         monthData.push({
             name: months[property - 1].substring(0, 3),
-            miles: parseFloat(monthTotals[property].toFixed(1))
+            miles: parseFloat(monthTotals[property].toFixed(1)),
+            unit: 'miles'
         })
     }
+
+    console.log(yearData);
 
     return (
         <div id='Stats-view' className='view'>
             <h2>Stats</h2>
             <p>
                 Note: Miles are only recorded once a segment has been completed. For example, if segment X was started in Jan 2020, but
-                wasn't completed until Mar 2022 the miles count toward Mar 2022. 
+                wasn't completed until Mar 2022 the miles count toward Mar 2022.
             </p>
-            <div className="miles miles-by-year">
+            <div className='miles miles-by-year'>
                 <h3>Miles per year</h3>
                 <ResponsiveContainer width='100%' height={300}>
                     <BarChart
@@ -104,15 +102,21 @@ const Stats = () => {
                             bottom: 5
                         }}
                     >
-                        <XAxis dataKey="name" />
+                        <XAxis dataKey='name' />
                         <YAxis />
-                        <Tooltip />
+                        <Tooltip
+                            formatter={
+                                (value, name, props) => {
+                                    return [`${value} miles`, `${props.payload.name}`]
+                                }
+                            }
+                        />
                         <Legend />
-                        <Bar dataKey="miles" fill="#0C78C5" />
+                        <Bar dataKey='miles' fill='#0C78C5' />
                     </BarChart>
                 </ResponsiveContainer>
             </div>
-            <div className="miles miles-by-month">
+            <div className='miles miles-by-month'>
                 <h3>Miles per month</h3>
                 <ResponsiveContainer width='100%' height={300}>
                     <BarChart
@@ -126,11 +130,17 @@ const Stats = () => {
                             bottom: 5
                         }}
                     >
-                        <XAxis dataKey="name" />
+                        <XAxis dataKey='name' />
                         <YAxis />
-                        <Tooltip />
+                        <Tooltip
+                            formatter={
+                                (value, name, props) => {
+                                    return [`${value} miles`, `${props.payload.name}`]
+                                }
+                            }
+                        />
                         <Legend />
-                        <Bar dataKey="miles" fill="#0C78C5" />
+                        <Bar dataKey='miles' fill='#0C78C5' />
                     </BarChart>
                 </ResponsiveContainer>
             </div>
@@ -143,7 +153,7 @@ export default Stats;
 /*
            yearTotalsProps.forEach(function (key) {
                if (yearTotals.hasOwnProperty(key)) {
-                   layoutHTML += '<div class="year">';
+                   layoutHTML += '<div class='year'>';
                    layoutHTML += '<h4>' + key + '</h4>';
                    layoutHTML += '<p>' + yearTotals[key].toFixed(1) + '</p>';
                    layoutHTML += '</div>';
@@ -153,11 +163,11 @@ export default Stats;
    
            layoutHTML += '</div>';
    
-           layoutHTML += '<div class="miles miles-by-month">';
+           layoutHTML += '<div class='miles miles-by-month'>';
            layoutHTML += '<h3>Miles per month</h3>';
    
            for (let i = 0; i < iceAge.months.length; i++) {
-               layoutHTML += '<div class="month">';
+               layoutHTML += '<div class='month'>';
                layoutHTML += '<h4>' + iceAge.months[i] + '</h4>';
                if (monthTotals.hasOwnProperty(i + 1)) {
                    layoutHTML += '<p>' + monthTotals[i + 1].toFixed(1) + '</p>';
@@ -169,7 +179,7 @@ export default Stats;
            /*
            for (var key in monthTotals) {
                if (monthTotals.hasOwnProperty(key)) {
-                   layoutHTML += '<div class="month">';
+                   layoutHTML += '<div class='month'>';
                    layoutHTML += '<h4>' + iceAge.months[key - 1] + '</h4>';
                    layoutHTML += '<p>' + monthTotals[key].toFixed(1) + '</p>';
                    layoutHTML += '</div>';

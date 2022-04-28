@@ -7,14 +7,14 @@ import { Categories } from '../config/Categories';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSort, faSortUp, faSortDown, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
-class SegmentProgressRows extends Component <{ segments: { [key: string]: string | number; }[] }, { sort: string, sortBy: string, startFrom: string, displayWhichSegments: string }> {
+class SegmentProgressRows extends Component<{ segments: { [key: string]: string | number; }[] }, { sort: string, sortBy: string, startFrom: string, displayWhichSegments: string }> {
     state = {
         sort: '',
         sortBy: '',
         startFrom: '',
         displayWhichSegments: 'all' // all, completed, uncompleted
     };
-    
+
 
     handleSort = (sortBy: string) => {
         if (!sortBy) {
@@ -89,27 +89,31 @@ class SegmentProgressRows extends Component <{ segments: { [key: string]: string
                         Categories.map((category) => {
                             const categoryLabel = isMobile ? category.label.substring(0, 4) + '.' : category.label;
 
-                            return (
-                                <th
-                                    key={category.sortBy}
-                                    onClick={() => this.handleSort(category.sortBy)}>
-                                    {category.label === 'Segment' ?
-                                        `${categoryLabel} ${isMobile ? directionLabelMobile : directionLabel}`
-                                        :
-                                        <>
-                                            {categoryLabel}
-                                            <span>
-                                                {!!category.sortBy && sortBy === category.sortBy ?
-                                                    sortBy && sort === 'desc' ?
-                                                        <FontAwesomeIcon icon={faSortDown} /> :
-                                                        <FontAwesomeIcon icon={faSortUp} />
-                                                    :
-                                                    !!category.sortBy && <FontAwesomeIcon icon={faSort} />}
-                                            </span>
-                                        </>
-                                    }
-                                </th>
-                            );
+                            if (isMobile && category.key === 'booksection') {
+                                return '';
+                            } else {
+                                return (
+                                    <th
+                                        key={category.sortBy}
+                                        onClick={() => this.handleSort(category.sortBy)}>
+                                        {category.label === 'Segment' ?
+                                            `${categoryLabel} ${isMobile ? directionLabelMobile : directionLabel}`
+                                            :
+                                            <>
+                                                {categoryLabel}
+                                                <span>
+                                                    {!!category.sortBy && sortBy === category.sortBy ?
+                                                        sortBy && sort === 'desc' ?
+                                                            <FontAwesomeIcon icon={faSortDown} /> :
+                                                            <FontAwesomeIcon icon={faSortUp} />
+                                                        :
+                                                        !!category.sortBy && <FontAwesomeIcon icon={faSort} />}
+                                                </span>
+                                            </>
+                                        }
+                                    </th>
+                                );
+                            }
                         })
                     }
                 </tr>
@@ -125,38 +129,44 @@ class SegmentProgressRows extends Component <{ segments: { [key: string]: string
                             (displayWhichSegments === 'completed' && segmentStatus[segment.segment].dateCompleted)
                             ||
                             (displayWhichSegments === 'uncompleted' && !segmentStatus[segment.segment].dateCompleted)
-                            ) {
+                        ) {
                             return (
                                 <tr key={index}>
                                     {
                                         Categories.map((category: {
                                             [key: string]: string
                                         }, index) => {
-                                            return (
-                                                <td key={index}>
-                                                    <span>
+                                            if (isMobile && category.key === 'booksection') {
+                                                return '';
+                                            }
+                                            else {
+                                                return (
+                                                    <td key={index}>
+                                                        <span>
+                                                            {
+                                                                segmentStatus[segment.segment].dateCompleted && category.key === 'segment' &&
+                                                                <FontAwesomeIcon icon={faCheckCircle} />
+                                                            }
+                                                        </span>
+                                                        {segment[category.key]}
                                                         {
-                                                            segmentStatus[segment.segment].dateCompleted && category.key === 'segment' &&
-                                                            <FontAwesomeIcon icon={faCheckCircle} />
+                                                            debugMode && category.key === 'segment' &&
+                                                            `(${segment.orderId})`
                                                         }
-                                                    </span>
-                                                    {segment[category.key]}
-                                                    {
-                                                        debugMode && category.key === 'segment' &&
-                                                        `(${segment.orderId})`
-                                                    }
-                                                    {
-                                                        debugMode && category.key === 'booksection' &&
-                                                        `(${segment.countyId})`
-                                                    }
-                                                </td>
-                                            );
+                                                        {
+                                                            debugMode && category.key === 'booksection' &&
+                                                            `(${segment.countyId})`
+                                                        }
+                                                    </td>
+                                                );
+                                            }
+
                                         })
                                     }
                                 </tr>
                             );
                         }
-                       
+
                     })
                 }
             </>

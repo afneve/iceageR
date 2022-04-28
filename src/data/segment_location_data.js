@@ -1,4 +1,4 @@
-segment_id_location_data = [{
+export const locationData = [{
 	"segment_id": "1",
 	"segment": "St. Croix Falls ",
 	"westLat": "45 23.979",
@@ -621,6 +621,15 @@ segment_id_location_data = [{
 	"east_gps_id": ""
 }, {
 	"segment_id": "70",
+	"segment": "Springfield Hill",
+	"westLat": "",
+	"westLong": "",
+	"eastLat": "",
+	"eastLong": "",
+	"west_gps_id": "",
+	"east_gps_id": ""
+}, {
+	"segment_id": "71",
 	"segment": "Indian Lake ",
 	"westLat": "43 11.744",
 	"westLong": "89 37.23",
@@ -629,7 +638,7 @@ segment_id_location_data = [{
 	"west_gps_id": "DA28",
 	"east_gps_id": "DA18"
 }, {
-	"segment_id": "71",
+	"segment_id": "72",
 	"segment": "Table Bluff ",
 	"westLat": "43 8.644",
 	"westLong": "89 40.210",
@@ -638,7 +647,7 @@ segment_id_location_data = [{
 	"west_gps_id": "DA17",
 	"east_gps_id": "DA16"
 }, {
-	"segment_id": "72",
+	"segment_id": "73",
 	"segment": "Cross Plains ",
 	"westLat": "43 7.103",
 	"westLong": "89 39.127",
@@ -647,7 +656,7 @@ segment_id_location_data = [{
 	"west_gps_id": "DA29",
 	"east_gps_id": "DA13"
 }, {
-	"segment_id": "73",
+	"segment_id": "74",
 	"segment": "Valley View ",
 	"westLat": "43 2.516",
 	"westLong": "89 35.764",
@@ -656,7 +665,7 @@ segment_id_location_data = [{
 	"west_gps_id": "DA11",
 	"east_gps_id": "DA8"
 }, {
-	"segment_id": "74",
+	"segment_id": "75",
 	"segment": "Madison",
 	"westLat": "43 1.377",
 	"westLong": "89 33.182",
@@ -665,7 +674,7 @@ segment_id_location_data = [{
 	"west_gps_id": "DA7",
 	"east_gps_id": "DA30"
 }, {
-	"segment_id": "75",
+	"segment_id": "76",
 	"segment": "Verona",
 	"westLat": "43 0.956",
 	"westLong": "89 31.187",
@@ -674,7 +683,7 @@ segment_id_location_data = [{
 	"west_gps_id": "DA30",
 	"east_gps_id": "DA31"
 }, {
-	"segment_id": "76",
+	"segment_id": "77",
 	"segment": "Montrose ",
 	"westLat": "42 56.602",
 	"westLong": "89 28.92",
@@ -683,7 +692,7 @@ segment_id_location_data = [{
 	"west_gps_id": "DA32",
 	"east_gps_id": "DA3"
 }, {
-	"segment_id": "77",
+	"segment_id": "78",
 	"segment": "Brooklyn Wildlife ",
 	"westLat": "42 52.548",
 	"westLong": "89 29.525",
@@ -692,7 +701,7 @@ segment_id_location_data = [{
 	"west_gps_id": "DA3",
 	"east_gps_id": "DA1"
 }, {
-	"segment_id": "78",
+	"segment_id": "79",
 	"segment": "Monticello ",
 	"westLat": "42 49.713",
 	"westLong": "89 33.151",
@@ -701,7 +710,7 @@ segment_id_location_data = [{
 	"west_gps_id": "GR7",
 	"east_gps_id": "GR8"
 }, {
-	"segment_id": "79",
+	"segment_id": "80",
 	"segment": "Albany",
 	"westLat": "42 44.582",
 	"westLong": "89 34.738",
@@ -710,7 +719,7 @@ segment_id_location_data = [{
 	"west_gps_id": "GR8",
 	"east_gps_id": "GR1"
 }, {
-	"segment_id": "80",
+	"segment_id": "81",
 	"segment": "Arbor Ridge",
 	"westLat": "42 42.406",
 	"westLong": "89 4.287",
@@ -719,7 +728,7 @@ segment_id_location_data = [{
 	"west_gps_id": "RO16",
 	"east_gps_id": "RO11"
 }, {
-	"segment_id": "81",
+	"segment_id": "82",
 	"segment": "Devils Staircase ",
 	"westLat": "42 42.894",
 	"westLong": "89 3.202",
@@ -728,7 +737,7 @@ segment_id_location_data = [{
 	"west_gps_id": "RO11",
 	"east_gps_id": "RO17"
 }, {
-	"segment_id": "82",
+	"segment_id": "83",
 	"segment": "Janesville",
 	"westLat": "42 42.378",
 	"westLong": "89 2.16",
@@ -737,7 +746,7 @@ segment_id_location_data = [{
 	"west_gps_id": "RO17",
 	"east_gps_id": "RO14"
 }, {
-	"segment_id": "83",
+	"segment_id": "84",
 	"segment": "Janesville to Milton ",
 	"westLat": "",
 	"westLong": "",
@@ -746,7 +755,7 @@ segment_id_location_data = [{
 	"west_gps_id": "",
 	"east_gps_id": "ROW"
 }, {
-	"segment_id": "84",
+	"segment_id": "85",
 	"segment": "Milton ",
 	"westLat": "42 46.414",
 	"westLong": "88 58.179",
@@ -755,7 +764,7 @@ segment_id_location_data = [{
 	"west_gps_id": "RO4",
 	"east_gps_id": "RO3"
 }, {
-	"segment_id": "85",
+	"segment_id": "86",
 	"segment": "Storrs Lake",
 	"westLat": "42 46.760",
 	"westLong": "88 55.044",
@@ -764,7 +773,7 @@ segment_id_location_data = [{
 	"west_gps_id": "RO3",
 	"east_gps_id": "RO1"
 }, {
-	"segment_id": "86",
+	"segment_id": "87",
 	"segment": "Clover Valley ",
 	"westLat": "42 47.025",
 	"westLong": "88 46.989 ",
@@ -773,7 +782,7 @@ segment_id_location_data = [{
 	"west_gps_id": "JW10",
 	"east_gps_id": "JW9"
 }, {
-	"segment_id": "87",
+	"segment_id": "88",
 	"segment": "Whitewater Lake ",
 	"westLat": "42 46.82",
 	"westLong": "88 42.211",
@@ -782,7 +791,7 @@ segment_id_location_data = [{
 	"west_gps_id": "JW7",
 	"east_gps_id": "JW13"
 }, {
-	"segment_id": "88",
+	"segment_id": "89",
 	"segment": "Blackhawk",
 	"westLat": "42 48.241",
 	"westLong": "88 39.146",
@@ -791,7 +800,7 @@ segment_id_location_data = [{
 	"west_gps_id": "JW13",
 	"east_gps_id": "JW11"
 }, {
-	"segment_id": "89",
+	"segment_id": "90",
 	"segment": "Blue Spring Lake",
 	"westLat": "42 50.557",
 	"westLong": "88 36.388",
@@ -800,7 +809,7 @@ segment_id_location_data = [{
 	"west_gps_id": "JW11",
 	"east_gps_id": "JW14"
 }, {
-	"segment_id": "90",
+	"segment_id": "91",
 	"segment": "Stony Ridge",
 	"westLat": "42 52.318",
 	"westLong": "88 32.604",
@@ -809,7 +818,7 @@ segment_id_location_data = [{
 	"west_gps_id": "JW14",
 	"east_gps_id": "WK31"
 }, {
-	"segment_id": "91",
+	"segment_id": "92",
 	"segment": "Eagle",
 	"westLat": "42 52.747",
 	"westLong": "88 30.171",
@@ -818,7 +827,7 @@ segment_id_location_data = [{
 	"west_gps_id": "WK31",
 	"east_gps_id": "WK36"
 }, {
-	"segment_id": "92",
+	"segment_id": "93",
 	"segment": "Scuppernong",
 	"westLat": "42 55.136",
 	"westLong": "88 28.4",
@@ -827,7 +836,7 @@ segment_id_location_data = [{
 	"west_gps_id": "WK36",
 	"east_gps_id": "WK15"
 }, {
-	"segment_id": "93",
+	"segment_id": "94",
 	"segment": "Waterville ",
 	"westLat": "42 58.656",
 	"westLong": "88 27.139",
@@ -836,7 +845,7 @@ segment_id_location_data = [{
 	"west_gps_id": "WK14",
 	"east_gps_id": "WK11"
 }, {
-	"segment_id": "94",
+	"segment_id": "95",
 	"segment": "Lapham Peak ",
 	"westLat": "43 0.960",
 	"westLong": "88 26.260",
@@ -845,7 +854,7 @@ segment_id_location_data = [{
 	"west_gps_id": "WK11",
 	"east_gps_id": "WK7"
 }, {
-	"segment_id": "95",
+	"segment_id": "96",
 	"segment": "Delafield ",
 	"westLat": "43 03.101",
 	"westLong": "88 24.840",
@@ -854,7 +863,7 @@ segment_id_location_data = [{
 	"west_gps_id": "WK7",
 	"east_gps_id": "WK32"
 }, {
-	"segment_id": "96",
+	"segment_id": "97",
 	"segment": "Hartland",
 	"westLat": "43 03.269",
 	"westLong": "88 22.289",
@@ -863,7 +872,7 @@ segment_id_location_data = [{
 	"west_gps_id": "WK32",
 	"east_gps_id": "WK33"
 }, {
-	"segment_id": "97",
+	"segment_id": "98",
 	"segment": "Merton",
 	"westLat": "43 7.186",
 	"westLong": "88 20.043",
@@ -872,7 +881,7 @@ segment_id_location_data = [{
 	"west_gps_id": "WK33",
 	"east_gps_id": "WK34"
 }, {
-	"segment_id": "98",
+	"segment_id": "99",
 	"segment": "Monches",
 	"westLat": "43 09.665",
 	"westLong": "88 21.336",
@@ -881,7 +890,7 @@ segment_id_location_data = [{
 	"west_gps_id": "WK34",
 	"east_gps_id": "WK35"
 }, {
-	"segment_id": "99",
+	"segment_id": "100",
 	"segment": "Loew Lake",
 	"westLat": "43 11.586",
 	"westLong": "88 20.778",
@@ -890,7 +899,7 @@ segment_id_location_data = [{
 	"west_gps_id": "WK35",
 	"east_gps_id": "WA17"
 }, {
-	"segment_id": "100",
+	"segment_id": "101",
 	"segment": "Holy Hill ",
 	"westLat": "43 14.191",
 	"westLong": "88 19.709",
@@ -899,7 +908,7 @@ segment_id_location_data = [{
 	"west_gps_id": "WA25",
 	"east_gps_id": ""
 }, {
-	"segment_id": "101",
+	"segment_id": "102",
 	"segment": "Pike Lake",
 	"westLat": "43 17.725",
 	"westLong": "88 19.791",
@@ -908,7 +917,7 @@ segment_id_location_data = [{
 	"west_gps_id": "WA11",
 	"east_gps_id": "WA26"
 },{
-	"segment_id": "102",
+	"segment_id": "103",
 	"segment": "Slinger",
 	"westLat": "43 19.493",
 	"westLong": "88 17.959",
@@ -917,7 +926,7 @@ segment_id_location_data = [{
 	"west_gps_id": "WA26",
 	"east_gps_id": "WA27"
 }, {
-	"segment_id": "103",
+	"segment_id": "104",
 	"segment": "Cedar Lakes",
 	"westLat": "43 20.34",
 	"westLong": "88 16.897",
@@ -926,7 +935,7 @@ segment_id_location_data = [{
 	"west_gps_id": "WA27",
 	"east_gps_id": "WA28"
 }, {
-	"segment_id": "104",
+	"segment_id": "105",
 	"segment": "West Bend ",
 	"westLat": "43 23.889",
 	"westLong": "88 12.659",
@@ -935,7 +944,7 @@ segment_id_location_data = [{
 	"west_gps_id": "WA29",
 	"east_gps_id": "WA30"
 }, {
-	"segment_id": "105",
+	"segment_id": "106",
 	"segment": "Southern Kewaskum",
 	"westLat": "43 27.337",
 	"westLong": "88 12.519",
@@ -944,7 +953,7 @@ segment_id_location_data = [{
 	"west_gps_id": "WA30",
 	"east_gps_id": "WA3"
 }, {
-	"segment_id": "106",
+	"segment_id": "107",
 	"segment": "Kewaskum",
 	"westLat": "43 29.085",
 	"westLong": "88 14.112",
@@ -953,7 +962,7 @@ segment_id_location_data = [{
 	"west_gps_id": "WA31",
 	"east_gps_id": "WA22"
 }, {
-	"segment_id": "107",
+	"segment_id": "108",
 	"segment": "Milwaukee River (Washington Co)",
 	"westLat": "43 29.718",
 	"westLong": "88 12.879",
@@ -962,7 +971,7 @@ segment_id_location_data = [{
 	"west_gps_id": "WA22",
 	"east_gps_id": "SF15"
 }, {
-	"segment_id": "108",
+	"segment_id": "109",
 	"segment": "Milwaukee River (Fond du Lac Co)",
 	"westLat": "43 32.752",
 	"westLong": "88 10.832",
@@ -971,7 +980,7 @@ segment_id_location_data = [{
 	"west_gps_id": "SF15",
 	"east_gps_id": "SF11"
 }, {
-	"segment_id": "109",
+	"segment_id": "110",
 	"segment": "Parnell",
 	"westLat": "43 35.632",
 	"westLong": "88 10.585",
@@ -980,7 +989,7 @@ segment_id_location_data = [{
 	"west_gps_id": "SF11",
 	"east_gps_id": ""
 }, {
-	"segment_id": "110",
+	"segment_id": "111",
 	"segment": "Greenbush ",
 	"westLat": "43 43.446",
 	"westLong": "88 5.821",
@@ -989,7 +998,7 @@ segment_id_location_data = [{
 	"west_gps_id": "SF3",
 	"east_gps_id": "SF12"
 }, {
-	"segment_id": "111",
+	"segment_id": "112",
 	"segment": "LaBudde Creek",
 	"westLat": "43 49.118",
 	"westLong": "88 0.063",
@@ -998,7 +1007,16 @@ segment_id_location_data = [{
 	"west_gps_id": "SF13",
 	"east_gps_id": "SF14"
 }, {
-	"segment_id": "112",
+	"segment_id": "113",
+	"segment": "Walla Hi",
+	"westLat": "",
+	"westLong": "",
+	"eastLat": "",
+	"eastLong": "",
+	"west_gps_id": "",
+	"east_gps_id": ""
+}, {
+	"segment_id": "114",
 	"segment": "City of Manitowoc",
 	"westLat": "44 5.848",
 	"westLong": "87 42.041",
@@ -1007,7 +1025,7 @@ segment_id_location_data = [{
 	"west_gps_id": "MN19",
 	"east_gps_id": "MN20"
 }, {
-	"segment_id": "113",
+	"segment_id": "115",
 	"segment": "City of Dunes",
 	"westLat": "44 7.548",
 	"westLong": "87 36.886",
@@ -1016,7 +1034,7 @@ segment_id_location_data = [{
 	"west_gps_id": "MN20",
 	"east_gps_id": "MN21"
 }, {
-	"segment_id": "114",
+	"segment_id": "116",
 	"segment": "City of Two Rivers",
 	"westLat": "44 8.661",
 	"westLong": "87 35.414",
@@ -1025,7 +1043,7 @@ segment_id_location_data = [{
 	"west_gps_id": "MN21",
 	"east_gps_id": "MN15"
 }, {
-	"segment_id": "115",
+	"segment_id": "117",
 	"segment": "Point Beach ",
 	"westLat": "44 9.455",
 	"westLong": "87 32.728",
@@ -1034,7 +1052,7 @@ segment_id_location_data = [{
 	"west_gps_id": "MN15",
 	"east_gps_id": "MN6"
 }, {
-	"segment_id": "116",
+	"segment_id": "118",
 	"segment": "Mishicot",
 	"westLat": "44 14.423",
 	"westLong": "87 37.812",
@@ -1043,7 +1061,16 @@ segment_id_location_data = [{
 	"west_gps_id": "MN22",
 	"east_gps_id": "MN16"
 }, {
-	"segment_id": "117",
+	"segment_id": "119",
+	"segment": "East Twin River",
+	"westLat": "",
+	"westLong": "",
+	"eastLat": "",
+	"eastLong": "",
+	"west_gps_id": "",
+	"east_gps_id": ""
+}, {
+	"segment_id": "120",
 	"segment": "Tisch Mills ",
 	"westLat": "44 19.436",
 	"westLong": "87 38.640",
@@ -1052,7 +1079,7 @@ segment_id_location_data = [{
 	"west_gps_id": "MN3",
 	"east_gps_id": "DK11"
 }, {
-	"segment_id": "118",
+	"segment_id": "121",
 	"segment": "Kewaunee River ",
 	"westLat": "44 31.236",
 	"westLong": "87 38.517",
@@ -1061,7 +1088,7 @@ segment_id_location_data = [{
 	"west_gps_id": "DK13",
 	"east_gps_id": "DK12"
 }, {
-	"segment_id": "119",
+	"segment_id": "122",
 	"segment": "Forestville ",
 	"westLat": "44 37.55",
 	"westLong": "87 27.596",
@@ -1070,7 +1097,7 @@ segment_id_location_data = [{
 	"west_gps_id": "DK14",
 	"east_gps_id": "DK15"
 }, {
-	"segment_id": "120",
+	"segment_id": "123",
 	"segment": "Sturgeon Bay",
 	"westLat": "44 44.871",
 	"westLong": "87 28.791",

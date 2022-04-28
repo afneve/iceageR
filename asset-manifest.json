@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/iceageR/static/css/main.5464eec9.css",
-    "main.js": "/iceageR/static/js/main.e50f8b5e.js",
+    "main.css": "/iceageR/static/css/main.f4cc75f6.css",
+    "main.js": "/iceageR/static/js/main.8c2997f0.js",
     "index.html": "/iceageR/index.html",
-    "main.5464eec9.css.map": "/iceageR/static/css/main.5464eec9.css.map",
-    "main.e50f8b5e.js.map": "/iceageR/static/js/main.e50f8b5e.js.map"
+    "main.f4cc75f6.css.map": "/iceageR/static/css/main.f4cc75f6.css.map",
+    "main.8c2997f0.js.map": "/iceageR/static/js/main.8c2997f0.js.map"
   },
   "entrypoints": [
-    "static/css/main.5464eec9.css",
-    "static/js/main.e50f8b5e.js"
+    "static/css/main.f4cc75f6.css",
+    "static/js/main.8c2997f0.js"
   ]
 }

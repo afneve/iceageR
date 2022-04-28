@@ -1,10 +1,19 @@
 // import { faMicrophone } from '@fortawesome/free-solid-svg-icons';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+
 export const Navigation = [
+    {
+        id: 'Home',
+        text:  <FontAwesomeIcon icon={faHome} />,
+        route: '/',
+        component: ''
+    },
     {
         id: 'Progress',
         text: 'Progress',
-        route: '/',
+        route: '/progress',
         component: ''
     },
     {

@@ -61,11 +61,13 @@ export const segmentStatus: { [key: string]: any } = {
     },
     "Northern Blue Hills": {
         dateCompleted: "",
-        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157703207779231"
+        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157703207779231",
+        partial: true
     },
     "Southern Blue Hills": {
         dateCompleted: "",
-        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157701446390472"
+        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157701446390472",
+        partial: true
 	},
 	"Chippewa Moraine": {
         dateCompleted: "",
@@ -145,7 +147,8 @@ export const segmentStatus: { [key: string]: any } = {
     },
     "Harrison Hills": {
         dateCompleted: "",
-        gallery: ""
+        gallery: "",
+        partial: true
     },
     "Parrish Hills": {
         dateCompleted: "4/8/2017",
@@ -401,7 +404,8 @@ export const segmentStatus: { [key: string]: any } = {
     },
     "Holy Hill": {
         dateCompleted: "",
-        gallery: ""
+        gallery: "",
+        partial: true
     },
     "Pike Lake": {
         dateCompleted: "10/20/2019",

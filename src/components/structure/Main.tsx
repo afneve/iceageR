@@ -3,6 +3,7 @@ import {
     Routes
 } from 'react-router-dom';
 
+import Home from '../Containers/Home';
 import Progress from '../Containers/Progress';
 import Segments from '../Containers/Segments';
 import County from '../County';
@@ -13,7 +14,8 @@ const Main = () => {
     return (
         <main id='ice-age' className='App'>
             <Routes>
-                <Route path='/' element={<Progress />} />
+                <Route path='/' element={<Home />} />
+                <Route path='progress' element={<Progress />} />
                 <Route path='segments' element={<Segments />}>
                     <Route path=':countyId' element={<County />} />
                 </Route>

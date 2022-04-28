@@ -7,9 +7,7 @@ export const formatCountyName = (county) => {
 };
 
 export const removeCounty = (county) => {
-    console.log(county);
     county = county.substring(0, county.toLowerCase().indexOf('count'));
-    console.log(county);
         
     return county;
 };

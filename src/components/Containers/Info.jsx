@@ -26,8 +26,9 @@ const Info = () => {
             </>
             <h2>Settings</h2>
             <>
-               <Toggle name='darkMode' label='Dark Mode' />
-               <Toggle name='hideCompleted' label='Hide Completed Segments' />
+                <Toggle name='darkMode' label='Dark Mode' />
+                <Toggle name='hideCompleted' label='Hide Completed Segments / Counties' />
+                <Toggle name='debugMode' label='Show segment / county IDs' />
             </>
         </div>
     );

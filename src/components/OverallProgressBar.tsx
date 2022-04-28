@@ -10,6 +10,8 @@ const OverallProgressBar = ({
                 iceAgeData.map((segment:any, index:any) => {
                     if (segmentStatus[segment.segment].dateCompleted) {
                         return (<div className='complete' key={index}></div>);
+                    } else if (segmentStatus[segment.segment].partial) {
+                        return (<div className='partial' key={index}></div>);
                     } else {
                         return (<div className='incomplete' key={index}></div>);
                     } 

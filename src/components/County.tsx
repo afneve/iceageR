@@ -43,8 +43,8 @@ const County = () => {
                         href={`https://www.google.com/#q= ${countySegments[0].booksection}+wi+weather`}>
                         {countySegments[0].booksection}
                     </a>
-                    <div>{`${(countyMilesRemaining).toFixed(1)} miles remaining`}</div>
                 </h2>
+                <div>{`${(countyMilesRemaining).toFixed(1)} miles remaining`}</div>
             </div>
             <SegmentList
                 segments={hideCompleted ? countySegmentsRemaining : countySegments}

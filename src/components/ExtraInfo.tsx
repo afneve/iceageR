@@ -54,12 +54,9 @@ const ExtraInfo = ({
     const noHikingLower: string = nohiking ? nohiking.toLowerCase() : '';
 
     if (noHikingLower.includes('deer') || noHikingLower.includes('hunt') || noHikingLower.includes('gun')) {
-        console.log('Hunting');
     }
     else {
         if (noHikingLower) {
-            console.log('-----------------NO HUNT');
-
         }
     }
 
@@ -70,14 +67,14 @@ const ExtraInfo = ({
                 disabled={potableWater ? false : true}
                 aria-label='Show water info'
             >
-                <FontAwesomeIcon icon={faTint} color={potableWater ? 'blue' : 'grey'} />
+                <FontAwesomeIcon icon={faTint} color={potableWater ? '#0C78C5' : 'grey'} />
             </button>
             <button
                 onClick={() => handleClick(restrooms)}
                 disabled={restrooms ? false : true}
                 aria-label='Show restroom info'
             >
-                <FontAwesomeIcon icon={faRestroom} color={restrooms ? 'green' : 'grey'} />
+                <FontAwesomeIcon icon={faRestroom} color={restrooms ? '#26bf42' : 'grey'} />
             </button>
             {
                 nohiking &&

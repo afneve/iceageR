@@ -11,11 +11,9 @@ interface SegmentListProps {
 const SegmentList = ({
     segments
 } : SegmentListProps) => {
-    console.log(segments);
     return (
         <div className='segment-list'>
             {segments.map((segment : any) => {
-                console.log(segments);
                 return (
                     <div
                         className='segment'

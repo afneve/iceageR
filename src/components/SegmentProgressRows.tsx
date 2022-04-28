@@ -76,6 +76,8 @@ class SegmentProgressRows extends Component <{ segments: { [key: string]: string
 
         const isMobile = (window.innerWidth < 640);
         const hideCompleted = (localStorage.getItem('hideCompleted') === 'true');
+        const debugMode = (localStorage.getItem('debugMode') === 'true');
+
 
         const directionLabel = startFrom === 'east' ? '(East to West)' : '(West to East)';
         const directionLabelMobile = startFrom === 'east' ? '(E to W)' : '(W to E)';
@@ -139,6 +141,14 @@ class SegmentProgressRows extends Component <{ segments: { [key: string]: string
                                                         }
                                                     </span>
                                                     {segment[category.key]}
+                                                    {
+                                                        debugMode && category.key === 'segment' &&
+                                                        `(${segment.orderId})`
+                                                    }
+                                                    {
+                                                        debugMode && category.key === 'booksection' &&
+                                                        `(${segment.countyId})`
+                                                    }
                                                 </td>
                                             );
                                         })

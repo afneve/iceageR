@@ -99,11 +99,17 @@
 
             .darkMode & {
                 background: #000 !important;
-                color: white;
+                color: white !important;
             }
         }
         .complete {
             background: $ice-yellow;
+            
+            a {
+                .darkMode & {
+                    color: black;
+                }
+            }
         }
         ul {
             list-style: none;
@@ -351,6 +357,10 @@ Styles for list of segments
 
     .incomplete {
         background: #666;
+    }
+
+    .partial {
+        background-color: $ice-yellow;
     }
 }
 

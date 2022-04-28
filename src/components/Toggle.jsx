@@ -1,5 +1,8 @@
 import { useState } from 'react';
 
+import Switch from "react-switch";
+
+
 const Toggle = ({
     name,
     label
@@ -25,7 +28,7 @@ const Toggle = ({
 
     return (
         <div className='Toggle'>
-            <div className='toggle-switch'>
+            {/* <div className='toggle-switch'>
                 <label className='' htmlFor={name}>
                     {label}:
                 </label>
@@ -37,7 +40,18 @@ const Toggle = ({
                     name={name}
                     id={name}
                 />
-            </div>
+            </div> */}
+            <label className='' htmlFor={name}>
+                <div>{label}:</div>
+                <Switch 
+                    id={name}
+                    onChange={onChange}
+                    checked={checked} 
+                    onColor='#0C78C5'
+                    uncheckedIcon={false}
+                    checkedIcon={false}
+                />
+            </label>
         </div>
     );
 }

@@ -59,10 +59,6 @@ const Stats = () => {
         }
     }
 
-    console.log(yearTotalsProps);
-    console.log(yearTotals);
-    console.log(monthTotals);
-
     for (const property in yearTotals) {
         yearData.push({
             name: property,

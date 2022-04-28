@@ -36,9 +36,6 @@ const SegmentList = ({
             {segments.map((segment: any) => {
 
                 const [segmentLocationData] = locationData.filter((location) => {
-                    // console.log(segment.orderId);
-                    console.log(location.segment_id);
-                    console.log(segment.orderId)
                     if (Number(location.segment_id) === segment.orderId) {
                         return true;
                     }

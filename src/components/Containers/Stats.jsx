@@ -75,8 +75,6 @@ const Stats = () => {
         })
     }
 
-    console.log(yearData);
-
     return (
         <div id='Stats-view' className='view'>
             <h2>Stats</h2>

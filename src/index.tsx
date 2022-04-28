@@ -8,6 +8,12 @@ const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 
+const darkMode = localStorage.getItem('darkMode');
+
+if (darkMode) {
+  document.body.classList.add('darkMode');
+}
+
 root.render(
     <React.StrictMode>
         <App />

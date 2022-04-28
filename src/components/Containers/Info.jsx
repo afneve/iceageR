@@ -26,7 +26,8 @@ const Info = () => {
             </>
             <h2>Settings</h2>
             <>
-               <Toggle name='test' />
+               <Toggle name='darkMode' label='Dark Mode' />
+               <Toggle name='hideCompleted' label='Hide Completed Segments' />
             </>
         </div>
     );

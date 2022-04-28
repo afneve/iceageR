@@ -2,40 +2,42 @@ import { useState } from 'react';
 
 const Toggle = ({
     name,
+    label
 }) => {
-    const darkMode = (localStorage.getItem('darkMode') === 'true');
+    const stateFromStorage = (localStorage.getItem(name) === 'true');
 
-    const [checked, setChecked] = useState(darkMode ? darkMode : false);
+    const [checked, setChecked] = useState(stateFromStorage ? stateFromStorage : false);
 
     const onChange = () => {
         const body = document.body;
 
         if (checked) {
-            localStorage.removeItem('darkMode');
-            body.classList.remove('darkMode');
+            localStorage.removeItem(name);
+            body.classList.remove(name);
             setChecked(false);
 
         } else {
-            localStorage.setItem('darkMode', true)
-            body.classList.add('darkMode');
+            localStorage.setItem(name, true)
+            body.classList.add(name);
             setChecked(true);
-
         }
     };
 
     return (
-        <div className='toggle-switch'>
-            <label className='' htmlFor={name}>
-                Dark Mode:
-            </label>
-            <input
-                type='checkbox'
-                className='toggle-switch-checkbox'
-                checked={checked}
-                onChange={e => onChange(e.target.checked)}
-                name={name}
-                id={name}
-            />
+        <div className='Toggle'>
+            <div className='toggle-switch'>
+                <label className='' htmlFor={name}>
+                    {label}:
+                </label>
+                <input
+                    type='checkbox'
+                    className='toggle-switch-checkbox'
+                    checked={checked}
+                    onChange={e => onChange(e.target.checked)}
+                    name={name}
+                    id={name}
+                />
+            </div>
         </div>
     );
 }

@@ -12,12 +12,19 @@ type DisplayState = 'all' | 'completed' | 'uncompleted';
 const Progress = () => {
     const [displaySegments, setDisplaySegments] = useState<DisplayState>('all');
 
+    const hideCompleted = (localStorage.getItem('hideCompleted') === 'true');
+
+
     const totalNumberOfSegments = iceAgeData.length;
     const filteredSegments = iceAgeData.filter((segment, index) => {
-        if (
+        if (hideCompleted) {
+            if (!segmentStatus[segment.segment].dateCompleted) {
+                return true;
+            }
+        } else if (
             (displaySegments === 'all' && segmentStatus[segment.segment])
             ||
-            (displaySegments === 'completed' && segmentStatus[segment.segment].dateCompleted)
+            (displaySegments === 'completed' && segmentStatus[segment.segment].dateCompleted && !hideCompleted)
             ||
             (displaySegments === 'uncompleted' && !segmentStatus[segment.segment].dateCompleted)
         ) {
@@ -32,29 +39,35 @@ const Progress = () => {
 
     return (
         <div className='Progress'>
-            <OverallProgress 
+            <OverallProgress
                 iceAgeData={iceAgeData}
             />
             <div className='Progress-filterInfo'>
                 <div className='Progress-filterInfo-filters Progress-filterInfo-row'>
-                    <label>
-                        <input type='radio' checked={(displaySegments === 'all')} onChange={onChange} value='all' />
-                        All
-                    </label>
-                    <label>
-                        <input type='radio' checked={(displaySegments === 'completed')} onChange={onChange} value='completed' />
-                        Completed
-                    </label>
-                    <label>
-                        <input type='radio' checked={(displaySegments === 'uncompleted')} onChange={onChange} value='uncompleted'/>
-                        Uncompleted
-                    </label>
+                    {
+                        !hideCompleted &&
+                        <>
+                            <label>
+                                <input type='radio' checked={(displaySegments === 'all')} onChange={onChange} value='all' />
+                                All
+                            </label>
+                            <label>
+                                <input type='radio' checked={(displaySegments === 'completed')} onChange={onChange} value='completed' />
+                                Completed
+                            </label>
+                            <label>
+                                <input type='radio' checked={(displaySegments === 'uncompleted')} onChange={onChange} value='uncompleted' />
+                                Uncompleted
+                            </label>
+                        </>
+                    }
+
                 </div>
-                
+
                 <div className='Progress-filterInfo-row'>Displaying {filteredSegments.length} of {totalNumberOfSegments} segments</div>
             </div>
-            
-            <div className='Progress-info container'>       
+
+            <div className='Progress-info container'>
                 <table>
                     <tbody>
                         <SegmentProgressRows

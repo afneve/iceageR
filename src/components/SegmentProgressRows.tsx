@@ -75,6 +75,7 @@ class SegmentProgressRows extends Component <{ segments: { [key: string]: string
         } = this.state;
 
         const isMobile = (window.innerWidth < 640);
+        const hideCompleted = (localStorage.getItem('hideCompleted') === 'true');
 
         const directionLabel = startFrom === 'east' ? '(East to West)' : '(West to East)';
         const directionLabelMobile = startFrom === 'east' ? '(E to W)' : '(W to E)';
@@ -115,6 +116,8 @@ class SegmentProgressRows extends Component <{ segments: { [key: string]: string
                         [key: string]: string | number
                     }, index) => {
                         if (
+                            (hideCompleted && !segmentStatus[segment.segment].dateCompleted)
+                            ||
                             (displayWhichSegments === 'all' && segmentStatus[segment.segment])
                             ||
                             (displayWhichSegments === 'completed' && segmentStatus[segment.segment].dateCompleted)

@@ -14,6 +14,7 @@ class SegmentProgressRows extends Component <{ segments: { [key: string]: string
         startFrom: '',
         displayWhichSegments: 'all' // all, completed, uncompleted
     };
+    
 
     handleSort = (sortBy: string) => {
         if (!sortBy) {
@@ -73,20 +74,27 @@ class SegmentProgressRows extends Component <{ segments: { [key: string]: string
             displayWhichSegments
         } = this.state;
 
+        const isMobile = (window.innerWidth < 640);
+
+        const directionLabel = startFrom === 'east' ? '(East to West)' : '(West to East)';
+        const directionLabelMobile = startFrom === 'east' ? '(E to W)' : '(W to E)';
+
         return (
             <>
                 <tr>
                     {
                         Categories.map((category) => {
+                            const categoryLabel = isMobile ? category.label.substring(0, 4) + '.' : category.label;
+
                             return (
                                 <th
                                     key={category.sortBy}
                                     onClick={() => this.handleSort(category.sortBy)}>
                                     {category.label === 'Segment' ?
-                                        `${category.label} ${startFrom === 'east' ? '(East to West)' : '(West to East)'}`
+                                        `${categoryLabel} ${isMobile ? directionLabelMobile : directionLabel}`
                                         :
                                         <>
-                                            {category.label}
+                                            {categoryLabel}
                                             <span>
                                                 {!!category.sortBy && sortBy === category.sortBy ?
                                                     sortBy && sort === 'desc' ?

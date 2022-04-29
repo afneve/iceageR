@@ -35,8 +35,8 @@ const County = () => {
 
     return (
         <div className='County'>
-            <div className='countyHeader'>
-                <h2 className='county-name'>
+            <div className='County-header'>
+                <h2 className='County-name'>
                     <a
                         target='_blank'
                         rel='noopener noreferrer'

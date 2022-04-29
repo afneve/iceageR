@@ -1,0 +1,76 @@
+.CountySelect {
+    background: #eee;
+    width: 50%;
+    min-width: 200px;
+    max-width: 215px;
+
+    h3 {
+        margin: 8px 0 0;
+    }
+
+    .darkMode & {
+        background: #333;
+    }
+
+    &-header {
+        padding: 0px 0 0 8px;
+    }
+
+    &-list {
+        background: #eee;
+        box-sizing: border-box;
+
+        .darkMode & {
+            background: #333;
+            color: white;
+        }
+
+        .selected {
+            background: white !important;
+
+            .darkMode & {
+                background: #000 !important;
+                color: white !important;
+            }
+        }
+
+        .complete {
+            background: $ice-yellow;
+
+            a {
+                .darkMode & {
+                    color: black;
+                }
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            >li>a {
+                font-size: 14px;
+                font-weight: bold;
+                display: block;
+                padding: 8px;
+                color: black;
+                text-decoration: none;
+
+                .darkMode & {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    @include for-phone-only {
+        display: none;
+    }
+
+    @media (max-width: 600px) {
+        &-list {
+            width: 100%;
+            display: none;
+        }
+    }
+}

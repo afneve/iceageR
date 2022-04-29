@@ -1,8 +1,5 @@
 import NavItems from './NavItems';
-import OverallProgressBar from '../OverallProgressBar';
-
-import { iceAgeData } from '../../data/ice_age_data';
-
+import ProgressBar from '../ProgressBar';
 
 
 const Header = () => {
@@ -11,9 +8,7 @@ const Header = () => {
 			<nav>
 				<NavItems />
 			</nav>
-			<OverallProgressBar 
-                iceAgeData={iceAgeData}
-            />
+			<ProgressBar />
 		</header>
 	);
 }

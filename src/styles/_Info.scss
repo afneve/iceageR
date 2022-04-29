@@ -1,0 +1,10 @@
+.Info {
+    a {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    h2:nth-child(1n + 2) {
+        margin-top: 40px;
+    }
+}

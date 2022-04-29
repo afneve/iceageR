@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { countyData } from '../data/county_data';
 import { formatCountyName } from '../utils/countyCheck';
 
 const CountySelectList = ({ 
@@ -13,11 +12,11 @@ const CountySelectList = ({
     let navigate = useNavigate();
     
     useEffect(() => {
-        navigate(`/segments/${formatCountyName(countyData[0].countyName)}`, { replace: true });
+        navigate(`/segments/${formatCountyName(counties[0].countyName)}`, { replace: true });
     }, []);
 
     const handleChange = (value:number) => {
-        const [selectedCounty] = countyData.filter(county => {
+        const [selectedCounty] = counties.filter((county: any) => {
             if (county.countyId === value) {
                 return true;
             } else { return false }
@@ -27,7 +26,7 @@ const CountySelectList = ({
     }
 
     return (
-        <div className='mobile-select'>
+        <div className='CountySelectList'>
             <select onChange={event => handleChange(Number(event.target.value))}>
                 {counties.map((county : any) => {
                     return (

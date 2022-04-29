@@ -61,7 +61,7 @@ const ExtraInfo = ({
     }
 
     return (
-        <div className='extra-info'>
+        <div className='ExtraInfo'>
             <button 
                 onClick={() => handleClick(potableWater)}
                 disabled={potableWater ? false : true}
@@ -78,7 +78,7 @@ const ExtraInfo = ({
             </button>
             {
                 nohiking &&
-                <div className='no-hiking'>
+                <div className='ExtraInfo-restriction'>
                     <div className='deer'>🦌</div>
                     <div>Hiking Restrictions: <br />{nohiking}</div> 
                    

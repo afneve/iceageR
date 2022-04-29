@@ -3,62 +3,50 @@ $ice_yellow: #fce037;
 $ice_green: #26bf42;
 
 @mixin for-phone-only {
-    @media (max-width: 599px) { @content; }
-  }
-  @mixin for-tablet-portrait-up {
-    @media (min-width: 600px) { @content; }
-  }
-  @mixin for-tablet-landscape-up {
-    @media (min-width: 900px) { @content; }
-  }
-  @mixin for-desktop-up {
-    @media (min-width: 1200px) { @content; }
-  }
-  @mixin for-big-desktop-up {
-    @media (min-width: 1800px) { @content; }
-  }
-  
-  // usage
-  .my-box {
-    padding: 10px;
-    
-    @include for-desktop-up {
-      padding: 20px;
+    @media (max-width: 599px) {
+        @content;
     }
-  }
+}
 
-a, a:visited {
+@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-landscape-up {
+    @media (min-width: 900px) {
+        @content;
+    }
+}
+
+@mixin for-desktop-up {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin for-big-desktop-up {
+    @media (min-width: 1800px) {
+        @content;
+    }
+}
+
+body {
+    background: #fff;
+    color: #666;
+    font-family: 'Oxygen', Arial, sans-serif;
+    margin: 0;
+
+    &.darkMode {
+        background: #000;
+        color: white;
+    }
+}
+
+a,
+a:visited {
     color: $ice_blue;
-}
-
-
-%progressBarContainer {
-    height: 6px;
-    width: 100%;
-    box-sizing: border-box;
-
-    .progressBar {
-        height: 100%;
-        background: $ice_yellow;
-        /* Old browsers */
-        background: -moz-linear-gradient(left, $ice_yellow 0%, $ice_green 100%);
-        /* FF3.6-15 */
-        background: -webkit-linear-gradient(left, $ice_yellow 0%, $ice_green 100%);
-        /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to right, $ice_yellow 0%, $ice_green 100%);
-        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$ice_yellow', endColorstr='$ice_green', GradientType=1);
-    }
-}
-
-[data-complete=true] {
-    .progressBar {
-        background: $ice_green;
-    }
-}
-
-.completed {
-    background: $ice_green;
 }
 
 table {
@@ -83,19 +71,11 @@ table {
     td {
         padding: 5px;
     }
-    
 }
 
-body {
-    background: #fff;
-    color: #666;
-    font-family: 'Oxygen', Arial, sans-serif;
-    margin: 0;
-
-    &.darkMode {
-        background: #000;
-        color: white;
-    }
+.fa-circle-check {
+    color: #26bf42;
+    margin-right: 2px;
 }
 
 h2 {
@@ -120,10 +100,6 @@ button {
     margin: 0px 9px;
 }
 
-.deer {
-    font-size: 35px;
-}
-
 .progressBarContainer {
     @extend %progressBarContainer;
 }
@@ -131,85 +107,6 @@ button {
 
 #ice-age {
     padding: 60px 12px 0;
-}
-
-.hide {
-    display: none;
-}
-
-#ice-age-overlay {
-    padding: 20px;
-    width: 80%;
-    box-sizing: border-box;
-    position: fixed;
-    left: 0;
-    right: 0;
-    margin: auto;
-    color: black;
-    font-size: 16px;
-    z-index: 50;
-    background-color: white;
-}
-
-#overlay-screen {
-    background-color: #000;
-    opacity: 0.8;
-    width: 100%;
-    position: fixed;
-    z-index: 30;
-}
-
-.overlay-heading {
-    text-align: left;
-    text-transform: capitalize;
-}
-
-#info-view {
-    a {
-        display: block;
-        margin-bottom: 5px;
-    }
-}
-
-.gallery {
-    margin-left: 20px;
-    font-weight: normal;
-}
-
-.fa-circle-check {
-    color: $ice_green;
-    margin-right: 2px;
-}
-
-
-
-.mobile-select select {
-    display: none;
-    border: none;
-    font-size: 19px;
-    font-weight: bold;
-    padding: 5px 0;
-    font-family: "Oxygen", sans-serif;
-    color: #666;
-
-    @include for-phone-only {
-        display: block;
-        margin-bottom: 10px;
-        width: 100%;
-    }
-}
-
-.County {
-    padding: 0 15px;
-}
-
-.County .county-name a {
-    text-decoration: none !important;
-    color: #0C78C5 !important;
-}
-
-#info-view h2:nth-child(1n + 2){
-    margin-top: 40px;
 }
 
 .ReactModal__Content {
@@ -230,18 +127,40 @@ button {
     margin-bottom: 20px;
 }
 
-.countyHeader {
-    margin-bottom: 30px; 
+.Segments {
+    display: flex;
 
-    h2 {
-        margin: 0;
+    @include for-phone-only {
+        flex-direction: column;
     }
 }
 
-.segment-info {
-    margin-bottom: 15px;
+#HomeNav {
+    max-width: 100px;
 }
 
-.terminus-container {
-    margin-bottom: 20px;
+// Keeping in case I bring progress bar back
+%progressBarContainer {
+    height: 6px;
+    width: 100%;
+    box-sizing: border-box;
+
+    .progressBar {
+        height: 100%;
+        background: $ice_yellow;
+        /* Old browsers */
+        background: -moz-linear-gradient(left, $ice_yellow 0%, $ice_green 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, $ice_yellow 0%, $ice_green 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, $ice_yellow 0%, $ice_green 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$ice_yellow', endColorstr='$ice_green', GradientType=1);
+    }
+}
+
+[data-complete=true] {
+    .progressBar {
+        background: $ice_green;
+    }
 }

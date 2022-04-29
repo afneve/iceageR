@@ -1,9 +1,12 @@
 @import './styles/_base';
-
-
 @import './styles/_header';
 
+// Components
 @import './styles/_Progress';
-
-
-@import './styles/_leftover';
+@import './styles/_ProgressBar';
+@import './styles/_County';
+@import './styles/_Segment';
+@import './styles/_CountySelect';
+@import './styles/_CountySelectList';
+@import './styles/_Info';
+@import './styles/_ExtraInfo';

@@ -1,0 +1,19 @@
+.ExtraInfo {
+    margin-top: 20px;
+    font-size: 25px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &-restriction {
+        flex: 1 1 100%;
+        font-size: 14px;
+        margin-top: 1rem;
+        color: #C50401;
+        display: flex;
+        align-items: center;
+    }
+
+    .deer {
+        font-size: 28px;
+    }
+}

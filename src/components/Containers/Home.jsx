@@ -1,18 +1,21 @@
 import { iceAgeData } from '../../data/ice_age_data';
 import { segmentStatus } from '../../data/progress_data';
 
+
 const Home = () => {
     const totalNumberOfSegments = iceAgeData.length;
     const segmentsCompleted = iceAgeData.filter((segment, index) => {
         if (segmentStatus[segment.segment].dateCompleted) {
             return true;
         }
+        return false;
     });
 
     const partialSegments = iceAgeData.filter((segment, index) => {
         if (segmentStatus[segment.segment].partial) {
             return true;
         }
+        return false;
     });
 
     const partialSegmentMiles = partialSegments.reduce(
@@ -33,9 +36,9 @@ const Home = () => {
     )
 
     return (
-        <div className="Home">
+        <div className='Home'>
             <div>
-                <h2 className="user-miles-remaining">{`${(totalMiles - totalMilesCompleted).toFixed(1)} miles to go`}</h2>
+                <h2 className='user-miles-remaining'>{`${(totalMiles - totalMilesCompleted).toFixed(1)} miles to go`}</h2>
                 <div>{`${totalMilesCompleted} of ${totalMiles} miles completed`}</div>
                 <div>{`${(totalNumberOfSegments - totalNumberOfCompletedSegments)} segments remaining`}</div>
                 <div>{`${partialSegmentMiles} miles of partially completed segments`}</div>
@@ -45,4 +48,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Home;

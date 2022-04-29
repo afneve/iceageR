@@ -7,7 +7,16 @@ import { Categories } from '../config/Categories';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSort, faSortUp, faSortDown, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
-class SegmentProgressRows extends Component<{ segments: { [key: string]: string | number; }[] }, { sort: string, sortBy: string, startFrom: string, displayWhichSegments: string }> {
+class SegmentProgressRows extends Component<{ 
+    segments: { 
+        [key: string]: string | number; 
+    }[] },
+ { 
+     sort: string,
+     sortBy: string,
+     startFrom: string,
+     displayWhichSegments: string 
+}> {
     state = {
         sort: '',
         sortBy: '',
@@ -165,8 +174,9 @@ class SegmentProgressRows extends Component<{ segments: { [key: string]: string 
                                     }
                                 </tr>
                             );
+                        } else {
+                            return null;
                         }
-
                     })
                 }
             </>

@@ -28,19 +28,6 @@ const Toggle = ({
 
     return (
         <div className='Toggle'>
-            {/* <div className='toggle-switch'>
-                <label className='' htmlFor={name}>
-                    {label}:
-                </label>
-                <input
-                    type='checkbox'
-                    className='toggle-switch-checkbox'
-                    checked={checked}
-                    onChange={e => onChange(e.target.checked)}
-                    name={name}
-                    id={name}
-                />
-            </div> */}
             <label className='' htmlFor={name}>
                 <div>{label}:</div>
                 <Switch 

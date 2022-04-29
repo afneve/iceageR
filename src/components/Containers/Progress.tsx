@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-import OverallProgress from '../OverallProgress';
 import SegmentProgressRows from '../SegmentProgressRows';
 
 import { iceAgeData } from '../../data/ice_age_data';
@@ -14,13 +13,10 @@ const Progress = () => {
 
     const hideCompleted = (localStorage.getItem('hideCompleted') === 'true');
 
-
     const totalNumberOfSegments = iceAgeData.length;
     const filteredSegments = iceAgeData.filter((segment, index) => {
         if (hideCompleted) {
-            if (!segmentStatus[segment.segment].dateCompleted) {
-                return true;
-            }
+            return (!segmentStatus[segment.segment].dateCompleted) ? true : false;
         } else if (
             (displaySegments === 'all' && segmentStatus[segment.segment])
             ||
@@ -29,6 +25,8 @@ const Progress = () => {
             (displaySegments === 'uncompleted' && !segmentStatus[segment.segment].dateCompleted)
         ) {
             return true;
+        } else {
+            return false;
         }
     });
 
@@ -39,9 +37,6 @@ const Progress = () => {
 
     return (
         <div className='Progress'>
-            <OverallProgress
-                iceAgeData={iceAgeData}
-            />
             <div className='Progress-filterInfo'>
                 <div className='Progress-filterInfo-filters Progress-filterInfo-row'>
                     {
@@ -61,9 +56,7 @@ const Progress = () => {
                             </label>
                         </>
                     }
-
                 </div>
-
                 <div className='Progress-filterInfo-row'>Displaying {filteredSegments.length} of {totalNumberOfSegments} segments</div>
             </div>
 

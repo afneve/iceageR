@@ -1,0 +1,20 @@
+.ProgressBar {
+    display: flex;
+
+    div {
+        width: 20px;
+        height: 5px;
+    }
+
+    .complete {
+        background: $ice-green
+    }    
+
+    .incomplete {
+        background: #666;
+    }
+
+    .partial {
+        background-color: $ice-yellow;
+    }
+}

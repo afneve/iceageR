@@ -1,0 +1,15 @@
+.CountySelectList select {
+    display: none;
+    border: none;
+    font-size: 19px;
+    font-weight: bold;
+    padding: 5px 0;
+    font-family: 'Oxygen', sans-serif;
+    color: #666;
+
+    @include for-phone-only {
+        display: block;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}

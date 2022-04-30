@@ -22,6 +22,7 @@ const County = () => {
         if (!segmentStatus[segment.segment].dateCompleted) {
             return true;
         }
+        return false;
     });
 
     const countyMilesRemaining = countySegmentsRemaining.reduce(

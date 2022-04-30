@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 
 import { formatCountyName, removeCounty } from '../utils/countyCheck';
 
-import { iceAgeData } from '../data/ice_age_data';
-import { segmentStatus } from '../data/progress_data';
+import { selectIncompleteSegments } from '../utils/getIceAgeData';
+
 
 
 const CountyList = ({ 
@@ -15,22 +15,17 @@ const CountyList = ({
     counties: any
 }) => {
     let navigate = useNavigate();
+    let countyIdSet = new Set();
+    const incompleteSegments = selectIncompleteSegments(undefined);
+
     
     useEffect(() => {
         navigate(`/segments/${formatCountyName(counties[0].countyName)}`, { replace: true });
     }, []);
 
-    let countyIdSet = new Set();
 
-    const segmentsNotCompleted = iceAgeData.filter((segment, index) => {
-        if (!segmentStatus[segment.segment].dateCompleted) {
-            return true;
-        }
-        return false;
-    });
-
-    for (let i = 0; i < segmentsNotCompleted.length; i++) {
-        countyIdSet.add(segmentsNotCompleted[i].countyId);
+    for (let i = 0; i < incompleteSegments.length; i++) {
+        countyIdSet.add(incompleteSegments[i].countyId);
     }
 
     return (

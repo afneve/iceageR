@@ -1,31 +1,21 @@
 import { iceAgeData } from '../../data/ice_age_data';
-import { segmentStatus } from '../../data/progress_data';
+
+import { selectCompletedSegments, selectPartialSegments } from '../../utils/getIceAgeData';
 
 
 const Home = () => {
-    const totalNumberOfSegments = iceAgeData.length;
-    const segmentsCompleted = iceAgeData.filter((segment, index) => {
-        if (segmentStatus[segment.segment].dateCompleted) {
-            return true;
-        }
-        return false;
-    });
+    const completedSegments = selectCompletedSegments();
+    const partialSegments = selectPartialSegments();
 
-    const partialSegments = iceAgeData.filter((segment, index) => {
-        if (segmentStatus[segment.segment].partial) {
-            return true;
-        }
-        return false;
-    });
+    const totalNumberOfSegments = iceAgeData.length;
+    const totalNumberOfCompletedSegments = completedSegments.length;
 
     const partialSegmentMiles = partialSegments.reduce(
         (previousValue, currentValue) => Number(previousValue) + Number(currentValue.iceagetraildistance),
         0
     )
 
-    const totalNumberOfCompletedSegments = segmentsCompleted.length;
-
-    const totalMilesCompleted = segmentsCompleted.reduce(
+    const totalMilesCompleted = completedSegments.reduce(
         (previousValue, currentValue) => Number(previousValue) + Number(currentValue.iceagetraildistance),
         0
     )

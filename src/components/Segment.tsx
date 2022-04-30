@@ -1,25 +1,28 @@
 import ExtraInfo from './ExtraInfo';
+import { LocationData } from '../types/types';
 
 
 const Segment = ({
     segment,
     segmentLocationData
-}: any) => {
-    const convertCoord = (coord: any) => {
-        if (!coord) {
-            return ''
-        }
+}: {
+    segment: any;
+    segmentLocationData: LocationData
+}) => {
+    const convertCoord = (coord: string) => {
         let degree = 0,
-            min = 0;
+            min = 0,
+            coordinate = null;
 
-        if (coord !== '') {
-            coord = coord.split(' ');
-            degree = parseFloat(coord[0]);
-            min = parseFloat(coord[1]);
+        if (!coord) { return '' }
 
-            return degree + (min / 60);
-        }
+        coordinate = coord.split(' ');
+        degree = parseFloat(coordinate[0]);
+        min = parseFloat(coordinate[1]);
+
+        return degree + (min / 60);
     }
+
 
     let eastLat = convertCoord(segmentLocationData?.eastLat),
         eastLong = convertCoord(segmentLocationData?.eastLong),

@@ -5,7 +5,7 @@ import SegmentProgressRows from '../../SegmentProgressRows';
 import { iceAgeData } from '../../../data/ice_age_data';
 import { segmentStatus } from '../../../data/progress_data';
 
-type DisplayState = 'all' | 'completed' | 'uncompleted';
+import { DisplayState } from '../../../types/types';
 
 
 const Progress = () => {

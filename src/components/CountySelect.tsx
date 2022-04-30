@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { formatCountyName, removeCounty } from '../utils/countyCheck';
 
 import { selectIncompleteSegments } from '../utils/getIceAgeData';
+import { County } from '../types/types';
 
 
 
@@ -12,7 +13,7 @@ const CountyList = ({
     counties 
 }: 
 { 
-    counties: any
+    counties: County[]
 }) => {
     let navigate = useNavigate();
     let countyIdSet = new Set();
@@ -33,7 +34,7 @@ const CountyList = ({
                 <h3 className='CountySelect-header'>Counties</h3>
                 <div className='CountySelect-list'>
                     <ul>
-                        {counties.map((county : any) => {
+                        {counties.map((county : County) => {
                             return (
                                 <li 
                                     key={county.countyId} 

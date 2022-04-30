@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
-import SegmentProgressRows from '../SegmentProgressRows';
+import SegmentProgressRows from '../../SegmentProgressRows';
 
-import { iceAgeData } from '../../data/ice_age_data';
-import { segmentStatus } from '../../data/progress_data';
+import { iceAgeData } from '../../../data/ice_age_data';
+import { segmentStatus } from '../../../data/progress_data';
 
 type DisplayState = 'all' | 'completed' | 'uncompleted';
 
@@ -36,7 +36,7 @@ const Progress = () => {
     };
 
     return (
-        <div className='Progress'>
+        <div className='Progress' data-testid='Progress'>
             <div className='Progress-filterInfo'>
                 <div className='Progress-filterInfo-filters Progress-filterInfo-row'>
                     {

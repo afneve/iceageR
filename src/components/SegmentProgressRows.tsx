@@ -104,6 +104,7 @@ class SegmentProgressRows extends Component<{
                                 return (
                                     <th
                                         key={category.sortBy}
+                                        data-testid={`${category.label}-heading`}
                                         onClick={() => this.handleSort(category.sortBy)}>
                                         {category.label === 'Segment' ?
                                             `${categoryLabel} ${isMobile ? directionLabelMobile : directionLabel}`

@@ -4,7 +4,7 @@ import {
 } from 'react-router-dom';
 
 import Home from '../Containers/Home';
-import Progress from '../Containers/Progress';
+import Progress from '../Containers/Progress/Progress';
 import Segments from '../Containers/Segments';
 import County from '../County';
 import Info from '../Containers/Info';

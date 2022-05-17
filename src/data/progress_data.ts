@@ -146,7 +146,7 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: ""
     },
     "Harrison Hills": {
-        dateCompleted: "",
+        dateCompleted: "05/16/2022",
         gallery: "",
         partial: true
     },
@@ -167,11 +167,11 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: ""
     },
     "Lumbercamp": {
-        dateCompleted: "",
+        dateCompleted: "05/15/2022",
         gallery: ""
     },
     "Kettlebowl": {
-        dateCompleted: "",
+        dateCompleted: "05/16/2022",
         gallery: ""
     },
     "Plover River": {

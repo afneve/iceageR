@@ -98,12 +98,13 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: ""
     },
     "Pine Line": {
-        dateCompleted: "",
+        dateCompleted: "6/25/2022",
         gallery: ""
     },
     "East Lake": {
         dateCompleted: "",
-        gallery: ""
+        gallery: "",
+        partial: true
     },
     "Rib Lake": {
         dateCompleted: "",
@@ -147,8 +148,7 @@ export const segmentStatus: { [key: string]: any } = {
     },
     "Harrison Hills": {
         dateCompleted: "05/16/2022",
-        gallery: "",
-        partial: true
+        gallery: ""
     },
     "Parrish Hills": {
         dateCompleted: "4/8/2017",

@@ -1,5 +1,9 @@
 import ExtraInfo from './ExtraInfo';
 import { LocationData } from '../types/types';
+import { segmentStatus } from '../data/progress_data';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
 
 const Segment = ({
@@ -29,10 +33,17 @@ const Segment = ({
         westLat = convertCoord(segmentLocationData?.westLat),
         westLong = convertCoord(segmentLocationData?.westLong);
 
+    const isCompleted = segmentStatus[segment.segment].dateCompleted && true;
+    const isPartial = segmentStatus[segment.segment].partial && true;
 
     return (
         <div className='Segment'>
-            <h3 className='Segment-name'>{segment.segment}</h3>
+            <h3 className='Segment-name'>
+                <span>
+                    {isCompleted ? <FontAwesomeIcon icon={faCheckCircle} /> : isPartial ? <span className='partial-warn'>&#9888;</span> : ''}
+                </span>
+                {segment.segment}
+            </h3>
             {
                 segment.gallery &&
                 <div className='Segment-gallery'>

@@ -157,6 +157,10 @@ class SegmentProgressRows extends Component<{
                                                                 segmentStatus[segment.segment].dateCompleted && category.key === 'segment' &&
                                                                 <FontAwesomeIcon icon={faCheckCircle} />
                                                             }
+                                                            {
+                                                                segmentStatus[segment.segment].partial && category.key === 'segment' &&
+                                                                <span className='partial-warn'>&#9888;</span>
+                                                            }
                                                         </span>
                                                         {segment[category.key]}
                                                         {

@@ -31,7 +31,7 @@ const Home = () => {
                 <h2 className='user-miles-remaining'>{`${(totalMiles - totalMilesCompleted).toFixed(1)} miles to go`}</h2>
                 <div>{`${totalMilesCompleted} of ${totalMiles.toFixed(1)} miles completed`}</div>
                 <div>{`${(totalNumberOfSegments - totalNumberOfCompletedSegments)} segments remaining`}</div>
-                <div>{`${partialSegmentMiles} miles of partially completed segments`}</div>
+                <div>{`${partialSegmentMiles.toFixed(1)} miles of partially completed segments`}</div>
             </div>
 
         </div>

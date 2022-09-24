@@ -119,15 +119,15 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: ""
 	},
 	"Camp 27": {
-        dateCompleted: "",
+        dateCompleted: "09/24/2022",
         gallery: ""
     },
     "Newwood": {
-        dateCompleted: "",
+        dateCompleted: "09/24/2022",
         gallery: ""
     },
     "Averill-Kelly Creek Wilderness": {
-        dateCompleted: "",
+        dateCompleted: "09/24/2022",
         gallery: ""
     },
     "Turtle Rock": {

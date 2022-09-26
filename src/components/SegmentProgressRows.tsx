@@ -98,7 +98,7 @@ class SegmentProgressRows extends Component<{
                         Categories.map((category) => {
                             const categoryLabel = isMobile ? category.label.substring(0, 4) + '.' : category.label;
 
-                            if (isMobile && category.key === 'booksection') {
+                            if (isMobile && (category.key === 'booksection' || category.key === 'dateCompleted')) {
                                 return '';
                             } else {
                                 return (
@@ -146,7 +146,7 @@ class SegmentProgressRows extends Component<{
                                         Categories.map((category: {
                                             [key: string]: string
                                         }, index) => {
-                                            if (isMobile && category.key === 'booksection') {
+                                            if (isMobile && (category.key === 'booksection' || category.key === 'dateCompleted')) {
                                                 return '';
                                             }
                                             else {
@@ -162,7 +162,7 @@ class SegmentProgressRows extends Component<{
                                                                 <span className='partial-warn'>&#9888;</span>
                                                             }
                                                         </span>
-                                                        {segment[category.key]}
+                                                        {category.key === 'dateCompleted' ? segmentStatus[segment.segment].dateCompleted : segment[category.key]}
                                                         {
                                                             debugMode && category.key === 'segment' &&
                                                             `(${segment.orderId})`

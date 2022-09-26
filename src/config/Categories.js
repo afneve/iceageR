@@ -23,6 +23,11 @@ export const Categories = [
         key: 'booksection',
         sortBy: '',
         label: 'County'
+    },
+    {
+        key: 'dateCompleted',
+        sortBy: 'dateCompleted',
+        label: 'Date Completed'
     }
     /*
     ,

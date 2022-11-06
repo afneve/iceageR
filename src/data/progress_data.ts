@@ -111,9 +111,8 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: ""
     },
     "Wood Lake": {
-        dateCompleted: "",
-        gallery: "",
-        partial: true
+        dateCompleted: "11/05/2022",
+        gallery: ""
     },
     "Timberland Wilderness": {
         dateCompleted: "09/25/2022",

@@ -12,7 +12,7 @@ const ProgressBar = () => {
 
     return (
         <div>
-            <div className="ProgressBar">
+            {/* <div className="ProgressBar">
                 {iceAgeData.map((segment:any, index) => {
                     const segmentClassName = segmentStatus[segment.segment]
                         .dateCompleted
@@ -23,7 +23,7 @@ const ProgressBar = () => {
 
                     return <div className={segmentClassName} key={index} title={segment.segment}></div>;
                 })}
-            </div>
+            </div> */}
             <div className="ProgressBar ProgressBar-two">
                 {iceAgeData.map((segment:any, index) => {
                     const segmentClassName = segmentStatus[segment.segment]
@@ -33,14 +33,14 @@ const ProgressBar = () => {
                         ? "partial"
                         : "incomplete";
 
-                        console.log(segment)
+                        // console.log(segment)
 
                     const segmentWidth =
                         Number(((Number(segment.iceagetraildistance) / totalMiles) * 100).toFixed(3));
                     
                         totalPer += segmentWidth;
 
-                        console.log(totalPer);
+                        // console.log(totalPer);
 
                     return (
                         <div

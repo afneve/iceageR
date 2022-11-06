@@ -95,19 +95,19 @@ export const segmentStatus: { [key: string]: any } = {
     },
     "Mondeaux Esker": {
         dateCompleted: "",
-        gallery: ""
+        gallery: "",
+        partial: true
     },
     "Pine Line": {
         dateCompleted: "6/25/2022",
         gallery: ""
     },
     "East Lake": {
-        dateCompleted: "",
-        gallery: "",
-        partial: true
+        dateCompleted: "11/06/2022",
+        gallery: ""
     },
     "Rib Lake": {
-        dateCompleted: "",
+        dateCompleted: "11/06/2022",
         gallery: ""
     },
     "Wood Lake": {

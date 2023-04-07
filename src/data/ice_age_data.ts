@@ -3297,6 +3297,17 @@ export const iceAgeData: {
 }, {
 	booksection: "Rock County",
 	countyId: 18,
+	orderId: 80,
+	segment: "Gibbs Lake", 
+	gallery: "", 
+	iceagetraildistance: "1.3",
+	elevation: "0",
+	ruggedness: "0",
+	summary: "?",
+	newSegment: 'true'
+}, {
+	booksection: "Rock County",
+	countyId: 18,
 	orderId: 81,
 	segment: "Arbor Ridge",
 	atlasmap: "74f",
@@ -4252,7 +4263,7 @@ export const iceAgeData: {
 	easternterminus: "CTH-NN",
 	elevation: "2",
 	ruggedness: "2",
-	summary: "Th e Cedar Lakes Segment features the Polk Kames, the second largest cluster of kames in the state.",
+	summary: "The Cedar Lakes Segment features the Polk Kames, the second largest cluster of kames in the state.",
 	potablewater: "",
 	filterablewater: "",
 	nowater: "No reliable sources of water.",

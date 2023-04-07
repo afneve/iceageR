@@ -322,6 +322,10 @@ export const segmentStatus: { [key: string]: any } = {
         dateCompleted: "3/25/2018",
         gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157676844644048"
     },
+    "Gibbs Lake": {
+        dateCompleted: "",
+        gallery: ""
+    },
     "Arbor Ridge": {
         dateCompleted: "",
         gallery: ""
@@ -395,17 +399,16 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: ""
     },
     "Monches": {
-        dateCompleted: "",
+        dateCompleted: "04/06/2023",
         gallery: ""
     },
     "Loew Lake": {
-        dateCompleted: "",
+        dateCompleted: "04/06/2023",
         gallery: ""
     },
     "Holy Hill": {
-        dateCompleted: "",
-        gallery: "",
-        partial: true
+        dateCompleted: "04/06/2023",
+        gallery: ""
     },
     "Pike Lake": {
         dateCompleted: "10/20/2019",

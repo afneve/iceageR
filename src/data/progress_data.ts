@@ -379,23 +379,23 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: ""
     },
     "Waterville": {
-        dateCompleted: "",
+        dateCompleted: "04/08/2023",
         gallery: ""
     },
     "Lapham Peak": {
-        dateCompleted: "",
+        dateCompleted: "04/08/2023",
         gallery: ""
     },
     "Delafield": {
-        dateCompleted: "",
+        dateCompleted: "04/07/2023",
         gallery: ""
     },
     "Hartland": {
-        dateCompleted: "",
+        dateCompleted: "04/07/2023",
         gallery: ""
     },
     "Merton": {
-        dateCompleted: "",
+        dateCompleted: "04/07/2023",
         gallery: ""
     },
     "Monches": {

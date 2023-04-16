@@ -44,19 +44,19 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: ""
     },
     "Bear Lake": {
-        dateCompleted: "2/17/2018",
+        dateCompleted: "02/17/2018",
         gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157674588412887"
     },
     "Tuscobia": {
-        dateCompleted: "3/4/2017",
+        dateCompleted: "03/4/2017",
         gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157674557547937"
     },
     "Blueberry": {
-        dateCompleted: "3/4/2017",
+        dateCompleted: "03/4/2017",
         gallery: ""
     },
     "Hemlock Creek": {
-        dateCompleted: "3/5/2017",
+        dateCompleted: "03/5/2017",
         gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157703208081561"
     },
     "Northern Blue Hills": {
@@ -82,7 +82,7 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: ""
 	},
 	"Chippewa River": {
-        dateCompleted: "6/25/2018",
+        dateCompleted: "06/25/2018",
         gallery: ""
     },
     "Lake Eleven": {
@@ -99,7 +99,7 @@ export const segmentStatus: { [key: string]: any } = {
         partial: true
     },
     "Pine Line": {
-        dateCompleted: "6/25/2022",
+        dateCompleted: "06/25/2022",
         gallery: ""
     },
     "East Lake": {
@@ -131,7 +131,7 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: ""
     },
     "Turtle Rock": {
-        dateCompleted: "4/16/2016",
+        dateCompleted: "04/16/2016",
         gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157698809354690"
     },
     "Grandfather Falls": {
@@ -151,7 +151,7 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: ""
     },
     "Parrish Hills": {
-        dateCompleted: "4/8/2017",
+        dateCompleted: "04/8/2017",
         gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157674830360997"
     },
     "Highland Lakes Western": {
@@ -179,7 +179,7 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157674556784627"
     },
     "Dells of the Eau Claire": {
-        dateCompleted: "2/11/2017",
+        dateCompleted: "02/11/2017",
         gallery: ""
     },
     "Thornapple Creek": {
@@ -191,31 +191,31 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157704818450034"
     },
     "New Hope-Iola Ski Hill": {
-        dateCompleted: "2/19/2017",
+        dateCompleted: "02/19/2017",
         gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157703208527491"
     },
     "Skunk and Foster Lakes": {
-        dateCompleted: "2/19/2017",
+        dateCompleted: "02/19/2017",
         gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157676715181588"
     },
     "Waupaca River": {
-        dateCompleted: "3/19/2017",
+        dateCompleted: "03/19/2017",
         gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157698785024720"
     },
     "Hartman Creek": {
-        dateCompleted: "3/19/2017",
+        dateCompleted: "03/19/2017",
         gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157701414552582"
     },
     "Emmons Creek": {
-        dateCompleted: "3/19/2017",
+        dateCompleted: "03/19/2017",
         gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157701414750552"
     },
     "Deerfield": {
-        dateCompleted: "8/19/2017",
+        dateCompleted: "08/19/2017",
         gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157701448313402"
     },
     "Bohn Lake": {
-        dateCompleted: "8/20/2017",
+        dateCompleted: "08/20/2017",
         gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157701448296812"
     },
     "Greenwood": {
@@ -223,15 +223,15 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157703167588891"
     },
     "Mecan River": {
-        dateCompleted: "1/20/2018",
+        dateCompleted: "01/20/2018",
         gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157704711242744"
     },
     "Wedde Creek": {
-        dateCompleted: "1/20/2018",
+        dateCompleted: "01/20/2018",
         gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157674588639597"
 	},
 	"Chaffee Creek": {
-        dateCompleted: "1/20/2018",
+        dateCompleted: "01/20/2018",
         gallery: ""
     },
     "John Muir Park": {
@@ -239,11 +239,11 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: ""
     },
     "Portage Canal": {
-        dateCompleted: "1/26/2018",
+        dateCompleted: "01/26/2018",
         gallery: ""
     },
     "Baraboo": {
-        dateCompleted: "1/26/2018",
+        dateCompleted: "01/26/2018",
         gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157704710673315"
     },
     "Sauk Point": {
@@ -255,7 +255,7 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157698809834160"
     },
     "Merrimac": {
-        dateCompleted: "1/26/2018",
+        dateCompleted: "01/26/2018",
         gallery: ""
     },
     "Gibraltar Rock": {
@@ -307,19 +307,19 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: ""
     },
     "Montrose": {
-        dateCompleted: "3/26/2018",
+        dateCompleted: "03/26/2018",
         gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157704819142544"
     },
     "Brooklyn Wildlife": {
-        dateCompleted: "3/26/2018",
+        dateCompleted: "03/26/2018",
         gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157703242161171"
     },
     "Monticello": {
-        dateCompleted: "3/25/2018",
+        dateCompleted: "03/25/2018",
         gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157674588806937"
     },
     "Albany": {
-        dateCompleted: "3/25/2018",
+        dateCompleted: "03/25/2018",
         gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157676844644048"
     },
     "Gibbs Lake": {

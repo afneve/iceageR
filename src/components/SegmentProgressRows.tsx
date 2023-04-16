@@ -47,15 +47,24 @@ class SegmentProgressRows extends Component<{
         }
 
         if (sortBy === 'dateCompleted') {
-            /*
-            return segmentStatus.sort((a, b) => {
+            return segments.sort((a:any, b:any) => {
+                if (!segmentStatus[a.segment].dateCompleted) {
+                    return 1;
+                }
+                if (!segmentStatus[b.segment].dateCompleted) {
+                    return -1;
+                }
 
-                let year = a[sortBy].split('/');
-                console.log(year);
-                return true;
+                // Parse the date strings into Date objects
+                var dateA = new Date(segmentStatus[a.segment].dateCompleted);
+                var dateB = new Date(segmentStatus[b.segment].dateCompleted);
+                // Sort in ascending or descending order
+                if (this.state.sort === 'asc') {
+                    return dateA.valueOf() - dateB.valueOf();
+                } else {
+                    return dateB.valueOf() - dateA.valueOf();
+                }
             });
-
-            */
         }
 
         return segments.sort((a: any, b: any) => {
@@ -130,7 +139,7 @@ class SegmentProgressRows extends Component<{
                 {
                     this.sortRows().map((segment: {
                         [key: string]: string | number
-                    }, index) => {
+                    }, index: any) => {
                         if (
                             (hideCompleted && !segmentStatus[segment.segment].dateCompleted)
                             ||

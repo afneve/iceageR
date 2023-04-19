@@ -56,6 +56,23 @@ const Stats = () => {
         }
     }
 
+    for (let month = 1; month <= 12; month++) {
+        if (!monthTotals[month]) {
+            monthTotals[month] = 0;
+        }
+    }
+
+    // Create a new Date object
+    const currentDate = new Date();
+
+    // Get the current year from the Date object
+    const currentYear = currentDate.getFullYear();
+    for (let year = 2016; year <= currentYear; year++) {
+        if (!yearTotals[year]) {
+            yearTotals[year] = 0;
+        }
+    }
+
     for (const property in yearTotals) {
         yearData.push({
             name: property,

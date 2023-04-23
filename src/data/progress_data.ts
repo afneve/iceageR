@@ -65,9 +65,8 @@ export const segmentStatus: { [key: string]: any } = {
         partial: true
     },
     "Southern Blue Hills": {
-        dateCompleted: "",
-        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157701446390472",
-        partial: true
+        dateCompleted: "04/22/2023",
+        gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157701446390472"
 	},
 	"Chippewa Moraine": {
         dateCompleted: "",
@@ -78,7 +77,7 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: ""
     },
     "Firth Lake": {
-        dateCompleted: "",
+        dateCompleted: "04/22/2023",
         gallery: ""
 	},
 	"Chippewa River": {

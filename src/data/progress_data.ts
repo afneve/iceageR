@@ -69,11 +69,11 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157701446390472"
 	},
 	"Chippewa Moraine": {
-        dateCompleted: "",
+        dateCompleted: "04/23/2023",
         gallery: ""
     },
     "Harwood Lakes": {
-        dateCompleted: "",
+        dateCompleted: "04/23/2023",
         gallery: ""
     },
     "Firth Lake": {

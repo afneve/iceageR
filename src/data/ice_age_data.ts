@@ -872,8 +872,8 @@ export const iceAgeData: {
 	orderId: 22,
 	segment: "Lake Eleven",
 	atlasmap: "21f, 22f",
-	totaldistance: "14.1",
-	iceagetraildistance: "14.1",
+	totaldistance: "15.6",
+	iceagetraildistance: "15.6",
 	connectingroutedistance: "0",
 	westernterminus: "STH-64",
 	easternterminus: "Sailor Creek Rd. (FR-571)",
@@ -913,8 +913,8 @@ export const iceAgeData: {
 	orderId: 23,
 	segment: "Jerry Lake",
 	atlasmap: "22f, 23f",
-	totaldistance: "15.1",
-	iceagetraildistance: "15.1",
+	totaldistance: "15.2",
+	iceagetraildistance: "15.2",
 	connectingroutedistance: "0",
 	westernterminus: "Sailor Creek Rd. (FR-571) Southern Trail Access",
 	easternterminus: "CTH-E",
@@ -954,8 +954,8 @@ export const iceAgeData: {
 	orderId: 24,
 	segment: "Mondeaux Esker",
 	atlasmap: "23f",
-	totaldistance: "11.4",
-	iceagetraildistance: "11.4",
+	totaldistance: "11.7",
+	iceagetraildistance: "11.7",
 	connectingroutedistance: "0",
 	westernterminus: "CTH-E",
 	easternterminus: "Shady Dr.",
@@ -3297,7 +3297,18 @@ export const iceAgeData: {
 }, {
 	booksection: "Rock County",
 	countyId: 18,
-	orderId: 80,
+	orderId: 81,
+	segment: "Evansville", 
+	gallery: "", 
+	iceagetraildistance: "2.8",
+	elevation: "0",
+	ruggedness: "0",
+	summary: "?",
+	newSegment: 'true'
+}, {
+	booksection: "Rock County",
+	countyId: 18,
+	orderId: 82,
 	segment: "Gibbs Lake", 
 	gallery: "", 
 	iceagetraildistance: "1.3",
@@ -3308,7 +3319,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Rock County",
 	countyId: 18,
-	orderId: 81,
+	orderId: 83,
 	segment: "Arbor Ridge",
 	atlasmap: "74f",
 	totaldistance: "2.1",
@@ -3349,7 +3360,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Rock County",
 	countyId: 18,
-	orderId: 82,
+	orderId: 84,
 	segment: "Devil's Staircase",
 	atlasmap: "74f",
 	totaldistance: "1.7",
@@ -3390,7 +3401,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Rock County",
 	countyId: 18,
-	orderId: 83,
+	orderId: 85,
 	segment: "Janesville",
 	atlasmap: "74f",
 	totaldistance: "10.4",
@@ -3431,7 +3442,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Rock County",
 	countyId: 18,
-	orderId: 84,
+	orderId: 86,
 	segment: "Janesville to Milton",
 	atlasmap: "75f",
 	totaldistance: "3.2",
@@ -3472,7 +3483,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Rock County",
 	countyId: 18,
-	orderId: 85,
+	orderId: 87,
 	segment: "Milton",
 	atlasmap: "75f",
 	totaldistance: "4.3",
@@ -3513,7 +3524,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Rock County",
 	countyId: 18,
-	orderId: 86,
+	orderId: 88,
 	segment: "Storrs Lake",
 	atlasmap: "75f",
 	totaldistance: "1.9",
@@ -3554,7 +3565,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Walworth & Jefferson Counties",
 	countyId: 19,
-	orderId: 87,
+	orderId: 89,
 	segment: "Clover Valley",
 	atlasmap: "77f",
 	totaldistance: "1.6",
@@ -3595,7 +3606,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Walworth & Jefferson Counties",
 	countyId: 19,
-	orderId: 88,
+	orderId: 90,
 	segment: "Whitewater Lake",
 	atlasmap: "78f",
 	totaldistance: "4.6",
@@ -3636,7 +3647,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Walworth & Jefferson Counties",
 	countyId: 19,
-	orderId: 89,
+	orderId: 91,
 	segment: "Blackhawk",
 	atlasmap: "79f",
 	totaldistance: "7.0",
@@ -3677,7 +3688,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Walworth & Jefferson Counties",
 	countyId: 19,
-	orderId: 90,
+	orderId: 92,
 	segment: "Blue Spring Lake",
 	atlasmap: "79f",
 	totaldistance: "7.1",
@@ -3718,7 +3729,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Waukesha County",
 	countyId: 20,
-	orderId: 91,
+	orderId: 93,
 	segment: "Stony Ridge",
 	atlasmap: "80f",
 	totaldistance: "3.1",
@@ -3759,7 +3770,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Waukesha County",
 	countyId: 20,
-	orderId: 92,
+	orderId: 94,
 	segment: "Eagle",
 	atlasmap: "80f",
 	totaldistance: "5.6",
@@ -3800,7 +3811,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Waukesha County",
 	countyId: 20,
-	orderId: 93,
+	orderId: 95,
 	segment: "Scuppernong",
 	atlasmap: "80f, 81f",
 	totaldistance: "5.6",
@@ -3841,7 +3852,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Waukesha County",
 	countyId: 20,
-	orderId: 94,
+	orderId: 96,
 	segment: "Waterville",
 	atlasmap: "81f",
 	totaldistance: "3.8",
@@ -3882,7 +3893,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Waukesha County",
 	countyId: 20,
-	orderId: 95,
+	orderId: 97,
 	segment: "Lapham Peak",
 	atlasmap: "81f, 82f",
 	totaldistance: "7.6",
@@ -3923,7 +3934,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Waukesha County",
 	countyId: 20,
-	orderId: 96,
+	orderId: 98,
 	segment: "Delafield",
 	atlasmap: "81f, 82f",
 	totaldistance: "2.8",
@@ -3964,7 +3975,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Waukesha County",
 	countyId: 20,
-	orderId: 97,
+	orderId: 99,
 	segment: "Hartland",
 	atlasmap: "82f",
 	totaldistance: "6.8",
@@ -4005,7 +4016,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Waukesha County",
 	countyId: 20,
-	orderId: 98,
+	orderId: 100,
 	segment: "Merton",
 	atlasmap: "83f",
 	totaldistance: "5.2",
@@ -4046,7 +4057,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Waukesha County",
 	countyId: 20,
-	orderId: 99,
+	orderId: 101,
 	segment: "Monches",
 	atlasmap: "83f",
 	totaldistance: "3.1",
@@ -4087,7 +4098,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Washington County",
 	countyId: 21,
-	orderId: 100,
+	orderId: 102,
 	segment: "Loew Lake",
 	atlasmap: "83f, 84f",
 	totaldistance: "4.8",
@@ -4128,7 +4139,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Washington County",
 	countyId: 21,
-	orderId: 101,
+	orderId: 103,
 	segment: "Holy Hill",
 	atlasmap: "84f",
 	totaldistance: "6.9",
@@ -4169,7 +4180,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Washington County",
 	countyId: 21,
-	orderId: 102,
+	orderId: 104,
 	segment: "Pike Lake",
 	gallery: "https://www.flickr.com/photos/144057467@N05/albums/72177720297736564",
 	atlasmap: "84f, 85f",
@@ -4211,7 +4222,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Washington County",
 	countyId: 21,
-	orderId: 103,
+	orderId: 105,
 	segment: "Slinger",
 	gallery: "https://www.flickr.com/photos/144057467@N05/albums/72177720297731677",
 	atlasmap: "84f, 85f",
@@ -4253,7 +4264,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Washington County",
 	countyId: 21,
-	orderId: 104,
+	orderId: 106,
 	segment: "Cedar Lakes",
 	atlasmap: "84f, 85f",
 	totaldistance: "2.8",
@@ -4294,7 +4305,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Washington County",
 	countyId: 21,
-	orderId: 105,
+	orderId: 107,
 	segment: "West Bend",
 	atlasmap: "85f, 86f",
 	totaldistance: "6.5",
@@ -4335,7 +4346,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Washington County",
 	countyId: 21,
-	orderId: 106,
+	orderId: 108,
 	segment: "Southern Kewaskum",
 	atlasmap: "85f, 86f",
 	totaldistance: "1.1",
@@ -4376,7 +4387,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Washington County",
 	countyId: 21,
-	orderId: 107,
+	orderId: 109,
 	segment: "Kewaskum",
 	atlasmap: "86f, 87f",
 	totaldistance: "2.1",
@@ -4417,7 +4428,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Washington County",
 	countyId: 21,
-	orderId: 108,
+	orderId: 110,
 	segment: "Milwaukee River (Washington Co)",
 	atlasmap: "86f, 87f",
 	totaldistance: "6.8",
@@ -4458,7 +4469,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Fond du Lac & Sheboygan Counties",
 	countyId: 22,
-	orderId: 109,
+	orderId: 111,
 	segment: "Milwaukee River (Fond Du Lac Co)",
 	atlasmap: "87f",
 	totaldistance: "4.3",
@@ -4499,7 +4510,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Fond du Lac & Sheboygan Counties",
 	countyId: 22,
-	orderId: 110,
+	orderId: 112,
 	segment: "Parnell",
 	gallery: "https://www.flickr.com/photos/144057467@N05/albums/72177720297734941",
 	atlasmap: "87f, 88f, 89f",
@@ -4541,7 +4552,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Fond du Lac & Sheboygan Counties",
 	countyId: 22,
-	orderId: 111,
+	orderId: 113,
 	segment: "Greenbush",
 	gallery: "https://www.flickr.com/photos/144057467@N05/albums/72177720297733357",
 	atlasmap: "89f",
@@ -4583,7 +4594,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Fond du Lac & Sheboygan Counties",
 	countyId: 22,
-	orderId: 112,
+	orderId: 114,
 	segment: "LaBudde Creek",
 	gallery: "https://www.flickr.com/photos/144057467@N05/albums/72177720297737369",
 	atlasmap: "90f",
@@ -4625,7 +4636,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Manitowoc County",
 	countyId: 23,
-	orderId: 113,
+	orderId: 115,
 	segment: "Walla Hi", 
 	gallery: "https://www.flickr.com/photos/144057467@N05/albums/72177720297734041", 
 	iceagetraildistance: "1.8",
@@ -4636,7 +4647,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Manitowoc County",
 	countyId: 23,
-	orderId: 114,
+	orderId: 116,
 	segment: "City of Manitowoc",
 	gallery: "https://www.flickr.com/photos/144057467@N05/albums/72177720297687969", 
 	atlasmap: "95f",
@@ -4678,7 +4689,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Manitowoc County",
 	countyId: 23,
-	orderId: 115,
+	orderId: 117,
 	segment: "Dunes",
 	gallery: "https://www.flickr.com/photos/144057467@N05/albums/72177720297688109",
 	atlasmap: "95f, 96f",
@@ -4720,7 +4731,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Manitowoc County",
 	countyId: 23,
-	orderId: 116,
+	orderId: 118,
 	segment: "City of Two Rivers",
 	gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157706655322951",
 	atlasmap: "95f, 96f",
@@ -4762,7 +4773,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Manitowoc County",
 	countyId: 23,
-	orderId: 117,
+	orderId: 119,
 	segment: "Point Beach",
 	gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157698912564780",
 	atlasmap: "96f",
@@ -4804,7 +4815,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Manitowoc County",
 	countyId: 23,
-	orderId: 118,
+	orderId: 120,
 	segment: "Mishicot",
 	gallery: "https://www.flickr.com/photos/144057467@N05/albums/72177720297684630",
 	atlasmap: "97f",
@@ -4846,7 +4857,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Manitowoc County",
 	countyId: 23,
-	orderId: 119,
+	orderId: 121,
 	segment: "East Twin River",
 	gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157691016917523",
 	iceagetraildistance: "1.4",
@@ -4857,7 +4868,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Manitowoc County",
 	countyId: 23,
-	orderId: 120,
+	orderId: 121,
 	segment: "Tisch Mills",
 	gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157703498560211",
 	atlasmap: "98f",
@@ -4899,7 +4910,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Kewaunee & Door Counties",
 	countyId: 25,
-	orderId: 121,
+	orderId: 122,
 	segment: "Kewaunee River",
 	atlasmap: "100f, 101f",
 	totaldistance: "11.2",
@@ -4940,7 +4951,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Kewaunee & Door Counties",
 	countyId: 25,
-	orderId: 122,
+	orderId: 123,
 	segment: "Forestville",
 	gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157701662526712",
 	atlasmap: "103f, 104f",
@@ -4982,7 +4993,7 @@ export const iceAgeData: {
 }, {
 	booksection: "Kewaunee & Door Counties",
 	countyId: 25,
-	orderId: 123,
+	orderId: 124,
 	segment: "Sturgeon Bay",
 	atlasmap: "104f, 105f",
 	totaldistance: "13.7",

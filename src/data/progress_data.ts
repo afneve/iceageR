@@ -321,6 +321,10 @@ export const segmentStatus: { [key: string]: any } = {
         dateCompleted: "03/25/2018",
         gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157676844644048"
     },
+    "Evansville": {
+        dateCompleted: "",
+        gallery: ""
+    },
     "Gibbs Lake": {
         dateCompleted: "",
         gallery: ""

@@ -93,9 +93,8 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: ""
     },
     "Mondeaux Esker": {
-        dateCompleted: "",
-        gallery: "",
-        partial: true
+        dateCompleted: "11/05/2023",
+        gallery: ""
     },
     "Pine Line": {
         dateCompleted: "06/25/2022",

@@ -48,15 +48,15 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157674588412887"
     },
     "Tuscobia": {
-        dateCompleted: "03/4/2017",
+        dateCompleted: "03/04/2017",
         gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157674557547937"
     },
     "Blueberry": {
-        dateCompleted: "03/4/2017",
+        dateCompleted: "03/04/2017",
         gallery: ""
     },
     "Hemlock Creek": {
-        dateCompleted: "03/5/2017",
+        dateCompleted: "03/05/2017",
         gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157703208081561"
     },
     "Northern Blue Hills": {
@@ -90,7 +90,8 @@ export const segmentStatus: { [key: string]: any } = {
     },
     "Jerry Lake": {
         dateCompleted: "",
-        gallery: ""
+        gallery: "",
+        partial: true
     },
     "Mondeaux Esker": {
         dateCompleted: "11/05/2023",
@@ -133,7 +134,7 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157698809354690"
     },
     "Grandfather Falls": {
-        dateCompleted: "11/3/2018",
+        dateCompleted: "11/03/2018",
         gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157704702699695"
     },
     "Underdown": {
@@ -141,7 +142,7 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: ""
     },
     "Alta Junction": {
-        dateCompleted: "11/3/2018",
+        dateCompleted: "11/03/2018",
         gallery: ""
     },
     "Harrison Hills": {
@@ -149,7 +150,7 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: ""
     },
     "Parrish Hills": {
-        dateCompleted: "04/8/2017",
+        dateCompleted: "04/08/2017",
         gallery: "https://www.flickr.com/photos/144057467@N05/sets/72157674830360997"
     },
     "Highland Lakes Western": {

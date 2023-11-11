@@ -174,7 +174,7 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: ""
     },
     "Plover River": {
-        dateCompleted: "11/3/2018",
+        dateCompleted: "11/03/2018",
         gallery: "https://www.flickr.com/photos/144057467@N05/albums/72157674556784627"
     },
     "Dells of the Eau Claire": {

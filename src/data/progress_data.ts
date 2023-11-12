@@ -86,12 +86,12 @@ export const segmentStatus: { [key: string]: any } = {
     },
     "Lake Eleven": {
         dateCompleted: "",
-        gallery: ""
-    },
-    "Jerry Lake": {
-        dateCompleted: "",
         gallery: "",
         partial: true
+    },
+    "Jerry Lake": {
+        dateCompleted: "11/12/2023",
+        gallery: ""
     },
     "Mondeaux Esker": {
         dateCompleted: "11/05/2023",

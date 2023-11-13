@@ -86,8 +86,7 @@ export const segmentStatus: { [key: string]: any } = {
     },
     "Lake Eleven": {
         dateCompleted: "",
-        gallery: "",
-        partial: true
+        gallery: "11/13/2023"
     },
     "Jerry Lake": {
         dateCompleted: "11/12/2023",

@@ -368,20 +368,19 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: "",
     },
     Janesville: {
-        dateCompleted: "",
+        dateCompleted: "12/27/2023",
         gallery: "",
-        partial: true,
     },
     "Janesville to Milton": {
-        dateCompleted: "",
+        dateCompleted: "12/27/2023",
         gallery: "",
     },
     Milton: {
-        dateCompleted: "",
+        dateCompleted: "12/27/2023",
         gallery: "",
     },
     "Storrs Lake": {
-        dateCompleted: "",
+        dateCompleted: "12/27/2023",
         gallery: "",
     },
     "Clover Valley": {

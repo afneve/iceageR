@@ -370,6 +370,7 @@ export const segmentStatus: { [key: string]: any } = {
     Janesville: {
         dateCompleted: "",
         gallery: "",
+        partial: true,
     },
     "Janesville to Milton": {
         dateCompleted: "",

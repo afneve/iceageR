@@ -63,10 +63,9 @@ export const segmentStatus: { [key: string]: any } = {
             "https://www.flickr.com/photos/144057467@N05/albums/72157703208081561",
     },
     "Northern Blue Hills": {
-        dateCompleted: "",
+        dateCompleted: "02/24/2024",
         gallery:
             "https://www.flickr.com/photos/144057467@N05/albums/72157703207779231",
-        partial: true,
     },
     "Southern Blue Hills": {
         dateCompleted: "04/22/2023",
@@ -87,6 +86,10 @@ export const segmentStatus: { [key: string]: any } = {
     },
     "Chippewa River": {
         dateCompleted: "06/25/2018",
+        gallery: "",
+    },
+    Cornell: {
+        dateCompleted: "02/24/2024",
         gallery: "",
     },
     "Lake Eleven": {

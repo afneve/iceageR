@@ -1125,6 +1125,18 @@ export const iceAgeData: {
         "pointsofinterest/sidetrail2": "",
     },
     {
+        booksection: "Chippewa County",
+        countyId: 4,
+        orderId: 22,
+        segment: "Cornell",
+        gallery: "",
+        iceagetraildistance: "1.5",
+        elevation: "1",
+        ruggedness: "1",
+        summary: "",
+        newSegment: "true",
+    },
+    {
         booksection: "Taylor County",
         countyId: 5,
         orderId: 22,

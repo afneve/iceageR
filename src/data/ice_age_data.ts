@@ -475,7 +475,7 @@ export const iceAgeData: {
     },
     {
         booksection: "Barron & Washburn Counties",
-        countyId: 1,
+        countyId: 2,
         orderId: 10,
         segment: "Timberland Hills",
         atlasmap: "6f",

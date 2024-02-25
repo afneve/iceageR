@@ -38,9 +38,10 @@ export const segmentStatus: { [key: string]: any } = {
     "Timberland Hills": {
         dateCompleted: "",
         gallery: "",
+        partial: true,
     },
     "Grassy Lake": {
-        dateCompleted: "",
+        dateCompleted: "02/25/2024",
         gallery: "",
     },
     "Bear Lake": {

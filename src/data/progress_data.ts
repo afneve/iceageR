@@ -26,19 +26,20 @@ export const segmentStatus: { [key: string]: any } = {
     "McKenzie Creek": {
         dateCompleted: "",
         gallery: "",
+        partial: true,
     },
     "Indian Creek": {
         dateCompleted: "",
         gallery: "",
+        partial: true,
     },
     "Sand Creek": {
         dateCompleted: "",
         gallery: "",
     },
     "Timberland Hills": {
-        dateCompleted: "",
+        dateCompleted: "03/09/2024",
         gallery: "",
-        partial: true,
     },
     "Grassy Lake": {
         dateCompleted: "02/25/2024",

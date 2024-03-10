@@ -27,11 +27,11 @@ export const segmentStatus: { [key: string]: any } = {
         dateCompleted: "",
         gallery: "",
         partial: true,
+        notes: "Finished everything North of McKenzie Lake",
     },
     "Indian Creek": {
-        dateCompleted: "",
+        dateCompleted: "03/10/2024",
         gallery: "",
-        partial: true,
     },
     "Sand Creek": {
         dateCompleted: "",

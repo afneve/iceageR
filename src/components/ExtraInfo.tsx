@@ -1,46 +1,48 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRestroom, faTint } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRestroom, faTint } from "@fortawesome/free-solid-svg-icons";
 
-import Modal from 'react-modal';
-import { useState } from 'react';
+import Modal from "react-modal";
+import { useState } from "react";
 
 const customStyles = {
     content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-      color: 'black',
-      width: '50%'
+        top: "50%",
+        left: "50%",
+        right: "auto",
+        bottom: "auto",
+        marginRight: "-50%",
+        transform: "translate(-50%, -50%)",
+        color: "black",
+        width: "50%",
     },
     overlay: {
-        backgroundColor: 'rgba(0, 0, 0, 0.75)'
-    }
-  };
+        backgroundColor: "rgba(0, 0, 0, 0.75)",
+    },
+};
 
-Modal.setAppElement('#root');
+Modal.setAppElement("#root");
 
 const ExtraInfo = ({
     potableWater,
     restrooms,
-    nohiking
+    nohiking,
+    isPartial,
+    notes,
 }: {
-    potableWater: string,
-    restrooms: string,
-    nohiking: string
+    potableWater: string;
+    restrooms: string;
+    nohiking: string;
+    isPartial: boolean;
+    notes: string;
 }) => {
     const [modalIsOpen, setIsOpen] = useState(false);
-    const [modalText, setModalText] = useState('');
+    const [modalText, setModalText] = useState("");
 
     function openModal() {
         setIsOpen(true);
     }
 
-    function afterOpenModal() {
-
-    }
+    function afterOpenModal() {}
 
     function closeModal() {
         setIsOpen(false);
@@ -51,50 +53,69 @@ const ExtraInfo = ({
         openModal();
     };
 
-    const noHikingLower: string = nohiking ? nohiking.toLowerCase() : '';
+    const noHikingLower: string = nohiking ? nohiking.toLowerCase() : "";
 
-    if (noHikingLower.includes('deer') || noHikingLower.includes('hunt') || noHikingLower.includes('gun')) {
-    }
-    else {
+    if (
+        noHikingLower.includes("deer") ||
+        noHikingLower.includes("hunt") ||
+        noHikingLower.includes("gun")
+    ) {
+    } else {
         if (noHikingLower) {
         }
     }
 
     return (
-        <div className='ExtraInfo'>
-            <button 
+        <div className="ExtraInfo">
+            <button
                 onClick={() => handleClick(potableWater)}
                 disabled={potableWater ? false : true}
-                aria-label='Show water info'
+                aria-label="Show water info"
             >
-                <FontAwesomeIcon icon={faTint} color={potableWater ? '#0C78C5' : 'grey'} />
+                <FontAwesomeIcon
+                    icon={faTint}
+                    color={potableWater ? "#0C78C5" : "grey"}
+                />
             </button>
             <button
                 onClick={() => handleClick(restrooms)}
                 disabled={restrooms ? false : true}
-                aria-label='Show restroom info'
+                aria-label="Show restroom info"
             >
-                <FontAwesomeIcon icon={faRestroom} color={restrooms ? '#26bf42' : 'grey'} />
+                <FontAwesomeIcon
+                    icon={faRestroom}
+                    color={restrooms ? "#26bf42" : "grey"}
+                />
             </button>
-            {
-                nohiking &&
-                <div className='ExtraInfo-restriction'>
-                    <div className='deer'>🦌</div>
-                    <div>Hiking Restrictions: <br />{nohiking}</div> 
-                   
+            {nohiking && (
+                <div className="ExtraInfo-restriction">
+                    <div className="deer">🦌</div>
+                    <div>
+                        Hiking Restrictions: <br />
+                        {nohiking}
+                    </div>
                 </div>
-            }
+            )}
+            {notes && (
+                <div className="ExtraInfo-restriction">
+                    {isPartial && <span className="partial-warn">&#9888;</span>}
+                    <div>
+                        Notes: <br />
+                        {notes}
+                    </div>
+                </div>
+            )}
             <Modal
                 isOpen={modalIsOpen}
                 onAfterOpen={afterOpenModal}
                 onRequestClose={closeModal}
-                contentLabel='Details'
+                contentLabel="Details"
                 style={customStyles}
             >
                 {modalText}
             </Modal>
         </div>
     );
-}
+};
 
 export default ExtraInfo;

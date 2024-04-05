@@ -389,11 +389,11 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: "",
     },
     "Clover Valley": {
-        dateCompleted: "",
+        dateCompleted: "04/04/2024",
         gallery: "",
     },
     "Whitewater Lake": {
-        dateCompleted: "",
+        dateCompleted: "04/04/2024",
         gallery: "",
     },
     Blackhawk: {

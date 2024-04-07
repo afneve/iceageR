@@ -397,23 +397,23 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: "",
     },
     Blackhawk: {
-        dateCompleted: "",
+        dateCompleted: "04/05/2024",
         gallery: "",
     },
     "Blue Spring Lake": {
-        dateCompleted: "",
+        dateCompleted: "04/05/2024",
         gallery: "",
     },
     "Stony Ridge": {
-        dateCompleted: "",
+        dateCompleted: "04/05/2024",
         gallery: "",
     },
     Eagle: {
-        dateCompleted: "",
+        dateCompleted: "04/06/2024",
         gallery: "",
     },
     Scuppernong: {
-        dateCompleted: "",
+        dateCompleted: "04/06/2024",
         gallery: "",
     },
     Waterville: {

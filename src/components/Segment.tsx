@@ -51,13 +51,6 @@ const Segment = ({
                 </span>
                 {segment.segment}
             </h3>
-            {segment.gallery && (
-                <div className="Segment-gallery">
-                    <a target="_blank" href={segment.gallery} rel="noreferrer">
-                        View images
-                    </a>
-                </div>
-            )}
             <div className="Segment-summary">{segment.summary}</div>
             <div className="Segment-info">
                 <div>{`Distance: ${segment.iceagetraildistance}`}</div>
@@ -102,6 +95,7 @@ const Segment = ({
                 nohiking={segment.nohiking}
                 isPartial={isPartial}
                 notes={notes}
+                gallery={segment.gallery}
             />
         </div>
     );

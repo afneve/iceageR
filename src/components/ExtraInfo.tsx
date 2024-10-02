@@ -1,5 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRestroom, faTint } from "@fortawesome/free-solid-svg-icons";
+import {
+    faRestroom,
+    faTint,
+    faCamera,
+} from "@fortawesome/free-solid-svg-icons";
 
 import Modal from "react-modal";
 import { useState } from "react";
@@ -28,12 +32,14 @@ const ExtraInfo = ({
     nohiking,
     isPartial,
     notes,
+    gallery,
 }: {
     potableWater: string;
     restrooms: string;
     nohiking: string;
     isPartial: boolean;
     notes: string;
+    gallery: string;
 }) => {
     const [modalIsOpen, setIsOpen] = useState(false);
     const [modalText, setModalText] = useState("");
@@ -87,6 +93,17 @@ const ExtraInfo = ({
                     color={restrooms ? "#26bf42" : "grey"}
                 />
             </button>
+            {gallery && (
+                <a
+                    aria-label="View pictures"
+                    className="photos"
+                    target="_blank"
+                    href={gallery}
+                    rel="noreferrer"
+                >
+                    <FontAwesomeIcon icon={faCamera} color={"#26bf42"} />
+                </a>
+            )}
             {nohiking && (
                 <div className="ExtraInfo-restriction">
                     <div className="deer">🦌</div>

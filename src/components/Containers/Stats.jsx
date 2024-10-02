@@ -42,6 +42,11 @@ const Stats = () => {
         averageMilesPerDay,
     } = processSegmentData(segmentStatus, iceAgeData);
 
+    const { bestTrip, uniqueHikingDays } = calculateMostMilesInTrip(
+        segmentStatus,
+        iceAgeData
+    );
+
     //Push any completed segments to new array
     for (let i = 0; i < iceAgeData.length; i++) {
         if (segmentStatus[iceAgeData[i].segment].dateCompleted) {
@@ -133,7 +138,7 @@ const Stats = () => {
                         }}
                     >
                         <XAxis dataKey="name" />
-                        <YAxis />
+                        <YAxis width={35} />
                         <Tooltip
                             formatter={(value, name, props) => {
                                 return [
@@ -162,7 +167,7 @@ const Stats = () => {
                         }}
                     >
                         <XAxis dataKey="name" />
-                        <YAxis />
+                        <YAxis width={35} />
                         <Tooltip
                             formatter={(value, name, props) => {
                                 return [
@@ -189,6 +194,8 @@ const Stats = () => {
                 <p>{`Average of miles completed per day: ${averageMilesPerDay.toFixed(
                     1
                 )}`}</p>
+                <p>{`Most miles completed in a trip: ${bestTrip.miles} miles from ${bestTrip.startDate} to ${bestTrip.endDate}`}</p>
+                <p>{`Days spent hiking: ${uniqueHikingDays}`}</p>
                 <p>{`Most segments completed in one day: ${mostSegmentsInOneDay.segments} (${mostSegmentsInOneDay.date})`}</p>
                 <p>{`Most elevation in one day: ${mostElevationInOneDay.elevation} (${mostElevationInOneDay.date})`}</p>
                 <p>{`Most ruggedness in one day: ${mostRuggednessInOneDay.ruggedness} (${mostRuggednessInOneDay.date})`}</p>
@@ -280,5 +287,90 @@ function processSegmentData(segmentStatus, iceAgeData) {
         mostElevationInOneDay,
         mostRuggednessInOneDay,
         averageMilesPerDay,
+    };
+}
+
+// Helper function to parse dates and check if two dates are consecutive
+function areDatesConsecutive(date1, date2) {
+    const d1 = new Date(date1);
+    const d2 = new Date(date2);
+
+    // Calculate difference in days between the two dates
+    const timeDifference = d2.getTime() - d1.getTime();
+    const daysDifference = timeDifference / (1000 * 3600 * 24);
+
+    return daysDifference === 1; // True if the difference is exactly one day
+}
+
+// Function to calculate the most miles in a trip (consecutive days)
+function calculateMostMilesInTrip(segmentStatus, iceAgeData) {
+    const dateMilesMap = {};
+
+    // Map dates to miles from iceAgeData and segmentStatus
+    for (const segment in segmentStatus) {
+        const date = segmentStatus[segment].dateCompleted;
+        const miles =
+            iceAgeData.find((data) => data.segment === segment)
+                ?.iceagetraildistance || 0;
+
+        if (date) {
+            if (!dateMilesMap[date]) {
+                dateMilesMap[date] = parseFloat(miles);
+            } else {
+                dateMilesMap[date] += parseFloat(miles);
+            }
+        }
+    }
+
+    // Sort the dates in ascending order
+    const sortedDates = Object.keys(dateMilesMap).sort(
+        (a, b) => new Date(a) - new Date(b)
+    );
+
+    let mostMiles = 0;
+    let currentTripMiles = 0;
+    let lastDate = null;
+    let tripStartDate = null;
+    let bestTrip = { miles: 0, startDate: null, endDate: null };
+
+    // Iterate through the sorted dates and sum up miles for consecutive days (trips)
+    for (const date of sortedDates) {
+        if (lastDate && areDatesConsecutive(lastDate, date)) {
+            // Continue the current trip
+            currentTripMiles += dateMilesMap[date];
+        } else {
+            // End the previous trip, and check if it's the longest so far
+            if (currentTripMiles > mostMiles) {
+                mostMiles = currentTripMiles;
+                bestTrip = {
+                    miles: currentTripMiles,
+                    startDate: tripStartDate,
+                    endDate: lastDate,
+                };
+            }
+
+            // Start a new trip
+            currentTripMiles = dateMilesMap[date];
+            tripStartDate = date;
+        }
+
+        // Update the lastDate to the current date
+        lastDate = date;
+    }
+
+    // Check the final trip as well
+    if (currentTripMiles > mostMiles) {
+        bestTrip = {
+            miles: currentTripMiles,
+            startDate: tripStartDate,
+            endDate: lastDate,
+        };
+    }
+
+    const uniqueHikingDays = new Set(Object.keys(dateMilesMap)).size;
+
+    return {
+        bestTrip,
+        uniqueHikingDays,
     };
 }

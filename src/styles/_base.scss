@@ -142,8 +142,10 @@ button {
     }
 }
 
-#HomeNav {
-    max-width: 100px;
+#HomeNav,
+#Info,
+#Extra {
+    max-width: 60px;
 }
 
 .Home p {

@@ -8,9 +8,50 @@
         flex: 1 1 100%;
         font-size: 14px;
         margin-top: 1rem;
-        color: #C50401;
         display: flex;
         align-items: center;
+        background-color: #F5F5F5;
+        /* Darker gray for light mode */
+        border-left: 4px solid #C50401;
+        /* Darker border */
+        color: #333;
+        /* Dark gray text */
+        border-radius: 4px;
+        padding: 10px;
+
+
+        .darkMode & {
+            background-color: #D3D3D3;
+            /* Light gray for dark mode */
+            border-left: 4px solid #C50401;
+            /* Dark gray border */
+            color: #000;
+            /* Black text */
+
+        }
+    }
+
+    &-notes {
+        flex: 1 1 100%;
+        font-size: 14px;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        background-color: #ADD8E6;
+        /* Sky blue for light mode */
+        border-left: 4px solid #4169E1;
+        /* Royal blue border */
+        color: #333;
+        padding: 10px;
+        border-radius: 4px;
+
+        .darkMode & {
+            background-color: #B0E0E6;
+            /* Soft pastel blue for dark mode */
+            border-left: 4px solid #4682B4;
+            /* Steel blue border */
+            color: #000;
+        }
     }
 
     .deer {

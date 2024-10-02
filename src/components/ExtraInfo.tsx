@@ -107,16 +107,15 @@ const ExtraInfo = ({
             {nohiking && (
                 <div className="ExtraInfo-restriction">
                     <div>
-                        Hiking Restrictions: <br />
+                        <strong>Hiking Restrictions:</strong> <br />
                         {nohiking}
                     </div>
                 </div>
             )}
             {notes && (
-                <div className="ExtraInfo-restriction">
-                    {isPartial && <span className="partial-warn">&#9888;</span>}
+                <div className="ExtraInfo-notes">
                     <div>
-                        Notes: <br />
+                        <strong>Notes:</strong> <br />
                         {notes}
                     </div>
                 </div>

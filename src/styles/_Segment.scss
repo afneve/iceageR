@@ -1,14 +1,19 @@
 .Segment {
     width: 100%;
     line-height: 22px;
-    margin-bottom: 55px;
+    margin-bottom: 80px;
 
     h3 {
-        margin: 0 0 5px;
+        margin: 0 0 15px;
     }
 
     &-info {
+        font-size: 14px;
         margin-bottom: 15px;
+    }
+
+    &-map {
+        font-size: 14px;
     }
 
     @media (max-width: 600px) {

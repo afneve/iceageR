@@ -27,7 +27,7 @@ export const segmentStatus: { [key: string]: any } = {
         dateCompleted: "",
         gallery: "",
         partial: true,
-        notes: "Finished everything North of McKenzie Lake",
+        notes: "Finished everything North of McKenzie Lake. Estimated 1.66 miles remaining",
     },
     "Indian Creek": {
         dateCompleted: "03/10/2024",

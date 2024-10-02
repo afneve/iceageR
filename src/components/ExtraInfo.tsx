@@ -106,7 +106,6 @@ const ExtraInfo = ({
             )}
             {nohiking && (
                 <div className="ExtraInfo-restriction">
-                    <div className="deer">🦌</div>
                     <div>
                         Hiking Restrictions: <br />
                         {nohiking}

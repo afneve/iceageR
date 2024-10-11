@@ -18,11 +18,7 @@ const NavItems = () => {
 
     return (
         <>
-            {Navigation.filter(
-                (nav) =>
-                    !nav.shouldOnlyDisplayWhenTrailCompleted ||
-                    (nav.shouldOnlyDisplayWhenTrailCompleted && isTrailComplete)
-            ).map((nav, index) => {
+            {Navigation.map((nav, index) => {
                 return (
                     <NavLink
                         id={nav.id}

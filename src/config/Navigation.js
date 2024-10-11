@@ -38,13 +38,13 @@ export const Navigation = [
         route: "/info",
         component: "",
     },
-    {
-        id: "Extra",
-        text: <FontAwesomeIcon icon={faPersonHiking} />,
-        route: "/extra",
-        component: "",
-        shouldOnlyDisplayWhenTrailCompleted: true,
-    },
+    // {
+    //     id: "Extra",
+    //     text: <FontAwesomeIcon icon={faPersonHiking} />,
+    //     route: "/extra",
+    //     component: "",
+    //     shouldOnlyDisplayWhenTrailCompleted: true,
+    // },
     /*,
     {
         id: 'M',

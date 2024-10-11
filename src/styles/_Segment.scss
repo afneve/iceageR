@@ -5,6 +5,8 @@
 
     h3 {
         margin: 0 0 15px;
+        display: flex;
+        align-items: center;
     }
 
     &-info {
@@ -14,6 +16,18 @@
 
     &-map {
         font-size: 14px;
+    }
+
+    &-tag {
+        font-size: 12px;
+        font-weight: normal;
+        background: $ice_blue;
+        padding: 2px 5px;
+        margin-left: 10px;
+        height: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     @media (max-width: 600px) {
@@ -27,7 +41,7 @@
 
         &.complete {
             i {
-                color: $ice-green;
+                color: $ice_green;
                 margin-right: 5px;
             }
         }

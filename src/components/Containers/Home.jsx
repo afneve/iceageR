@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { iceAgeData } from "../../data/ice_age_data";
 
 import {
@@ -59,6 +60,11 @@ const Home = () => {
                     <strong>{`${partialSegmentMiles.toFixed(1)}`}</strong> miles
                     of partially completed segments
                 </p>
+            </div>
+            <div>
+                <Link to="/bonus" className="bonus-hikes-button">
+                    Bonus hikes
+                </Link>
             </div>
         </div>
     );

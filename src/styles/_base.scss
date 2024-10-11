@@ -135,6 +135,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: calc(100vh - 160px);
 }
 
@@ -184,5 +185,53 @@ button {
 [data-complete=true] {
     .progressBar {
         background: $ice_green;
+    }
+}
+
+.Bonus {
+    padding: 0 15px;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+}
+
+.bonus-hikes-button {
+    display: block;
+    background: linear-gradient(270deg, $ice_yellow, $ice_green, $ice_blue, $ice_dark_blue);
+    background-size: 600% 600%;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    animation: gradient 8s ease infinite;
+    margin-top: 30px;
+    font-weight: bold;
+    display: none;
+
+    &:visited {
+        color: white;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
     }
 }

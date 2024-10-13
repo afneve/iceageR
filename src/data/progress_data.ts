@@ -20,21 +20,19 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: "",
     },
     "Pine Lake": {
-        dateCompleted: "",
+        dateCompleted: "10/12/2024",
         gallery: "",
     },
     "McKenzie Creek": {
-        dateCompleted: "",
+        dateCompleted: "10/12/2024",
         gallery: "",
-        partial: true,
-        notes: "Finished everything North of McKenzie Lake. Estimated 1.66 miles remaining",
     },
     "Indian Creek": {
         dateCompleted: "03/10/2024",
         gallery: "",
     },
     "Sand Creek": {
-        dateCompleted: "",
+        dateCompleted: "10/12/2024",
         gallery: "",
     },
     "Timberland Hills": {

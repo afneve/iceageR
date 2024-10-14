@@ -2,11 +2,13 @@ export const segmentStatus: { [key: string]: any } = {
     "St. Croix Falls": {
         dateCompleted: "",
         gallery: "",
-        partialMiles: 4.56,
     },
     "Gandy Dancer": {
         dateCompleted: "",
         gallery: "",
+        partial: true,
+        notes: "Finished everything north of the Two Eagle trailhead in Luck. Estimated 10.64 miles remaining.",
+        partialMiles: 4.56,
     },
     "Trade River": {
         dateCompleted: "10/13/2024",

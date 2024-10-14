@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { iceAgeData } from "../../data/ice_age_data";
+import { segmentStatus } from "../../data/progress_data";
 
 import {
     selectCompletedSegments,
@@ -23,11 +24,19 @@ const Home = () => {
         0
     );
 
-    const totalMilesCompleted = completedSegments.reduce(
+    let totalMilesCompleted = completedSegments.reduce(
         (previousValue, currentValue) =>
             Number(previousValue) + Number(currentValue.iceagetraildistance),
         0
     );
+
+    const segmentStatusData = Object.values(segmentStatus);
+
+    totalMilesCompleted += segmentStatusData
+        .filter((segment) => segment.partialMiles)
+        .reduce((previousValue, currentValue) => {
+            return Number(previousValue) + Number(currentValue.partialMiles);
+        }, 0);
 
     const totalMiles = iceAgeData.reduce(
         (previousValue, currentValue) =>
@@ -62,10 +71,10 @@ const Home = () => {
                         }`}</strong>{" "}
                         segments remaining
                     </p>
-                    <p>
+                    {/* <p>
                         <strong>{`${partialSegmentMiles.toFixed(1)}`}</strong>{" "}
                         miles of partially completed segments
-                    </p>
+                    </p> */}
                 </div>
             )}
             {isTrailComplete && (

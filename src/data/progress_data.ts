@@ -2,6 +2,7 @@ export const segmentStatus: { [key: string]: any } = {
     "St. Croix Falls": {
         dateCompleted: "",
         gallery: "",
+        partialMiles: 0,
     },
     "Gandy Dancer": {
         dateCompleted: "",

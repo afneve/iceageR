@@ -8,15 +8,15 @@ export const segmentStatus: { [key: string]: any } = {
         gallery: "",
     },
     "Trade River": {
-        dateCompleted: "",
+        dateCompleted: "10/13/2024",
         gallery: "",
     },
     "Straight Lake": {
-        dateCompleted: "",
+        dateCompleted: "10/13/2024",
         gallery: "",
     },
     "Straight River": {
-        dateCompleted: "",
+        dateCompleted: "10/13/2024",
         gallery: "",
     },
     "Pine Lake": {

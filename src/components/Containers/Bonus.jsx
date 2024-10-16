@@ -6,10 +6,10 @@ const Bonus = () => {
     return (
         <div className="Bonus">
             <h2>Bonus hikes</h2>
-            {bonusHikes.map((hike) => {
+            {bonusHikes.map((hike, index) => {
                 return (
                     hike.segment && (
-                        <div className="Segment">
+                        <div className="Segment" key={index}>
                             <h3 className="Segment-name">
                                 <span>
                                     {hike.isComplete && (
@@ -32,6 +32,20 @@ const Bonus = () => {
                                 <div>{`Distance: ${hike.iceagetraildistance}`}</div>
                                 <div>{`Elevation: ${hike.elevation}`}</div>
                                 <div>{`Ruggedness: ${hike.ruggedness}`}</div>
+                            </div>
+                            <div className="Segment-map">
+                                {hike.location && (
+                                    <div className="Segment-terminus-container">
+                                        Location on map: <br />
+                                        <a
+                                            target="_blank"
+                                            href={hike.location}
+                                            rel="noreferrer"
+                                        >
+                                            Map
+                                        </a>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     )

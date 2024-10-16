@@ -5,17 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMicrophone } from '@fortawesome/free-solid-svg-icons';
 */
 
-import { isTrailCompleted } from "../../utils/getIceAgeData";
-
 import { Navigation } from "../../config/Navigation";
 
 const NavItems = () => {
     // const handleMicrophoneClick = () => {};
-
-    const isTrailComplete: any = isTrailCompleted();
-
-    console.log(isTrailComplete);
-
     return (
         <>
             {Navigation.map((nav, index) => {

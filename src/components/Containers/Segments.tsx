@@ -1,49 +1,47 @@
-import CountyList from '../CountySelect';
-import CountySelectList from '../CountySelectList';
-import { Outlet } from 'react-router-dom';
+import CountyList from "../CountySelect";
+import CountySelectList from "../CountySelectList";
+import { Outlet } from "react-router-dom";
 
-import { countyData } from '../../data/county_data';
-import { selectIncompleteSegments } from '../../utils/getIceAgeData';
-
-
+import { countyData } from "../../data/county_data";
+import { selectIncompleteSegments } from "../../utils/getIceAgeData";
+import { isTrailCompleted } from "../../utils/getIceAgeData";
 
 const Segments = () => {
-	const hideCompleted = (localStorage.getItem('hideCompleted') === 'true');
-	const isMobile = (window.innerWidth < 640);
-	let counties = null;
+    const hideCompleted = localStorage.getItem("hideCompleted") === "true";
+    const isMobile = window.innerWidth < 640;
+    let counties = null;
+    const isTrailComplete = isTrailCompleted();
 
-	if (hideCompleted) {
-		let countyIdSet = new Set();
+    if (hideCompleted && !isTrailComplete) {
+        let countyIdSet = new Set();
 
-		const incompleteSegments = selectIncompleteSegments(undefined);
+        const incompleteSegments = selectIncompleteSegments(undefined);
 
-		for (let i = 0; i < incompleteSegments.length; i++) {
-			countyIdSet.add(incompleteSegments[i].countyId);
-		}
+        for (let i = 0; i < incompleteSegments.length; i++) {
+            countyIdSet.add(incompleteSegments[i].countyId);
+        }
 
-		counties = countyData.filter(county => {
-			if (countyIdSet.has(county.countyId)) {
-				return true;
-			}
+        counties = countyData.filter((county) => {
+            if (countyIdSet.has(county.countyId)) {
+                return true;
+            }
 
-			return false;
-		});
-	} else {
-		counties = [...countyData];
-	}
+            return false;
+        });
+    } else {
+        counties = [...countyData];
+    }
 
-	return (
-		<div className='Segments'>
-			{
-				isMobile ? 
-				<CountySelectList counties={counties} />
-				:
-				<CountyList counties={counties} />
-
-			}
-			<Outlet />
-		</div>
-	);
-}
+    return (
+        <div className="Segments">
+            {isMobile ? (
+                <CountySelectList counties={counties} />
+            ) : (
+                <CountyList counties={counties} />
+            )}
+            <Outlet />
+        </div>
+    );
+};
 
 export default Segments;

@@ -48,6 +48,15 @@ const Home = () => {
     const { earliestHike, latestHike } =
         findEarliestAndLatestDates(segmentStatus);
 
+    // Output result
+    const fiftyPercentDate = getFiftyPercentCompletionDate(
+        segmentStatus,
+        iceAgeData,
+        totalMiles
+    );
+
+    console.log(fiftyPercentDate);
+
     return (
         <div className="Home">
             {!isTrailComplete && (
@@ -84,7 +93,7 @@ const Home = () => {
             {isTrailComplete && (
                 // [Review your journey] | [Plan your next adventure]
                 <>
-                    <div className="complete">
+                    <div className="trail-complete">
                         <h2 className="user-miles-remaining">
                             Trail complete!
                         </h2>
@@ -95,7 +104,7 @@ const Home = () => {
                                         1
                                     )}`}</strong>
                                 </div>
-                                <div>
+                                <div className="big-stat-label">
                                     <p> miles hiked</p>
                                 </div>
                             </div>
@@ -103,7 +112,7 @@ const Home = () => {
                                 <div className="big-stat">
                                     <strong>{`${totalNumberOfCompletedSegments}`}</strong>
                                 </div>
-                                <div>
+                                <div className="big-stat-label">
                                     <p>segments completed</p>
                                 </div>
                             </div>
@@ -111,9 +120,9 @@ const Home = () => {
                         <div className="test-stats">
                             <div className="test-stats-section">
                                 <div className="big-stat">
-                                    <strong>{`${uniqueHikingDays}`}</strong>
+                                    <strong>{`${uniqueHikingDays}+`}</strong>
                                 </div>
-                                <div>
+                                <div className="big-stat-label">
                                     <p>days of hiking</p>
                                 </div>
                             </div>
@@ -121,7 +130,7 @@ const Home = () => {
                                 <div className="big-stat">
                                     <strong>{earliestHike}</strong>
                                 </div>
-                                <div>
+                                <div className="big-stat-label">
                                     <p>First segment completed</p>
                                 </div>
                             </div>
@@ -129,7 +138,7 @@ const Home = () => {
                                 <div className="big-stat">
                                     <strong>{latestHike}</strong>
                                 </div>
-                                <div>
+                                <div className="big-stat-label">
                                     <p>Last segment completed</p>
                                 </div>
                             </div>
@@ -174,6 +183,44 @@ function findEarliestAndLatestDates(hikes) {
             day: "numeric",
         }),
     };
+}
+
+function getFiftyPercentCompletionDate(hikes, segments, totalMiles) {
+    const totalMileage = totalMiles;
+    const halfMileage = totalMileage / 2;
+
+    let cumulativeMileage = 0;
+    let fiftyPercentDate = null;
+
+    // Sort segments by completion date
+    const sortedHikes = Object.entries(hikes).sort(
+        (a, b) => new Date(a[1].dateCompleted) - new Date(b[1].dateCompleted)
+    );
+
+    // Iterate through each segment in completion order, adding up the distances
+    for (let [segmentName, hikeDetails] of sortedHikes) {
+        // Find the segment and its distance
+        const segment = segments.find((s) => s.segment === segmentName);
+        if (!segment) continue; // If the segment isn't in the list, skip it
+
+        cumulativeMileage += parseFloat(segment.iceagetraildistance);
+
+        // Check if we have passed 50% of the total mileage
+        if (cumulativeMileage >= halfMileage) {
+            console.log(hikeDetails);
+            console.log(segmentName);
+            fiftyPercentDate = hikeDetails.dateCompleted;
+            break;
+        }
+    }
+
+    return fiftyPercentDate
+        ? new Date(fiftyPercentDate).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+          })
+        : "Not reached 50%";
 }
 
 export default Home;

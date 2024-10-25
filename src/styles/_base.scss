@@ -196,7 +196,7 @@ button {
     }
 }
 
-.complete {
+.trail-complete {
     text-align: center;
     width: 100%;
 
@@ -223,6 +223,14 @@ button {
 
     .big-stat {
         font-size: 20px;
+    }
+
+    .big-stat-label {
+        color: #8a8a8a;
+
+        .darkMode & {
+            color: #e2e2e2;
+        }
     }
 }
 

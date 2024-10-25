@@ -12,8 +12,7 @@ import { isTrailCompleted } from "../../utils/getIceAgeData";
 const Home = () => {
     const completedSegments = selectCompletedSegments();
     const partialSegments = selectPartialSegments();
-    const isTrailComplete = false;
-    // const isTrailComplete = isTrailCompleted();
+    const isTrailComplete = isTrailCompleted();
 
     const totalNumberOfSegments = iceAgeData.length;
     const totalNumberOfCompletedSegments = completedSegments.length;
@@ -43,6 +42,11 @@ const Home = () => {
             Number(previousValue) + Number(currentValue.iceagetraildistance),
         0
     );
+
+    const uniqueHikingDays = countUniqueHikingDays(segmentStatus);
+
+    const { earliestHike, latestHike } =
+        findEarliestAndLatestDates(segmentStatus);
 
     return (
         <div className="Home">
@@ -80,27 +84,56 @@ const Home = () => {
             {isTrailComplete && (
                 // [Review your journey] | [Plan your next adventure]
                 <>
-                    <div>
+                    <div className="complete">
                         <h2 className="user-miles-remaining">
                             Trail complete!
                         </h2>
-                        <p>
-                            <strong>{`${totalMilesCompleted.toFixed(
-                                1
-                            )}`}</strong>{" "}
-                            miles hiked
-                        </p>
-                        <p>
-                            <strong>{`${totalNumberOfCompletedSegments}`}</strong>{" "}
-                            segments completed
-                        </p>
-                        <p>
-                            <strong>{`${totalNumberOfCompletedSegments}`}</strong>{" "}
-                            days of hiking
-                        </p>
-                        <p>First segment completed on October 10, 2022</p>
-                        <p>Last segment completed on October 10, 2024</p>
-                        <p>Photos: Coming soon</p>
+                        <div className="test-stats">
+                            <div className="test-stats-section">
+                                <div className="big-stat">
+                                    <strong>{`${totalMilesCompleted.toFixed(
+                                        1
+                                    )}`}</strong>
+                                </div>
+                                <div>
+                                    <p> miles hiked</p>
+                                </div>
+                            </div>
+                            <div className="test-stats-section">
+                                <div className="big-stat">
+                                    <strong>{`${totalNumberOfCompletedSegments}`}</strong>
+                                </div>
+                                <div>
+                                    <p>segments completed</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="test-stats">
+                            <div className="test-stats-section">
+                                <div className="big-stat">
+                                    <strong>{`${uniqueHikingDays}`}</strong>
+                                </div>
+                                <div>
+                                    <p>days of hiking</p>
+                                </div>
+                            </div>
+                            <div className="test-stats-section">
+                                <div className="big-stat">
+                                    <strong>{earliestHike}</strong>
+                                </div>
+                                <div>
+                                    <p>First segment completed</p>
+                                </div>
+                            </div>
+                            <div className="test-stats-section">
+                                <div className="big-stat">
+                                    <strong>{latestHike}</strong>
+                                </div>
+                                <div>
+                                    <p>Last segment completed</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <Link to="/bonus" className="bonus-hikes-button">
                         Bonus hikes
@@ -110,5 +143,37 @@ const Home = () => {
         </div>
     );
 };
+
+function countUniqueHikingDays(hikes) {
+    const uniqueDates = new Set();
+
+    Object.values(hikes).forEach((hike) => {
+        uniqueDates.add(hike.dateCompleted);
+    });
+
+    return uniqueDates.size;
+}
+
+function findEarliestAndLatestDates(hikes) {
+    const dates = Object.values(hikes).map(
+        (hike) => new Date(hike.dateCompleted)
+    );
+
+    const earliestHike = new Date(Math.min(...dates));
+    const latestHike = new Date(Math.max(...dates));
+
+    return {
+        earliestHike: earliestHike.toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+        }),
+        latestHike: latestHike.toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+        }),
+    };
+}
 
 export default Home;

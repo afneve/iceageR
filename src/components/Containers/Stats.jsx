@@ -195,7 +195,6 @@ const Stats = () => {
                     1
                 )}`}</p>
                 <p>{`Most miles completed in a trip: ${bestTrip.miles} miles from ${bestTrip.startDate} to ${bestTrip.endDate}`}</p>
-                <p>{`Days spent hiking: ${uniqueHikingDays}`}</p>
                 <p>{`Most segments completed in one day: ${mostSegmentsInOneDay.segments} (${mostSegmentsInOneDay.date})`}</p>
                 <p>{`Most elevation in one day: ${mostElevationInOneDay.elevation} (${mostElevationInOneDay.date})`}</p>
                 <p>{`Most ruggedness in one day: ${mostRuggednessInOneDay.ruggedness} (${mostRuggednessInOneDay.date})`}</p>

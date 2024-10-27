@@ -1,14 +1,11 @@
 export const segmentStatus: { [key: string]: any } = {
     "St. Croix Falls": {
-        dateCompleted: "",
+        dateCompleted: "10/27/2024",
         gallery: "",
-        notes: "Finished everything north of Lion's Park.",
-        partialMiles: 1.6,
     },
     "Gandy Dancer": {
         dateCompleted: "10/26/2024",
         gallery: "",
-        notes: "",
     },
     "Trade River": {
         dateCompleted: "10/13/2024",
